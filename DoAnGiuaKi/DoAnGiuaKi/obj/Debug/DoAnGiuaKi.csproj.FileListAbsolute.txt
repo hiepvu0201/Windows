@@ -1,0 +1,12 @@
+F:\New folder\Windows\DoAnGiuaKi\DoAnGiuaKi\bin\Debug\DoAnGiuaKi.exe.config
+F:\New folder\Windows\DoAnGiuaKi\DoAnGiuaKi\bin\Debug\DoAnGiuaKi.exe
+F:\New folder\Windows\DoAnGiuaKi\DoAnGiuaKi\bin\Debug\DoAnGiuaKi.pdb
+F:\New folder\Windows\DoAnGiuaKi\DoAnGiuaKi\obj\Debug\DoAnGiuaKi.Properties.Resources.resources
+F:\New folder\Windows\DoAnGiuaKi\DoAnGiuaKi\obj\Debug\DoAnGiuaKi.csproj.GenerateResource.cache
+F:\New folder\Windows\DoAnGiuaKi\DoAnGiuaKi\obj\Debug\DoAnGiuaKi.csproj.CoreCompileInputs.cache
+F:\New folder\Windows\DoAnGiuaKi\DoAnGiuaKi\obj\Debug\DoAnGiuaKi.exe
+F:\New folder\Windows\DoAnGiuaKi\DoAnGiuaKi\obj\Debug\DoAnGiuaKi.pdb
+F:\New folder\Windows\DoAnGiuaKi\DoAnGiuaKi\obj\Debug\DoAnGiuaKi.FrmWelcome.resources
+F:\New folder\Windows\DoAnGiuaKi\DoAnGiuaKi\obj\Debug\DoAnGiuaKi.FrmDangNhap.resources
+F:\New folder\Windows\DoAnGiuaKi\DoAnGiuaKi\obj\Debug\DoAnGiuaKi.csprojAssemblyReference.cache
+F:\New folder\Windows\DoAnGiuaKi\DoAnGiuaKi\obj\Debug\DoAnGiuaKi.FrmDangKy.resources

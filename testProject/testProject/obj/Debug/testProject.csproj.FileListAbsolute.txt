@@ -1,0 +1,10 @@
+D:\Working !\Window Progaming\testProject\testProject\bin\Debug\testProject.exe.config
+D:\Working !\Window Progaming\testProject\testProject\bin\Debug\testProject.exe
+D:\Working !\Window Progaming\testProject\testProject\bin\Debug\testProject.pdb
+D:\Working !\Window Progaming\testProject\testProject\obj\Debug\testProject.csprojResolveAssemblyReference.cache
+D:\Working !\Window Progaming\testProject\testProject\obj\Debug\testProject.Properties.Resources.resources
+D:\Working !\Window Progaming\testProject\testProject\obj\Debug\testProject.csproj.GenerateResource.Cache
+D:\Working !\Window Progaming\testProject\testProject\obj\Debug\testProject.csproj.CoreCompileInputs.cache
+D:\Working !\Window Progaming\testProject\testProject\obj\Debug\testProject.exe
+D:\Working !\Window Progaming\testProject\testProject\obj\Debug\testProject.pdb
+D:\Working !\Window Progaming\testProject\testProject\obj\Debug\testProject.Form1.resources

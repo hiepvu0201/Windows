@@ -8,3 +8,13 @@ D:\Working !\Window Progaming\testProject\testProject\obj\Debug\testProject.cspr
 D:\Working !\Window Progaming\testProject\testProject\obj\Debug\testProject.exe
 D:\Working !\Window Progaming\testProject\testProject\obj\Debug\testProject.pdb
 D:\Working !\Window Progaming\testProject\testProject\obj\Debug\testProject.Form1.resources
+F:\New folder\github\Windows\testProject\testProject\bin\Debug\testProject.exe.config
+F:\New folder\github\Windows\testProject\testProject\bin\Debug\testProject.exe
+F:\New folder\github\Windows\testProject\testProject\bin\Debug\testProject.pdb
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.csprojAssemblyReference.cache
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.Form1.resources
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.Properties.Resources.resources
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.csproj.GenerateResource.cache
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.csproj.CoreCompileInputs.cache
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.exe
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.pdb

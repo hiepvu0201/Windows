@@ -75,9 +75,8 @@
             this.lbUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbUser.Location = new System.Drawing.Point(650, 264);
             this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(142, 31);
+            this.lbUser.Size = new System.Drawing.Size(0, 31);
             this.lbUser.TabIndex = 2;
-            this.lbUser.Text = "username";
             // 
             // label4
             // 
@@ -101,9 +100,8 @@
             this.lbLevel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbLevel.Location = new System.Drawing.Point(650, 302);
             this.lbLevel.Name = "lbLevel";
-            this.lbLevel.Size = new System.Drawing.Size(84, 31);
+            this.lbLevel.Size = new System.Drawing.Size(0, 31);
             this.lbLevel.TabIndex = 4;
-            this.lbLevel.Text = "Level";
             // 
             // btnNewGame
             // 
@@ -119,7 +117,6 @@
             this.btnNewGame.TabIndex = 5;
             this.btnNewGame.Text = "NEW GAME";
             this.btnNewGame.UseVisualStyleBackColor = false;
-            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // btnQuit
             // 
@@ -160,7 +157,6 @@
             this.btnMenu.TabIndex = 8;
             this.btnMenu.Text = "MENU";
             this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
             // 
             // GameOver
             // 
@@ -169,7 +165,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1276, 636);
+            this.ClientSize = new System.Drawing.Size(1289, 653);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnQuit);
@@ -182,7 +178,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "GameOver";
             this.Text = "GameOver";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.GameOver_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

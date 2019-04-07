@@ -12,7 +12,7 @@ namespace testProject.Detail
 {
     class detail
     {
-        public PictureBox createBlock(PictureBox picture,string name,int xPos,int Ypos,string type)
+        public PictureBox createBlock(ref PictureBox picture,string name,int xPos,int Ypos,string type)
         {
             
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));

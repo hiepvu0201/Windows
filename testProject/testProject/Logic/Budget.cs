@@ -13,6 +13,7 @@ namespace testProject.Logic
     {
         MapGame map = new MapGame();
         render render = new render();
+
         public Budget()
         {
 
@@ -154,7 +155,7 @@ namespace testProject.Logic
                 default:
                     break;
             }
-            if (map.A[row + moveY, col + moveX] == 3)
+            if (map.A[row + moveY, col + moveX] == 2)
             {
                 return true;
             }
@@ -217,9 +218,8 @@ namespace testProject.Logic
                 }
             }
         }
-        public int findCrate(Point curPos)
+        public int findCrate(Point curPos, PictureBox[] list)
         {
-            PictureBox[] list= render.createList();
             for (int i = 0; i < list.Length; i++)
             {
                 if (curPos.X==list[i].Location.X && curPos.Y==list[i].Location.Y)

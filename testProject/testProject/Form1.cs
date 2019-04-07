@@ -123,7 +123,7 @@ namespace testProject
                     break;
             }
             Point curPosCrate = new Point(curPos.X + deltaX, curPos.Y + deltaY);
-            int currentCrate = budget.findCrate(curPosCrate);
+            int currentCrate = budget.findCrate(curPosCrate,list);
             bool canGo =budget.IsGoingCrate(direction,curPosCrate);
             if (canGo==false)
             {
@@ -136,20 +136,26 @@ namespace testProject
         {
             cur = render.Miner.Location;
             PictureBox[] list = render.createList();
+            Point temp = new Point();
+            if (ktCrate == 1)
+            {
+                int tempValue = CrateMove(direction, cur);
+                if (tempValue != -1)
+                {
+                    crateIndex =tempValue;
+                    temp.X = list[crateIndex].Location.X;
+                    temp.Y = list[crateIndex].Location.Y;
+                    budget.updateMatrix(temp, direction, 2);
+                    runCrate = 1;
+                }
+                ktCrate = 0;
+            }
             bool canGo = budget.IsGoing(direction, render.Miner.Location);
             if(!ktCanGo(canGo,render.Miner.Location,direction))
             {
                 return;
             }
-            if (ktCrate==1)
-            {
-                if (CrateMove(direction, cur)!=-1)
-                {
-                    crateIndex = CrateMove(direction, cur);
-                    runCrate = 1;
-                }
-                ktCrate = 0;
-            }
+
 
             var deltaX = 0;
             var deltaY = 0;
@@ -179,7 +185,7 @@ namespace testProject
                 default: break;
             }
             render.Miner.Location = new Point(cur.X + deltaX, cur.Y + deltaY);
-            Point temp = new Point();
+
             if (runCrate==1)
             {
                 temp.X = list[crateIndex].Location.X;

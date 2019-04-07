@@ -12,8 +12,12 @@ using System.Data.SqlClient;
 
 namespace DoAnGiuaKi
 {
+   
+
     public partial class FrmDangNhap : Form
     {
+        private static string curr_user = "";
+   
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-S5V3TOI\SQLEXPRESS;" +
             "Initial Catalog=SukobanGame;" +
             "Integrated Security=True");
@@ -25,6 +29,7 @@ namespace DoAnGiuaKi
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
+              curr_user = txtUser.Text.ToString();
             try
             {
                 conn.Open();
@@ -43,7 +48,7 @@ namespace DoAnGiuaKi
                     txtPasswords.ResetText();
                     txtUser.Focus();
                     //FrmMain.bIsLogin = true;
-
+                
                     this.Close();
                 }
                 else
@@ -69,6 +74,11 @@ namespace DoAnGiuaKi
             this.Close();
             FrmDangKy frmDangKy = new FrmDangKy();
             frmDangKy.Show();
+        }
+
+        private void FrmDangNhap_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

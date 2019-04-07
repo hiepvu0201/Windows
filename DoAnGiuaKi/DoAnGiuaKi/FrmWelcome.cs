@@ -29,5 +29,10 @@ namespace DoAnGiuaKi
             DialogResult traloi;
             traloi = MessageBox.Show("Are you sure ?", "Warning!!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question); if (traloi == DialogResult.OK) Close();
         }
+
+        private void FrmWelcome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

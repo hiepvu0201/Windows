@@ -21,6 +21,7 @@ namespace testProject
         render render = new render();
         MapGame map = new MapGame();
         Matrix matrix = new Matrix();
+        CheckWin checker = new CheckWin();
         int crateIndex = 0;
         int ktCrate = 1;
         int ktChay = 1;
@@ -34,6 +35,8 @@ namespace testProject
             render.renderObj(mainPan, map.A, "wall");
             render.renderObj(mainPan, map.A, "crate");
             render.renderObj(mainPan, map.A, "miner");
+            render.renderObj(mainPan, map.A, "hole");
+            map.clearHole();
             gp = mainPan.CreateGraphics();
         }
 
@@ -52,7 +55,7 @@ namespace testProject
             //render.renderObj(mainPan, map.a,"crate");
             //render.renderObj(mainPan, map.a, "miner");
         }
-        bool isMoving = false;
+
 
         private void moveRepeat()
         {
@@ -61,6 +64,14 @@ namespace testProject
             {
                 runTime = 0;
                 timer1.Stop();
+                PictureBox[] listCrates = render.createList();
+                PictureBox[] listHoles = render.createHole();
+                int numBerCrates = map.crateCount();
+                bool winFlag = checker.check(numBerCrates, listCrates, listHoles);
+                if (winFlag == true)
+                {
+                    MessageBox.Show("winner!");
+                }
             }
             else
             {
@@ -69,15 +80,19 @@ namespace testProject
         }
         private bool ktCanGo(bool canGo,Point cur,string direction)
         {
+
             var valid = true;
             if (ktChay == 1)
             {
                 budget.updateMatrix(cur, direction,3);
                 if (canGo == false)
                 {
+
+
                     timer1.Stop();
                     ktChay = 1;
                     ktCrate = 1;
+
                     return false;
                 }
 

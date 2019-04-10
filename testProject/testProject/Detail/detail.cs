@@ -32,6 +32,10 @@ namespace testProject.Detail
             {
                 picture.Image = Image.FromFile(Model.StrMiner);
             }
+            else if (type=="hole")
+            {
+                picture.Image = Image.FromFile(Model.StrHole);
+            }
             picture.SizeMode = PictureBoxSizeMode.Zoom;
             picture.TabIndex = 0;
             picture.TabStop = false;

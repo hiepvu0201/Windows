@@ -154,8 +154,8 @@ namespace testProject.Detail
     }
     static class Model
     {
-        public static string StrWall = @"D:\Working !\Window Progaming\testProject\testProject\Detail\wall2.png";
-        public static string StrCrate = @"D:\Working !\Window Progaming\testProject\testProject\Detail\crate.png";
-        public static string StrMiner = @"D:\Working !\Window Progaming\testProject\testProject\Detail\Miner.png";
+        public static string StrWall = @"F:\New folder\github\Windows\testProject\testProject\Detail\wall2.png";
+        public static string StrCrate = @"F:\New folder\github\Windows\testProject\testProject\Detail\crate.png";
+        public static string StrMiner = @"F:\New folder\github\Windows\testProject\testProject\Detail\Miner.png";
     }
 }

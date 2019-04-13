@@ -1,4 +1,4 @@
-﻿namespace DoAnGiuaKi
+﻿namespace testProject
 {
     partial class FrmDangNhap
     {
@@ -32,12 +32,12 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPasswords = new System.Windows.Forms.TextBox();
             this.btnLogIn = new System.Windows.Forms.Button();
-            this.lbSignIn = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnSignIn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -75,16 +75,6 @@
             this.btnLogIn.Text = "Log In";
             this.btnLogIn.UseVisualStyleBackColor = false;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
-            // 
-            // lbSignIn
-            // 
-            this.lbSignIn.AutoSize = true;
-            this.lbSignIn.Location = new System.Drawing.Point(331, 462);
-            this.lbSignIn.Name = "lbSignIn";
-            this.lbSignIn.Size = new System.Drawing.Size(61, 16);
-            this.lbSignIn.TabIndex = 7;
-            this.lbSignIn.Text = "Sign In?";
-            this.lbSignIn.Click += new System.EventHandler(this.lbSignIn_Click);
             // 
             // pictureBox4
             // 
@@ -145,13 +135,28 @@
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // btnSignIn
+            // 
+            this.btnSignIn.AutoSize = true;
+            this.btnSignIn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignIn.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignIn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSignIn.Location = new System.Drawing.Point(104, 376);
+            this.btnSignIn.Name = "btnSignIn";
+            this.btnSignIn.Size = new System.Drawing.Size(86, 34);
+            this.btnSignIn.TabIndex = 9;
+            this.btnSignIn.Text = "Sign In";
+            this.btnSignIn.UseVisualStyleBackColor = false;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
+            // 
             // FrmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(435, 561);
+            this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.lbSignIn);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -182,7 +187,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnLogIn;
-        private System.Windows.Forms.Label lbSignIn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSignIn;
     }
 }

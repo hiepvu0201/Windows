@@ -27,6 +27,7 @@ namespace testProject
         int runCrate = 0;
         int runTime=0;
         string direction;
+
         public Form1()
         {
 

@@ -22,14 +22,17 @@ namespace testProject.Detail
             picture.Size = new Size(49, 49);
             if (type == "wall")
             {
+                //picture.Image = new Bitmap(Application.StartupPath + "\\Detail\\wall2.png");
                 picture.Image = Image.FromFile(Model.StrWall);
             }
             else if (type == "crate")
             {
+                //picture.Image = new Bitmap(Application.StartupPath + "\\Detail\\crate.png");
                 picture.Image = Image.FromFile(Model.StrCrate);
             }
             else if (type == "miner")
             {
+                //picture.Image = new Bitmap(Application.StartupPath + "\\Detail\\miner.png");
                 picture.Image = Image.FromFile(Model.StrMiner);
             }
             picture.SizeMode = PictureBoxSizeMode.Zoom;

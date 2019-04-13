@@ -36,9 +36,10 @@
             // mainPan
             // 
             this.mainPan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.mainPan.Location = new System.Drawing.Point(12, 12);
+            this.mainPan.Location = new System.Drawing.Point(9, 10);
+            this.mainPan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mainPan.Name = "mainPan";
-            this.mainPan.Size = new System.Drawing.Size(670, 618);
+            this.mainPan.Size = new System.Drawing.Size(502, 502);
             this.mainPan.TabIndex = 0;
             this.mainPan.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPan_Paint);
             // 
@@ -48,12 +49,14 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 819);
+            this.ClientSize = new System.Drawing.Size(647, 609);
             this.Controls.Add(this.mainPan);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);

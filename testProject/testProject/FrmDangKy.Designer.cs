@@ -1,4 +1,4 @@
-﻿namespace DoAnGiuaKi
+﻿namespace testProject
 {
     partial class FrmDangKy
     {
@@ -183,6 +183,7 @@
             this.panel1.Controls.Add(this.txtNewPhoneNumber);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtNewEmail);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Location = new System.Drawing.Point(2, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(436, 487);

@@ -7,56 +7,73 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
 namespace Soudokan
 {
     public partial class GameOver : Form
     {
+        string curr_user = "hiepvu123";
+        string curr_point = "10";
+        static bool sua = true;
+        SqlConnection conec = new SqlConnection (@"Data Source=DESKTOP-F3VTH4B; "
+            + "Initial Catalog=SukobanGame;"
+           + "Integrated Security=True");
         public GameOver()
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        void LoadData()
         {
+            lbUser.Text = curr_user;
+            lbLevel.Text = curr_point;
+            if (!lbUser.Text.Equals(""))
+            {
+                if (conec.State == ConnectionState.Open)
+                    conec.Close();
+                conec.Open();
+                if (sua)
+                {
+                    try
+                    {
+                        SqlCommand cmd = new SqlCommand();
+                        cmd.Connection = conec;
+                        cmd.CommandType = CommandType.Text;
 
+                        cmd.CommandText =
+                        "UPDATE  dtbGame  SET Point = ' " + lbLevel.Text.Trim()
+                        + " ' Where TaiKhoan = ' " + lbUser.Text.Trim() + "'";
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (SqlException)
+                    {
+                        MessageBox.Show("Error");
+                    }
+                }
+            }
+                
         }
+           
+       
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-
+            //Form1 frmgame = new Form1();
+            //frmgame.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+
+        private void BtnMenu_Click(object sender, EventArgs e)
         {
-
+            //FrmWellcome frmwellcome = new FrmWellcome();
+            //frmwellcome.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void GameOver_Load(object sender, EventArgs e)
         {
-
+            LoadData();
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
     }
 }

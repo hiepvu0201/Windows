@@ -16,7 +16,7 @@ namespace Soudokan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GameWin());
+            Application.Run(new GameOver());
         }
     }
 }

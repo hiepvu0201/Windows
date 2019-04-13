@@ -26,6 +26,7 @@ namespace testProject.Logic
         }
         public bool IsGoing(string direction,Point curPos)//kt có đi được hay không
         {
+            map.clearHole();
             int col=0; 
             int row=0;
             findCurCell(ref row, ref col, curPos);
@@ -41,7 +42,7 @@ namespace testProject.Logic
                     {
                         return false;
                     }
-                    else if (map.A[row, col - 1] == 0)
+                    else if (map.A[row, col - 1] == 0 )
                     {
                         return true;
                     }
@@ -53,7 +54,7 @@ namespace testProject.Logic
                 {
                     return false;
                 }
-                else if (map.A[row + 1, col] == 0)
+                else if (map.A[row + 1, col] == 0 )
                 {
                     return true;
                 }
@@ -64,7 +65,7 @@ namespace testProject.Logic
                 {
                     return false;
                 }
-                else if (map.A[row - 1, col] == 0)
+                else if (map.A[row - 1, col] == 0 )
                 {
                     return true;
                 }
@@ -76,7 +77,7 @@ namespace testProject.Logic
                 {
                     return false;
                 }
-                else if (map.A[row, col+1] == 0)
+                else if (map.A[row, col+1] == 0 )
                 {
                     return true;
                 }
@@ -86,6 +87,7 @@ namespace testProject.Logic
         }
         public void updateMatrix(Point curPos,string direction,int type)
         {
+            map.clearHole();
             int col = 0;
             int row = 0;
             findCurCell(ref row,ref col, curPos);
@@ -163,6 +165,7 @@ namespace testProject.Logic
         }
         public bool IsGoingCrate(string direction,Point curBox)//cur của hộp    //hộp có đi được ô tiếp theo không ?
         {
+            map.clearHole();
             int col = 0;
             int row = 0;
             findCurCell(ref row, ref col, curBox);
@@ -202,6 +205,7 @@ namespace testProject.Logic
         }
         public void pullBox(Point cur,string direction) //cur của hộp
         {
+            map.clearHole();
             int col = 0;
             int row = 0;
             findCurCell(ref row, ref col, cur);

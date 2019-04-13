@@ -30,13 +30,33 @@ namespace testProject.Detail
         public PictureBox Crate5 { get => crate5; set => crate5 = value; }
         public PictureBox Crate6 { get => crate6; set => crate6 = value; }
 
+        private PictureBox hole1 = new PictureBox();
+        private PictureBox hole2 = new PictureBox();
+        private PictureBox hole3 = new PictureBox();
+        private PictureBox hole4 = new PictureBox();
+        private PictureBox hole5 = new PictureBox();
+        private PictureBox hole6 = new PictureBox();
+
+ 
+        public PictureBox[] createHole()
+        {
+            PictureBox[] listHoles = new PictureBox[6] { Hole1, Hole2, Hole3, Hole4, Hole5, Hole6 };
+            return listHoles;
+
+        }
+
         public PictureBox[] createList()
         {
             PictureBox[] listCrates = new PictureBox[6] { Crate1, Crate2, Crate3, Crate4, Crate5, Crate6 };
             return listCrates;
         }
         public PictureBox Miner { get => miner; set => miner = value; }
-
+        public PictureBox Hole1 { get => hole1; set => hole1 = value; }
+        public PictureBox Hole2 { get => hole2; set => hole2 = value; }
+        public PictureBox Hole3 { get => hole3; set => hole3 = value; }
+        public PictureBox Hole4 { get => hole4; set => hole4 = value; }
+        public PictureBox Hole5 { get => hole5; set => hole5 = value; }
+        public PictureBox Hole6 { get => hole6; set => hole6 = value; }
 
         public void renderObj(Panel mainPan,int[,] map,string type)
         {
@@ -45,6 +65,7 @@ namespace testProject.Detail
             Matrix matrix = new Matrix();
             Point a = new Point();
             int count = 0;
+            int countHole = 0;
             if (type == "wall")
             {
                 for (int i = 0; i < map.GetLength(1); i++)
@@ -69,13 +90,6 @@ namespace testProject.Detail
                     {
                         if (map[i, j] == 2)
                         {
-
-                            //CratesList crates = new CratesList();
-                            //PictureBox[] container = crates.createList();
-                            //a = matrix.findCell(i, j);
-                            //rendering.createBlock(ref container[count], $"crate{count}", a.X + 1, a.Y + 1,type);
-                            //mainPan.Controls.Add(container[count]);
-                            //count++;
                             switch (count)
                             {
                                 case 0:
@@ -141,10 +155,80 @@ namespace testProject.Detail
                     {
                         if (map[i, j] == 3)
                         {
-                            //PictureBox miner = new PictureBox();
                             a = matrix.findCell(i, j);
                             rendering.createBlock(ref miner, $"miner{i},{j}", a.X + 1, a.Y + 1, type);
                             mainPan.Controls.Add(Miner);
+                        }
+                    }
+                }
+
+            }
+            else if (type == "hole")
+            {
+                for (int i = 0; i < map.GetLength(1); i++)
+                {
+                    for (int j = 0; j < map.GetLength(0); j++)
+                    {
+                        if (map[i, j] == 4)
+                        {
+                            switch (countHole)
+                            {
+                                case 0:
+                                    {
+                                        a = matrix.findCell(i, j);
+                                        rendering.createBlock(ref hole1, $"hole{count + 1}", a.X + 1, a.Y + 1, type);
+                                        mainPan.Controls.Add(hole1);
+                                        
+                                        break;
+                                    }
+                                case 1:
+                                    {
+                                        a = matrix.findCell(i, j);
+                                        rendering.createBlock(ref hole2, $"hole{count + 1}", a.X + 1, a.Y + 1, type);
+                                        mainPan.Controls.Add(hole2);
+                                       
+                                        break;
+
+                                    }
+                                case 3:
+                                    {
+                                        a = matrix.findCell(i, j);
+                                        rendering.createBlock(ref hole3, $"crate{count + 1}", a.X + 1, a.Y + 1, type);
+                                        mainPan.Controls.Add(hole3);
+                                       
+                                        break;
+
+                                    }
+                                case 4:
+                                    {
+                                        a = matrix.findCell(i, j);
+                                        rendering.createBlock(ref hole4, $"crate{count + 1}", a.X + 1, a.Y + 1, type);
+                                        mainPan.Controls.Add(hole4);
+                                        
+                                        break;
+
+                                    }
+                                case 5:
+                                    {
+                                        a = matrix.findCell(i, j);
+                                        rendering.createBlock(ref hole5, $"crate{count + 1}", a.X + 1, a.Y + 1, type);
+                                        mainPan.Controls.Add(hole5);
+                                        
+                                        break;
+
+                                    }
+                                case 6:
+                                    {
+                                        a = matrix.findCell(i, j);
+                                        rendering.createBlock(ref hole6, $"crate{count + 1}", a.X + 1, a.Y + 1, type);
+                                        mainPan.Controls.Add(hole6);
+                                        
+                                        break;
+                                    }
+                                default:
+                                    break;
+                            }
+                            countHole++;
                         }
                     }
                 }
@@ -154,8 +238,15 @@ namespace testProject.Detail
     }
     static class Model
     {
+<<<<<<< HEAD
         public static string StrWall = @"F:\New folder\github\Windows\testProject\testProject\Detail\wall2.png";
         public static string StrCrate = @"F:\New folder\github\Windows\testProject\testProject\Detail\crate.png";
         public static string StrMiner = @"F:\New folder\github\Windows\testProject\testProject\Detail\Miner.png";
+=======
+        public static string StrWall = @"D:\Working !\Window Progaming\testProject\testProject\Detail\wall2.png";
+        public static string StrCrate = @"D:\Working !\Window Progaming\testProject\testProject\Detail\crate.png";
+        public static string StrMiner = @"D:\Working !\Window Progaming\testProject\testProject\Detail\Miner.png";
+        public static string StrHole = @"D:\Working !\Window Progaming\testProject\testProject\Detail\hole.png";
+>>>>>>> 8c6cb22fe890a9f3d97762342c00f1a897f3f12a
     }
 }

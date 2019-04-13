@@ -19,3 +19,14 @@ F:\New folder\github\Windows\MidtermProject\Soudokan\Soudokan\obj\Debug\Soudokan
 F:\New folder\github\Windows\MidtermProject\Soudokan\Soudokan\obj\Debug\Soudokan.csproj.CoreCompileInputs.cache
 F:\New folder\github\Windows\MidtermProject\Soudokan\Soudokan\obj\Debug\Soudokan.exe
 F:\New folder\github\Windows\MidtermProject\Soudokan\Soudokan\obj\Debug\Soudokan.pdb
+D:\Tài Liệu Học Tập\Năm 2\Windows\MidtermProject\Soudokan\Soudokan\bin\Debug\Soudokan.exe.config
+D:\Tài Liệu Học Tập\Năm 2\Windows\MidtermProject\Soudokan\Soudokan\bin\Debug\Soudokan.exe
+D:\Tài Liệu Học Tập\Năm 2\Windows\MidtermProject\Soudokan\Soudokan\bin\Debug\Soudokan.pdb
+D:\Tài Liệu Học Tập\Năm 2\Windows\MidtermProject\Soudokan\Soudokan\obj\Debug\Soudokan.csprojAssemblyReference.cache
+D:\Tài Liệu Học Tập\Năm 2\Windows\MidtermProject\Soudokan\Soudokan\obj\Debug\Soudokan.GameOver.resources
+D:\Tài Liệu Học Tập\Năm 2\Windows\MidtermProject\Soudokan\Soudokan\obj\Debug\Soudokan.GameWin.resources
+D:\Tài Liệu Học Tập\Năm 2\Windows\MidtermProject\Soudokan\Soudokan\obj\Debug\Soudokan.Properties.Resources.resources
+D:\Tài Liệu Học Tập\Năm 2\Windows\MidtermProject\Soudokan\Soudokan\obj\Debug\Soudokan.csproj.GenerateResource.cache
+D:\Tài Liệu Học Tập\Năm 2\Windows\MidtermProject\Soudokan\Soudokan\obj\Debug\Soudokan.csproj.CoreCompileInputs.cache
+D:\Tài Liệu Học Tập\Năm 2\Windows\MidtermProject\Soudokan\Soudokan\obj\Debug\Soudokan.exe
+D:\Tài Liệu Học Tập\Năm 2\Windows\MidtermProject\Soudokan\Soudokan\obj\Debug\Soudokan.pdb

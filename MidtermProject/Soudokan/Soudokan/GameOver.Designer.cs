@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameOver));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbUser = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbLevel = new System.Windows.Forms.Label();
             this.btnNewGame = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
@@ -45,11 +45,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("Rockstone", 75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.PeachPuff;
-            this.label1.Location = new System.Drawing.Point(378, 468);
+            this.label1.Location = new System.Drawing.Point(372, 488);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(650, 138);
+            this.label1.Size = new System.Drawing.Size(663, 113);
             this.label1.TabIndex = 0;
             this.label1.Text = "GAME OVER";
             // 
@@ -65,21 +65,18 @@
             this.label2.Size = new System.Drawing.Size(165, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Your Name: ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // lbUser
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Font = new System.Drawing.Font("VNI-Cooper", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(650, 256);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 39);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "username";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lbUser.AutoSize = true;
+            this.lbUser.BackColor = System.Drawing.Color.Transparent;
+            this.lbUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbUser.Location = new System.Drawing.Point(650, 264);
+            this.lbUser.Name = "lbUser";
+            this.lbUser.Size = new System.Drawing.Size(0, 31);
+            this.lbUser.TabIndex = 2;
             // 
             // label4
             // 
@@ -93,21 +90,18 @@
             this.label4.Size = new System.Drawing.Size(104, 36);
             this.label4.TabIndex = 3;
             this.label4.Text = "Point: ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label5
+            // lbLevel
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label5.Font = new System.Drawing.Font("VNI-Cooper", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(650, 298);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 39);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Level";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.lbLevel.AutoSize = true;
+            this.lbLevel.BackColor = System.Drawing.Color.Transparent;
+            this.lbLevel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lbLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLevel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbLevel.Location = new System.Drawing.Point(650, 302);
+            this.lbLevel.Name = "lbLevel";
+            this.lbLevel.Size = new System.Drawing.Size(0, 31);
+            this.lbLevel.TabIndex = 4;
             // 
             // btnNewGame
             // 
@@ -123,7 +117,6 @@
             this.btnNewGame.TabIndex = 5;
             this.btnNewGame.Text = "NEW GAME";
             this.btnNewGame.UseVisualStyleBackColor = false;
-            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // btnQuit
             // 
@@ -138,7 +131,6 @@
             this.btnQuit.TabIndex = 6;
             this.btnQuit.Text = "QUIT";
             this.btnQuit.UseVisualStyleBackColor = false;
-            this.btnQuit.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnLogOut
             // 
@@ -152,7 +144,6 @@
             this.btnLogOut.TabIndex = 7;
             this.btnLogOut.Text = "LOG OUT";
             this.btnLogOut.UseVisualStyleBackColor = false;
-            this.btnLogOut.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnMenu
             // 
@@ -167,27 +158,27 @@
             this.btnMenu.Text = "MENU";
             this.btnMenu.UseVisualStyleBackColor = false;
             // 
-            // Form1
+            // GameOver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1276, 636);
+            this.ClientSize = new System.Drawing.Size(1289, 653);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnNewGame);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbLevel);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "GameOver";
+            this.Text = "GameOver";
+            this.Load += new System.EventHandler(this.GameOver_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,9 +188,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbUser;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbLevel;
         private System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Button btnLogOut;

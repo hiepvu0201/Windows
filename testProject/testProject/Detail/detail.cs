@@ -35,6 +35,10 @@ namespace testProject.Detail
                 //picture.Image = new Bitmap(Application.StartupPath + "\\Detail\\miner.png");
                 picture.Image = Image.FromFile(Model.StrMiner);
             }
+            else if (type=="hole")
+            {
+                picture.Image = Image.FromFile(Model.StrHole);
+            }
             picture.SizeMode = PictureBoxSizeMode.Zoom;
             picture.TabIndex = 0;
             picture.TabStop = false;

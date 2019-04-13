@@ -14,11 +14,11 @@ namespace testProject.Map
         private int[,] a;
         public MapGame()
         {
-            A = new int[10, 10] {
+            a = new int[10, 10] {
                                 { 0,0,1,1,1,1,1,0,0,0 },
                                 { 1,1,1,3,0,0,1,0,0,0 },
-                                { 1,0,2,0,1,0,1,1,0,0 },
-                                { 1,0,1,0,0,0,0,1,0,0 },
+                                { 1,0,0,2,1,0,1,1,0,0 },
+                                { 1,0,1,0,0,0,4,1,0,0 },
                                 { 1,0,0,0,0,1,0,1,0,0 },
                                 { 1,1,0,1,0,0,0,1,0,0 },
                                 { 0,1,0,0,0,1,1,1,0,0 },
@@ -43,6 +43,36 @@ namespace testProject.Map
                 }
             }
             return count;
+        }
+        public int holeCount()
+        {
+            int count = 0;
+            for (int i = 0; i < a.GetLength(1); i++)
+            {
+                for (int j = 0; j < a.GetLength(0); j++)
+                {
+                    if (a[i, j] == 4)
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+
+        }
+        public void clearHole()
+        {
+
+            for (int i = 0; i < a.GetLength(1); i++)
+            {
+                for (int j = 0; j < a.GetLength(0); j++)
+                {
+                    if (A[i, j] == 4)
+                    {
+                        this.A[i, j] = 0;
+                    }
+                }
+            }
         }
     }
 }

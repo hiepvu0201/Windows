@@ -37,12 +37,14 @@ namespace testProject
             render.renderObj(mainPan, map.A, "crate");
             render.renderObj(mainPan, map.A, "miner");
             render.renderObj(mainPan, map.A, "hole");
+            render.renderObj(mainPan, map.A, "background");
             map.clearHole();
             gp = mainPan.CreateGraphics();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            timer3.Start();
             //PictureBox[] list = render.createList();
             //MessageBox.Show($"crate1:{list[0].Name}");
         }
@@ -71,6 +73,9 @@ namespace testProject
                 bool winFlag = checker.check(numBerCrates, listCrates, listHoles);
                 if (winFlag == true)
                 {
+                    timer3.Stop();
+                    this.ptbRightForm.Image=Image.FromFile(@"F:\New folder\github\Windows\testProject\testProject\Detail\finish.gif");
+                    this.Controls.Add(ptbRightForm);
                     MessageBox.Show("winner!");
                 }
             }
@@ -296,6 +301,19 @@ namespace testProject
                 default:
                     break;
             }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            Label lbl = new Label();
+
+        }
+
+        int i = 300 ;
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            i--;
+            lblTimer.Text = i.ToString();
         }
     }
     public class CellGame

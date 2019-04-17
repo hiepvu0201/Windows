@@ -112,7 +112,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Detail\crate.png" />
-    <Content Include="Detail\miner.png" />
     <Content Include="Detail\wall2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

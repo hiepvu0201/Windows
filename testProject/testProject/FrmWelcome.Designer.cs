@@ -88,6 +88,7 @@
             this.Name = "FrmWelcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmWelcome";
+            this.Load += new System.EventHandler(this.FrmWelcome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbWelcome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

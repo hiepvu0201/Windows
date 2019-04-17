@@ -13,6 +13,7 @@ using testProject.Logic;
 
 namespace testProject
 {
+
     public partial class Form1 : Form
     {
         Graphics gp;
@@ -28,6 +29,7 @@ namespace testProject
         int runCrate = 0;
         int runTime=0;
         string direction;
+        public static int curr_point = 0;
 
         public Form1()
         {
@@ -74,9 +76,12 @@ namespace testProject
                 if (winFlag == true)
                 {
                     timer3.Stop();
-                    this.ptbRightForm.Image=Image.FromFile(@"F:\New folder\github\Windows\testProject\testProject\Detail\finish.gif");
+                    curr_point++;
+                    this.ptbRightForm.Image=Image.FromFile(@"D:\GitHub\Windows\testProject\testProject\Detail\finish.gif");
                     this.Controls.Add(ptbRightForm);
-                    MessageBox.Show("winner!");
+                    this.Hide();
+                    FrmWin win = new FrmWin();
+                    win.ShowDialog();
                 }
             }
             else

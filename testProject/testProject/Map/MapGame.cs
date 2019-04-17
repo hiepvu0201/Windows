@@ -12,6 +12,7 @@ namespace testProject.Map
     class MapGame
     {
         private int[,] a;
+       
 
         public MapGame()
         {
@@ -27,7 +28,10 @@ namespace testProject.Map
                                 { 9,9,9,9,9,9,9,9,9,9 },
                                 { 9,9,9,9,9,9,9,9,9,9 }};
 
+           
         }
+       
+            
 
         public int[,] A { get => a; set => a = value; }
 

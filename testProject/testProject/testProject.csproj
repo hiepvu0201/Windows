@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,11 +72,22 @@
     <Compile Include="FrmWelcome.Designer.cs">
       <DependentUpon>FrmWelcome.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWin.Designer.cs">
+      <DependentUpon>FrmWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logic\Budget.cs" />
     <Compile Include="Logic\CheckWin.cs" />
     <Compile Include="Map\MapGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanlyUser.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanlyUser.dbml</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmWelcome.resx">
       <DependentUpon>FrmWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWin.resx">
+      <DependentUpon>FrmWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,6 +121,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QuanlyUser.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QuanlyUser.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanlyUser.dbml.layout">
+      <DependentUpon>QuanlyUser.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -114,6 +137,9 @@
     <Content Include="Detail\crate.png" />
     <Content Include="Detail\miner.png" />
     <Content Include="Detail\wall2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

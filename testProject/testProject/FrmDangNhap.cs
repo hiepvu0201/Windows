@@ -12,12 +12,13 @@ using System.Data.SqlClient;
 
 namespace testProject
 {
+
     public partial class FrmDangNhap : Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-S5V3TOI\SQLEXPRESS;" +
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-F3VTH4B;" +
             "Initial Catalog=SukobanGame;" +
             "Integrated Security=True");
-
+        public static string curr_user = "";
         public FrmDangNhap()
         {
             InitializeComponent();
@@ -37,6 +38,7 @@ namespace testProject
                 if (dataReader.Read() == true)
                 {
                     MessageBox.Show("Đăng nhập thành công!");
+                    curr_user = txtUser.Text;
                     //FrmMain.User = txtUser.Text;
                     //FrmMain.Pass = txtPass.Text;
                     txtUser.ResetText();
@@ -45,6 +47,7 @@ namespace testProject
                     this.Close();
                     Form1 form1 = new Form1();
                     form1.Show();
+
                 }
                 else
                 {
@@ -69,6 +72,11 @@ namespace testProject
             this.Close();
             FrmDangKy frmDangKy = new FrmDangKy();
             frmDangKy.Show();
+        }
+
+        private void FrmDangNhap_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

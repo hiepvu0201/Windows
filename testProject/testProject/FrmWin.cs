@@ -53,11 +53,10 @@ namespace testProject
 
         private void BtnMenu_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             FrmWelcome frmWelcome = new FrmWelcome();
             frmWelcome.ShowDialog();
             Form1.curr_point = 0;
-            this.Close();
         }
 
      

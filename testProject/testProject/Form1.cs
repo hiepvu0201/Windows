@@ -79,7 +79,7 @@ namespace testProject
                     this.lblScore.Text = curr_point.ToString();
                     this.ptbRightForm.Image=Image.FromFile(@"F:\New folder\github\Windows\testProject\testProject\Detail\finish.gif");
                     this.Controls.Add(ptbRightForm);
-                    this.Hide();
+                    this.Close();
                     FrmWin win = new FrmWin();
                     win.Show();
                 }
@@ -311,7 +311,6 @@ namespace testProject
         private void timer2_Tick(object sender, EventArgs e)
         {
             Label lbl = new Label();
-
         }
     }
     public class CellGame

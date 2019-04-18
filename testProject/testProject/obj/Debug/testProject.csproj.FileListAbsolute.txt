@@ -25,3 +25,4 @@ D:\GitHub\Windows\testProject\testProject\obj\Debug\testProject.exe
 D:\GitHub\Windows\testProject\testProject\obj\Debug\testProject.pdb
 D:\GitHub\Windows\testProject\testProject\obj\Debug\testProject.FrmWin.resources
 F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.FrmWin.resources
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.csprojAssemblyReference.cache

@@ -8,16 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using testProject.BSLayer;
+
+using System.Data.Linq;
+using System.Data.Linq.Mapping; 
 
 namespace testProject
 {
     public partial class FrmDangKy : Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-S5V3TOI\SQLEXPRESS;" +
-            "Initial Catalog=SukobanGame;" +
-            "Integrated Security=True");
-
         private int i = 10;
+        string err;
+        BLUser dbTP = new BLUser();
 
         public FrmDangKy()
         {
@@ -42,30 +44,13 @@ namespace testProject
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (!txtNewUser.Text.Trim().Equals(""))
-            {
-                if (conn.State == ConnectionState.Open)
-                    conn.Close();
-                conn.Open();
-
-                try
-                {
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = conn;
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "Insert Into dtbGame Values('" + txtNewUser.Text.Trim() + "',N'"
-                        + txtNewPasswords.Text.Trim() + "',N'"+ txtNewEmail.Text.Trim() + "',N'" + txtNewPhoneNumber.Text.Trim() +"')";
-                    cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Đã thêm xong!");
-                }
-                catch (SqlException)
-                {
-                    MessageBox.Show("Không thêm được. Lỗi rồi!");
-
-                }
-                conn.Close();
-            }
+            BLUser blUser = new BLUser();
+            blUser.ThemNguoiDung(this.txtNewUser.Text, this.txtNewPasswords.Text,this.txtNewPhoneNumber.Text,this.txtNewEmail.Text, 0.ToString(),ref err);
+            MessageBox.Show("Đã thêm xong!");
+            this.txtNewUser.ResetText();
+            this.txtNewPasswords.ResetText();
+            this.txtNewPhoneNumber.ResetText();
+            this.txtNewEmail.ResetText();
         }
     }
 }

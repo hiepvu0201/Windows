@@ -199,7 +199,7 @@
             this.lbWelcome.Name = "lbWelcome";
             this.lbWelcome.Size = new System.Drawing.Size(310, 32);
             this.lbWelcome.TabIndex = 12;
-            this.lbWelcome.Text = "Welcome to Sukoban !";
+            this.lbWelcome.Text = "Welcome to Sokoban !";
             // 
             // timer1
             // 

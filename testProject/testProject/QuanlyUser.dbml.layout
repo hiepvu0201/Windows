@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QuanlyUser">
+  <DataContextMoniker Name="/QuanlyUserDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ee5e6191-78db-4248-a503-9612ea2d588f" absoluteBounds="1.75, 1.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/QuanlyUserDataContext/dtbGame" />
+      <nestedChildShapes>
+        <elementListCompartment Id="308a3318-57ca-4877-b5fc-74e68bc2d80b" absoluteBounds="1.7650000000000001, 2.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

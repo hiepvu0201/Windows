@@ -34,10 +34,9 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblLevel = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.lblTimer = new System.Windows.Forms.Label();
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.ptbRightForm = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ptbRightForm)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,52 +71,47 @@
             this.timer2.Enabled = true;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(534, 130);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(87, 19);
-            this.lbl1.TabIndex = 2;
-            this.lbl1.Text = "Total Time";
-            // 
-            // lblTimer
-            // 
-            this.lblTimer.AutoSize = true;
-            this.lblTimer.BackColor = System.Drawing.Color.Transparent;
-            this.lblTimer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTimer.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.Location = new System.Drawing.Point(627, 123);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(24, 26);
-            this.lblTimer.TabIndex = 3;
-            this.lblTimer.Text = "0";
-            // 
-            // timer3
-            // 
-            this.timer3.Interval = 1000;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
             // ptbRightForm
             // 
             this.ptbRightForm.Image = ((System.Drawing.Image)(resources.GetObject("ptbRightForm.Image")));
-            this.ptbRightForm.Location = new System.Drawing.Point(516, 185);
+            this.ptbRightForm.Location = new System.Drawing.Point(516, 108);
             this.ptbRightForm.Name = "ptbRightForm";
             this.ptbRightForm.Size = new System.Drawing.Size(256, 256);
             this.ptbRightForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbRightForm.TabIndex = 4;
             this.ptbRightForm.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(583, 386);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 19);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Score: ";
+            // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblScore.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblScore.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Location = new System.Drawing.Point(653, 382);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(24, 26);
+            this.lblScore.TabIndex = 6;
+            this.lblScore.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 609);
+            this.Controls.Add(this.lblScore);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ptbRightForm);
-            this.Controls.Add(this.lblTimer);
-            this.Controls.Add(this.lbl1);
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.mainPan);
             this.DoubleBuffered = true;
@@ -139,10 +133,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.Label lblTimer;
-        private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.PictureBox ptbRightForm;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblScore;
     }
 }
 

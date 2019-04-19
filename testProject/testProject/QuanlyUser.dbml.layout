@@ -2,10 +2,10 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QuanlyUser">
   <DataContextMoniker Name="/QuanlyUserDataContext" />
   <nestedChildShapes>
-    <classShape Id="270438cf-1370-40b5-9f2a-056bee235c14" absoluteBounds="1.375, 1.75, 2, 1.7708968098958331">
+    <classShape Id="46a17d7f-3a16-400e-8a1d-9b432522bb10" absoluteBounds="2.125, 1.875, 2, 1.7708968098958331">
       <DataClassMoniker Name="/QuanlyUserDataContext/dtbGame" />
       <nestedChildShapes>
-        <elementListCompartment Id="ad30a354-eb45-4dc8-ae3d-3e7d43524ded" absoluteBounds="1.3900000000000001, 2.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="bb805971-2323-4845-aa33-5a9a4c4e6841" absoluteBounds="2.14, 2.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

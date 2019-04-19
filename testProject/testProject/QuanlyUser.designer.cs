@@ -36,7 +36,7 @@ namespace testProject
     #endregion
 		
 		public QuanlyUserDataContext() : 
-				base(global::testProject.Properties.Settings.Default.SukobanGameConnectionString2, mappingSource)
+				base(global::testProject.Properties.Settings.Default.SukobanGameConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

@@ -1,14 +1,14 @@
-C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\bin\Debug\testProject.exe.config
-C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\bin\Debug\testProject.exe
-C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\bin\Debug\testProject.pdb
-C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.Form1.resources
-C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.FrmDangKy.resources
-C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.FrmDangNhap.resources
-C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.FrmWelcome.resources
-C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.FrmWin.resources
-C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.Properties.Resources.resources
-C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.csproj.GenerateResource.Cache
-C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.csproj.CoreCompileInputs.cache
-C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.exe
-C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.pdb
-C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.csprojResolveAssemblyReference.cache
+F:\New folder\github\Windows\testProject\testProject\bin\Debug\testProject.exe.config
+F:\New folder\github\Windows\testProject\testProject\bin\Debug\testProject.exe
+F:\New folder\github\Windows\testProject\testProject\bin\Debug\testProject.pdb
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.csprojAssemblyReference.cache
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.Form1.resources
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.FrmDangKy.resources
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.FrmDangNhap.resources
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.FrmWelcome.resources
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.FrmWin.resources
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.Properties.Resources.resources
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.csproj.GenerateResource.cache
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.csproj.CoreCompileInputs.cache
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.exe
+F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.pdb

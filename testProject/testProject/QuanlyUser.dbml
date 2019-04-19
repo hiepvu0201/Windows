@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SukobanGame" Class="QuanlyUserDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=AMATERASU\SQLEXPRESS;Initial Catalog=SukobanGame;Integrated Security=True" SettingsObjectName="testProject.Properties.Settings" SettingsPropertyName="SukobanGameConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-S5V3TOI\SQLEXPRESS;Initial Catalog=SukobanGame;Integrated Security=True" SettingsObjectName="testProject.Properties.Settings" SettingsPropertyName="SukobanGameConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.dtbGame" Member="dtbGames">
     <Type Name="dtbGame">
       <Column Name="TaiKhoan" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

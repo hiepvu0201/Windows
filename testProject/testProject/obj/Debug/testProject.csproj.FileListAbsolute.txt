@@ -1,34 +1,6 @@
-F:\New folder\github\Windows\testProject\testProject\bin\Debug\testProject.exe.config
-F:\New folder\github\Windows\testProject\testProject\bin\Debug\testProject.exe
-F:\New folder\github\Windows\testProject\testProject\bin\Debug\testProject.pdb
-F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.Form1.resources
-F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.FrmDangKy.resources
-F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.FrmDangNhap.resources
-F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.FrmWelcome.resources
-F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.Properties.Resources.resources
-F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.csproj.GenerateResource.cache
-F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.csproj.CoreCompileInputs.cache
-F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.exe
-F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.pdb
-D:\GitHub\Windows\testProject\testProject\bin\Debug\testProject.exe.config
-D:\GitHub\Windows\testProject\testProject\bin\Debug\testProject.exe
-D:\GitHub\Windows\testProject\testProject\bin\Debug\testProject.pdb
-D:\GitHub\Windows\testProject\testProject\obj\Debug\testProject.csprojAssemblyReference.cache
-D:\GitHub\Windows\testProject\testProject\obj\Debug\testProject.Form1.resources
-D:\GitHub\Windows\testProject\testProject\obj\Debug\testProject.FrmDangKy.resources
-D:\GitHub\Windows\testProject\testProject\obj\Debug\testProject.FrmDangNhap.resources
-D:\GitHub\Windows\testProject\testProject\obj\Debug\testProject.FrmWelcome.resources
-D:\GitHub\Windows\testProject\testProject\obj\Debug\testProject.Properties.Resources.resources
-D:\GitHub\Windows\testProject\testProject\obj\Debug\testProject.csproj.GenerateResource.cache
-D:\GitHub\Windows\testProject\testProject\obj\Debug\testProject.csproj.CoreCompileInputs.cache
-D:\GitHub\Windows\testProject\testProject\obj\Debug\testProject.exe
-D:\GitHub\Windows\testProject\testProject\obj\Debug\testProject.pdb
-D:\GitHub\Windows\testProject\testProject\obj\Debug\testProject.FrmWin.resources
-<<<<<<< HEAD
 C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\bin\Debug\testProject.exe.config
 C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\bin\Debug\testProject.exe
 C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\bin\Debug\testProject.pdb
-C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.csprojResolveAssemblyReference.cache
 C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.Form1.resources
 C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.FrmDangKy.resources
 C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.FrmDangNhap.resources
@@ -39,7 +11,4 @@ C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\test
 C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.csproj.CoreCompileInputs.cache
 C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.exe
 C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.pdb
-=======
-F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.FrmWin.resources
-F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.csprojAssemblyReference.cache
->>>>>>> b819c3656e5ce0d5f66eb1f055bb4606da1534f3
+C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\obj\Debug\testProject.csprojResolveAssemblyReference.cache

@@ -30,11 +30,19 @@ namespace testProject
         int runTime=0;
         string direction;
         public static int curr_point = 0;
-
+        int[,] backupMap = new int[10, 10];
+        bool moving = false;
         public Form1()
         {
 
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //PictureBox[] list = render.createList();
+            //MessageBox.Show($"crate1:{list[0].Name}");
+            backupMap = map.A;
             render.renderObj(mainPan, map.A, "wall");
             render.renderObj(mainPan, map.A, "crate");
             render.renderObj(mainPan, map.A, "miner");
@@ -42,22 +50,13 @@ namespace testProject
             render.renderObj(mainPan, map.A, "background");
             map.clearHole();
             gp = mainPan.CreateGraphics();
-        }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            //PictureBox[] list = render.createList();
-            //MessageBox.Show($"crate1:{list[0].Name}");
         }
 
         private void mainPan_Paint(object sender, PaintEventArgs e)
         {
-
-
             matrix.drawTable(gp);
-            //render.renderObj(mainPan, map.a,"wall");
-            //render.renderObj(mainPan, map.a,"crate");
-            //render.renderObj(mainPan, map.a, "miner");
+
         }
 
 
@@ -67,6 +66,7 @@ namespace testProject
             if (runTime == 9)
             {
                 runTime = 0;
+                moving = false;
                 timer1.Stop();
                 PictureBox[] listCrates = render.createList();
                 PictureBox[] listHoles = render.createHole();
@@ -86,6 +86,7 @@ namespace testProject
             }
             else
             {
+                moving = true;
                 runTime++;
             }
         }
@@ -250,6 +251,10 @@ namespace testProject
         {
             Point cur;
             cur=render.Miner.Location;
+            if (moving == true)
+            {
+                return;
+            }
             switch (e.KeyCode)
             {
                 case Keys.Left:
@@ -296,12 +301,50 @@ namespace testProject
                     }
                     break;
                 case Keys.A:
+                    {
+                        ktCrate = 1;
+                        runCrate = 0;
+                        ktChay = 1;
+                        direction = "left";
+                        timer1.Interval = 4;
+                        timer1.Start();
+                    }
                     break;
                 case Keys.D:
+                    {
+                        runCrate = 0;
+                        ktCrate = 1;
+                        ktChay = 1;
+                        direction = "right";
+                        timer1.Interval = 4;
+                        timer1.Start();
+                    }
                     break;
                 case Keys.S:
+                    {
+                        ktCrate = 1;
+                        runCrate = 0;
+                        ktChay = 1;
+                        direction = "down";
+                        timer1.Interval = 4;
+                        timer1.Start();
+                    }
                     break;
                 case Keys.W:
+                    {
+                        ktCrate = 1;
+                        runCrate = 0;
+                        ktChay = 1;
+                        direction = "up";
+                        timer1.Interval = 4;
+                        timer1.Start();
+                    }
+                    break;
+                case Keys.F5:
+                    {
+
+                        Application.Restart();
+                    }
                     break;
                 default:
                     break;
@@ -312,6 +355,9 @@ namespace testProject
         {
             Label lbl = new Label();
         }
+
+
+
     }
     public class CellGame
     {

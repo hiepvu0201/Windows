@@ -43,10 +43,10 @@
             // mainPan
             // 
             this.mainPan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.mainPan.Location = new System.Drawing.Point(9, 10);
-            this.mainPan.Margin = new System.Windows.Forms.Padding(2);
+            this.mainPan.Location = new System.Drawing.Point(12, 12);
+            this.mainPan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainPan.Name = "mainPan";
-            this.mainPan.Size = new System.Drawing.Size(502, 502);
+            this.mainPan.Size = new System.Drawing.Size(669, 618);
             this.mainPan.TabIndex = 0;
             this.mainPan.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPan_Paint);
             // 
@@ -60,9 +60,10 @@
             this.lblLevel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblLevel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblLevel.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevel.Location = new System.Drawing.Point(575, 25);
+            this.lblLevel.Location = new System.Drawing.Point(767, 31);
+            this.lblLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(110, 34);
+            this.lblLevel.Size = new System.Drawing.Size(134, 42);
             this.lblLevel.TabIndex = 1;
             this.lblLevel.Text = "Level 1";
             // 
@@ -74,9 +75,10 @@
             // ptbRightForm
             // 
             this.ptbRightForm.Image = ((System.Drawing.Image)(resources.GetObject("ptbRightForm.Image")));
-            this.ptbRightForm.Location = new System.Drawing.Point(516, 108);
+            this.ptbRightForm.Location = new System.Drawing.Point(688, 133);
+            this.ptbRightForm.Margin = new System.Windows.Forms.Padding(4);
             this.ptbRightForm.Name = "ptbRightForm";
-            this.ptbRightForm.Size = new System.Drawing.Size(256, 256);
+            this.ptbRightForm.Size = new System.Drawing.Size(341, 315);
             this.ptbRightForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbRightForm.TabIndex = 4;
             this.ptbRightForm.TabStop = false;
@@ -86,9 +88,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(583, 386);
+            this.label1.Location = new System.Drawing.Point(777, 475);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 19);
+            this.label1.Size = new System.Drawing.Size(78, 24);
             this.label1.TabIndex = 5;
             this.label1.Text = "Score: ";
             // 
@@ -98,24 +101,25 @@
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblScore.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(653, 382);
+            this.lblScore.Location = new System.Drawing.Point(871, 470);
+            this.lblScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(24, 26);
+            this.lblScore.Size = new System.Drawing.Size(32, 34);
             this.lblScore.TabIndex = 6;
             this.lblScore.Text = "0";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 609);
+            this.ClientSize = new System.Drawing.Size(1032, 750);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ptbRightForm);
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.mainPan);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

@@ -28,29 +28,23 @@ namespace testProject
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            try
+            BLUser blUser = new BLUser();
+            if (blUser.KtDangNhap(this.txtUser.Text, this.txtPasswords.Text, ref err) == true)
             {
-                BLUser blUser = new BLUser();
-                if(blUser.KtDangNhap(this.txtUser.Text, this.txtPasswords.Text,ref err)==true)
-                {
-                    MessageBox.Show("Đăng nhập thành công!");
-                    curr_user=txtUser.Text;
-                    this.Close();
-                    Form1 form1 = new Form1();
-                    form1.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu");
-                }
-                txtUser.ResetText();
-                txtPasswords.ResetText();
-                txtUser.Focus();
+                MessageBox.Show("Đăng nhập thành công!");
+                curr_user = txtUser.Text;
+                this.Close();
+                Form1 form1 = new Form1();
+                form1.Show();
             }
-            catch (SqlException)
+            else
             {
-                MessageBox.Show("Lỗi rồi!");
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu");
             }
+            txtUser.ResetText();
+            txtPasswords.ResetText();
+            txtUser.Focus();
+
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)

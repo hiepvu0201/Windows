@@ -45,7 +45,8 @@ namespace testProject
         private void btnCreate_Click(object sender, EventArgs e)
         {
             BLUser blUser = new BLUser();
-            blUser.ThemNguoiDung(this.txtNewUser.Text, this.txtNewPasswords.Text,this.txtNewPhoneNumber.Text,this.txtNewEmail.Text, 0.ToString(),ref err);
+            blUser.ThemNguoiDung(this.txtNewUser.Text, this.txtNewPasswords.Text,
+                this.txtNewPhoneNumber.Text,this.txtNewEmail.Text, 0.ToString(),ref err);
             MessageBox.Show("Đã thêm xong!");
             this.txtNewUser.ResetText();
             this.txtNewPasswords.ResetText();

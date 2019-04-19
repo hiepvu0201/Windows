@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
+
 namespace testProject
 {
     public partial class FrmWin : Form
@@ -30,7 +33,6 @@ namespace testProject
                  where game.TaiKhoan == FrmDangNhap.curr_user
                  select game).SingleOrDefault();
             int temp = Int32.Parse(gameQuery.Point);
-           
 
             if (Form1.curr_point > temp)
             {
@@ -51,11 +53,10 @@ namespace testProject
 
         private void BtnMenu_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             FrmWelcome frmWelcome = new FrmWelcome();
             frmWelcome.ShowDialog();
             Form1.curr_point = 0;
-            this.Close();
         }
 
      

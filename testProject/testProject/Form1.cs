@@ -46,7 +46,6 @@ namespace testProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            timer3.Start();
             //PictureBox[] list = render.createList();
             //MessageBox.Show($"crate1:{list[0].Name}");
         }
@@ -75,13 +74,14 @@ namespace testProject
                 bool winFlag = checker.check(numBerCrates, listCrates, listHoles);
                 if (winFlag == true)
                 {
-                    timer3.Stop();
+         
                     curr_point++;
-                    this.ptbRightForm.Image=Image.FromFile(@"D:\GitHub\Windows\testProject\testProject\Detail\finish.gif");
+                    this.lblScore.Text = curr_point.ToString();
+                    this.ptbRightForm.Image=Image.FromFile(@"F:\New folder\github\Windows\testProject\testProject\Detail\finish.gif");
                     this.Controls.Add(ptbRightForm);
-                    this.Hide();
+                    this.Close();
                     FrmWin win = new FrmWin();
-                    win.ShowDialog();
+                    win.Show();
                 }
             }
             else
@@ -311,14 +311,6 @@ namespace testProject
         private void timer2_Tick(object sender, EventArgs e)
         {
             Label lbl = new Label();
-
-        }
-
-        int i = 300 ;
-        private void timer3_Tick(object sender, EventArgs e)
-        {
-            i--;
-            lblTimer.Text = i.ToString();
         }
     }
     public class CellGame

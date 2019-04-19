@@ -8,16 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using testProject.BSLayer;
 
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
 
 namespace testProject
 {
 
     public partial class FrmDangNhap : Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-F3VTH4B;" +
-            "Initial Catalog=SukobanGame;" +
-            "Integrated Security=True");
+        string err;
+        BLUser dbTP = new BLUser();
         public static string curr_user = "";
         public FrmDangNhap()
         {
@@ -28,42 +30,26 @@ namespace testProject
         {
             try
             {
-                conn.Open();
-
-                string sql = "Select *From dtbGame Where TaiKhoan='" +
-                    txtUser.Text.Trim() + "' AND MatKhau='" + txtPasswords.Text.Trim() + "'";
-
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                if (dataReader.Read() == true)
+                BLUser blUser = new BLUser();
+                if(blUser.KtDangNhap(this.txtUser.Text, this.txtPasswords.Text,ref err)==true)
                 {
                     MessageBox.Show("Đăng nhập thành công!");
-                    curr_user = txtUser.Text;
-                    //FrmMain.User = txtUser.Text;
-                    //FrmMain.Pass = txtPass.Text;
-                    txtUser.ResetText();
-                    txtPasswords.ResetText();
-                    txtUser.Focus();
+                    curr_user=txtUser.Text;
                     this.Close();
                     Form1 form1 = new Form1();
                     form1.Show();
-
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại");
-                    txtUser.Focus();
-                    txtPasswords.Focus();
-
+                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu");
                 }
+                txtUser.ResetText();
+                txtPasswords.ResetText();
+                txtUser.Focus();
             }
             catch (SqlException)
             {
                 MessageBox.Show("Lỗi rồi!");
-            }
-            finally
-            {
-                conn.Close();
             }
         }
 

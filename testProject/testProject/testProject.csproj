@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BSLayer\BLUser.cs" />
     <Compile Include="Detail\detail.cs" />
     <Compile Include="Detail\render.cs" />
     <Compile Include="Form1.cs">
@@ -135,7 +136,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Detail\crate.png" />
-    <Content Include="Detail\miner.png" />
     <Content Include="Detail\wall2.png" />
   </ItemGroup>
   <ItemGroup>

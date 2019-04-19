@@ -36,6 +36,11 @@ namespace testProject.Detail
             {
                 picture.Image = Image.FromFile(Model.StrHole);
             }
+            else if (type == "background")
+            {
+                picture.Image = Image.FromFile(Model.StrBackground);
+            }
+
             picture.SizeMode = PictureBoxSizeMode.Zoom;
             picture.TabIndex = 0;
             picture.TabStop = false;

@@ -13,6 +13,7 @@ using testProject.Logic;
 
 namespace testProject
 {
+
     public partial class Form1 : Form
     {
         Graphics gp;
@@ -28,6 +29,8 @@ namespace testProject
         int runCrate = 0;
         int runTime=0;
         string direction;
+        public static int curr_point = 0;
+
         public Form1()
         {
 
@@ -36,12 +39,14 @@ namespace testProject
             render.renderObj(mainPan, map.A, "crate");
             render.renderObj(mainPan, map.A, "miner");
             render.renderObj(mainPan, map.A, "hole");
+            render.renderObj(mainPan, map.A, "background");
             map.clearHole();
             gp = mainPan.CreateGraphics();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            timer3.Start();
             //PictureBox[] list = render.createList();
             //MessageBox.Show($"crate1:{list[0].Name}");
         }
@@ -70,7 +75,13 @@ namespace testProject
                 bool winFlag = checker.check(numBerCrates, listCrates, listHoles);
                 if (winFlag == true)
                 {
-                    MessageBox.Show("winner!");
+                    timer3.Stop();
+                    curr_point++;
+                    this.ptbRightForm.Image=Image.FromFile(@"D:\GitHub\Windows\testProject\testProject\Detail\finish.gif");
+                    this.Controls.Add(ptbRightForm);
+                    this.Hide();
+                    FrmWin win = new FrmWin();
+                    win.ShowDialog();
                 }
             }
             else
@@ -295,6 +306,19 @@ namespace testProject
                 default:
                     break;
             }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            Label lbl = new Label();
+
+        }
+
+        int i = 300 ;
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            i--;
+            lblTimer.Text = i.ToString();
         }
     }
     public class CellGame

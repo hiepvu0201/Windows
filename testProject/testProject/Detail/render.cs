@@ -234,13 +234,30 @@ namespace testProject.Detail
                 }
 
             }
+            else if (type == "background")
+            {
+                for (int i = 0; i < map.GetLength(1); i++)
+                {
+                    for (int j = 0; j < map.GetLength(0); j++)
+                    {
+                        if (map[i, j] == 9)
+                        {
+                            PictureBox background = new PictureBox();
+                            a = matrix.findCell(i, j);
+                            rendering.createBlock(ref background, $"background{i},{j}", a.X + 1, a.Y + 1, type);
+                            mainPan.Controls.Add(background);
+                        }
+                    }
+                }
+            }
         }
     }
     static class Model
     {
-        public static string StrWall = @"D:\Working !\Window Progaming\testProject\testProject\Detail\wall2.png";
-        public static string StrCrate = @"D:\Working !\Window Progaming\testProject\testProject\Detail\crate.png";
-        public static string StrMiner = @"D:\Working !\Window Progaming\testProject\testProject\Detail\Miner.png";
-        public static string StrHole = @"D:\Working !\Window Progaming\testProject\testProject\Detail\hole.png";
+        public static string StrWall = @"D:\GitHub\Windows\testProject\testProject\Detail\wall2.png";
+        public static string StrCrate = @"D:\GitHub\Windows\testProject\testProject\Detail\crate.png";
+        public static string StrMiner = @"D:\GitHub\Windows\testProject\testProject\Detail\Charactor.gif";
+        public static string StrHole = @"D:\GitHub\Windows\testProject\testProject\Detail\x.png";
+        public static string StrBackground = @"D:\GitHub\Windows\testProject\testProject\Detail\galaxy.jpg";
     }
 }

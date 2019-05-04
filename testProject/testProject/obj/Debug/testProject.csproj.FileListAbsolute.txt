@@ -12,3 +12,17 @@ F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.cspro
 F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.csproj.CoreCompileInputs.cache
 F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.exe
 F:\New folder\github\Windows\testProject\testProject\obj\Debug\testProject.pdb
+D:\Temp\Windows\testProject\testProject\bin\Debug\testProject.exe.config
+D:\Temp\Windows\testProject\testProject\bin\Debug\testProject.exe
+D:\Temp\Windows\testProject\testProject\bin\Debug\testProject.pdb
+D:\Temp\Windows\testProject\testProject\obj\Debug\testProject.csprojAssemblyReference.cache
+D:\Temp\Windows\testProject\testProject\obj\Debug\testProject.Form1.resources
+D:\Temp\Windows\testProject\testProject\obj\Debug\testProject.FrmDangKy.resources
+D:\Temp\Windows\testProject\testProject\obj\Debug\testProject.FrmDangNhap.resources
+D:\Temp\Windows\testProject\testProject\obj\Debug\testProject.FrmWelcome.resources
+D:\Temp\Windows\testProject\testProject\obj\Debug\testProject.FrmWin.resources
+D:\Temp\Windows\testProject\testProject\obj\Debug\testProject.Properties.Resources.resources
+D:\Temp\Windows\testProject\testProject\obj\Debug\testProject.csproj.GenerateResource.cache
+D:\Temp\Windows\testProject\testProject\obj\Debug\testProject.csproj.CoreCompileInputs.cache
+D:\Temp\Windows\testProject\testProject\obj\Debug\testProject.exe
+D:\Temp\Windows\testProject\testProject\obj\Debug\testProject.pdb

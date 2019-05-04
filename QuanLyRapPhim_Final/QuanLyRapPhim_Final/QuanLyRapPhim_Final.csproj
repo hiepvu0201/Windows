@@ -54,6 +54,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyRapPhimDataSet_DATVE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyRapPhimDataSet_DATVE.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyRapPhimDataSet_KHACHHANG.cs">
       <DependentUpon>QuanLyRapPhimDataSet_KHACHHANG.xsd</DependentUpon>
     </Compile>
@@ -77,6 +82,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyRapPhimDataSet_RAP.xsd</DependentUpon>
     </Compile>
+    <Compile Include="renderSeat\render.cs" />
     <Compile Include="User Controls\DatVeUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,6 +158,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QuanLyRapPhimDataSet_DATVE.xsc">
+      <DependentUpon>QuanLyRapPhimDataSet_DATVE.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyRapPhimDataSet_DATVE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyRapPhimDataSet_DATVE.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyRapPhimDataSet_DATVE.xss">
+      <DependentUpon>QuanLyRapPhimDataSet_DATVE.xsd</DependentUpon>
+    </None>
     <None Include="QuanLyRapPhimDataSet_KHACHHANG.xsc">
       <DependentUpon>QuanLyRapPhimDataSet_KHACHHANG.xsd</DependentUpon>
     </None>
@@ -200,8 +217,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataSet\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

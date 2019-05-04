@@ -65,5 +65,14 @@ namespace QuanLyRapPhim_Final
             quanLyRapUC1.BringToFront();
             lblHeader.Text = "Quản lý rạp";
         }
+
+        private void btnDatVe_Click(object sender, EventArgs e)
+        {
+            pnlClick.Height = btnDatVe.Height;
+            pnlClick.Top = btnDatVe.Top;
+            datVeUC1.BringToFront();
+            lblHeader.Text = "Đặt vé";
+
+        }
     }
 }

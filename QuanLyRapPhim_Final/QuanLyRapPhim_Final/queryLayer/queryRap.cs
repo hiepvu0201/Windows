@@ -19,5 +19,19 @@ namespace QuanLyRapPhim_Final.queryLayer
         {
             return db.ExecuteQueryDataSet("select MaRap from Rap", CommandType.Text);
         }
+        public DataSet findRap(string MaRap)
+        {
+            return db.ExecuteQueryDataSet($"select MaRap from Rap where MaRap='{MaRap.Trim()}'", CommandType.Text);
+        }
+        public DataSet findSoDayGhe(string MaRap)
+        {
+            return db.ExecuteQueryDataSet($"select SoDayGhe from Rap where MaRap='{MaRap.Trim()}'", CommandType.Text);
+        }
+        public DataSet findSoLuongGhe(string MaRap)
+        {
+            return db.ExecuteQueryDataSet($"select SoLuongGhe from Rap where MaRap='{MaRap.Trim()}'", CommandType.Text);
+        }
+
+
     }
 }

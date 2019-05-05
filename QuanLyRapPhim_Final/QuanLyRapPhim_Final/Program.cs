@@ -9,13 +9,17 @@ namespace QuanLyRapPhim_Final
 {
     static class Program
     {
-
+        public static Pen myPen;
+        public static Color myColor;
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
+            myColor = Color.Red;
+            myPen = new Pen(Program.myColor, 1);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

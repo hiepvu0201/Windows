@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyRapPhim_Final.User_Controls;
 using QuanLyRapPhim_Final.queryLayer;
+using QuanLyRapPhim_Final.renderSeat;
 
 namespace QuanLyRapPhim_Final.User_Controls
 {
@@ -16,7 +17,10 @@ namespace QuanLyRapPhim_Final.User_Controls
     {
         DataTable dtRap = null;
         queryRap dbRap = new queryRap();
-
+        Graphics gp;
+        private int hangGhe;
+        private int soGhe;
+        string alPha = "abcdefghijklmnopqrstuvwxyz";
         public DatVeUC()
         {
             InitializeComponent();
@@ -32,12 +36,37 @@ namespace QuanLyRapPhim_Final.User_Controls
             comboBox1.DataSource = dtRap;
             comboBox1.DisplayMember = "MaRap";
             comboBox1.ValueMember = "MaRap";
-            
+            gp = seatPanel.CreateGraphics();
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            dtRap = new DataTable();
+            dtRap.Clear();
+            DataSet ds = dbRap.findRap(comboBox1.Text);
+            dtRap = ds.Tables[0];
+            try
+            {
+                if(dtRap.Rows[0].ItemArray[0]!= null)
+                {
+                    ds = dbRap.findSoDayGhe(comboBox1.Text);
+                    dtRap = ds.Tables[0];
+
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+        private void seatPanel_Paint(object sender, PaintEventArgs e)
+        {
+            render matrix = new render(seatPanel.Width,seatPanel.Height);
+            matrix.drawTable(gp);
         }
     }
 }

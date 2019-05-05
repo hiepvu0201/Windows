@@ -20,6 +20,5 @@ namespace QuanLyRapPhim_Final.queryLayer
             return db.ExecuteQueryDataSet("select * from DatVe", CommandType.Text);
         }
 
-
     }
 }

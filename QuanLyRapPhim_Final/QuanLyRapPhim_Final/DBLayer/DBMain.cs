@@ -16,7 +16,7 @@ namespace QuanLyRapPhim_Final.DBLayer
         string cnstr = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyRapPhim;Integrated Security=True";
         SqlConnection conn = null;
         SqlDataAdapter daHoaDon = null;
-        DataTable dtHoaDon = null;
+        //DataTable dtHoaDon = null;
         SqlCommand comm = null;
         public DBMain()
         {

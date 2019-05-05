@@ -12,8 +12,6 @@ namespace QuanLyRapPhim_Final.renderSeat
     {
         private int row;
         private int col;
-        public static Pen myPen;
-        public static Color myColor;
 
         public int Row { get => row; set => row = value; }
         public int Col { get => col; set => col = value; }
@@ -21,38 +19,41 @@ namespace QuanLyRapPhim_Final.renderSeat
         public render()
         {
             
-            myColor = Color.Blue;
-            myPen = new Pen(myColor, 1);
         }
-        public render(int row,int col)
+        public render(int r,int c)
         {
-            this.Row = row;
-            this.Col = col;
+            this.row = r;
+            this.col = c;
         }
 
-        public void drawTable(Graphics gp)
+        public void drawTable( Graphics gp)
         {
-            CellGame cell = new CellGame();
+            Program.myColor = Color.Red;
+            Program.myPen= new Pen(Program.myColor, 1);
 
-            for (int i = 0; i <= cell.Line; i++)
+            CellTable cell = new CellTable();
+
+            for (int i = 0; i <= cell.LineCol; i++)
             {
-                gp.DrawLine(myPen, i * cell.CellWidth, 0, i * cell.CellWidth, Row * cell.CellHeight);
+                gp.DrawLine(Program.myPen, i * cell.CellWidth, 0, i * cell.CellWidth, Row * cell.CellHeight);
             }
 
-            for (int j = 0; j <= cell.Line; j++)
+            for (int j = 0; j <= cell.LineRow; j++)
             {
-                gp.DrawLine(myPen, 0, j * cell.CellHeight, Col * cell.CellWidth, j * cell.CellHeight);
+                gp.DrawLine(Program.myPen, 0, j * cell.CellHeight, Col * cell.CellWidth, j * cell.CellHeight);
             }
         }
 
-        public class CellGame
+        public class CellTable
         {
-            private int cellWidth = 50;
-            private int cellHeight = 50;
-            private int line = 10;
+            private int cellWidth = 75;
+            private int cellHeight = 75;
+            private int lineCol = 15;
+            private int lineRow = 5;
             public int CellWidth { get => cellWidth; set => cellWidth = value; }
             public int CellHeight { get => cellHeight; set => cellHeight = value; }
-            public int Line { get => line; set => line = value; }
+            public int LineCol { get => lineCol; set => lineCol = value; }
+            public int LineRow { get => lineRow; set => lineRow = value; }
         }
 
     }

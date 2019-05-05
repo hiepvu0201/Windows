@@ -64,7 +64,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(399, 29);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(744, 99);
+            this.dataGridView1.Size = new System.Drawing.Size(779, 99);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.Visible = false;
             // 
@@ -126,10 +126,12 @@
             // 
             // seatPanel
             // 
+            this.seatPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.seatPanel.Location = new System.Drawing.Point(61, 143);
             this.seatPanel.Name = "seatPanel";
-            this.seatPanel.Size = new System.Drawing.Size(965, 399);
+            this.seatPanel.Size = new System.Drawing.Size(1117, 458);
             this.seatPanel.TabIndex = 1;
+            this.seatPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.seatPanel_Paint);
             // 
             // comboBox1
             // 
@@ -138,6 +140,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(136, 24);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -158,7 +161,7 @@
             this.Controls.Add(this.seatPanel);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DatVeUC";
-            this.Size = new System.Drawing.Size(1212, 620);
+            this.Size = new System.Drawing.Size(1208, 634);
             this.Load += new System.EventHandler(this.DatVeUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datVeBindingSource)).EndInit();

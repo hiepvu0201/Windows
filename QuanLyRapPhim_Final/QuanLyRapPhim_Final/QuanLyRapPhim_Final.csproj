@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBLayer\DBMain.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +83,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyRapPhimDataSet_RAP.xsd</DependentUpon>
     </Compile>
+    <Compile Include="queryLayer\queryDatVe.cs" />
+    <Compile Include="queryLayer\queryRap.cs" />
     <Compile Include="renderSeat\render.cs" />
     <Compile Include="User Controls\DatVeUC.cs">
       <SubType>UserControl</SubType>

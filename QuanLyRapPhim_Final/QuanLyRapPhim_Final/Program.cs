@@ -16,8 +16,6 @@ namespace QuanLyRapPhim_Final
         [STAThread]
         static void Main()
         {
-            myColor = Color.Blue;
-            myPen = new Pen(myColor, 1);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.quanLyRapPhimDataSet_DATVE = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_DATVE();
-            this.datVeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.datVeTableAdapter = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_DATVETableAdapters.DatVeTableAdapter();
             this.maPhimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.suatChieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,10 +37,15 @@
             this.maRapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datVeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyRapPhimDataSet_DATVE = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_DATVE();
+            this.datVeTableAdapter = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_DATVETableAdapters.DatVeTableAdapter();
             this.seatPanel = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_DATVE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datVeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_DATVE)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -59,26 +61,12 @@
             this.dayDataGridViewTextBoxColumn,
             this.soDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.datVeBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(1042, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(399, 29);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(167, 99);
+            this.dataGridView1.Size = new System.Drawing.Size(744, 99);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.Visible = false;
-            // 
-            // quanLyRapPhimDataSet_DATVE
-            // 
-            this.quanLyRapPhimDataSet_DATVE.DataSetName = "QuanLyRapPhimDataSet_DATVE";
-            this.quanLyRapPhimDataSet_DATVE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // datVeBindingSource
-            // 
-            this.datVeBindingSource.DataMember = "DatVe";
-            this.datVeBindingSource.DataSource = this.quanLyRapPhimDataSet_DATVE;
-            // 
-            // datVeTableAdapter
-            // 
-            this.datVeTableAdapter.ClearBeforeFill = true;
             // 
             // maPhimDataGridViewTextBoxColumn
             // 
@@ -122,17 +110,50 @@
             this.soDataGridViewTextBoxColumn.HeaderText = "So";
             this.soDataGridViewTextBoxColumn.Name = "soDataGridViewTextBoxColumn";
             // 
+            // datVeBindingSource
+            // 
+            this.datVeBindingSource.DataMember = "DatVe";
+            this.datVeBindingSource.DataSource = this.quanLyRapPhimDataSet_DATVE;
+            // 
+            // quanLyRapPhimDataSet_DATVE
+            // 
+            this.quanLyRapPhimDataSet_DATVE.DataSetName = "QuanLyRapPhimDataSet_DATVE";
+            this.quanLyRapPhimDataSet_DATVE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // datVeTableAdapter
+            // 
+            this.datVeTableAdapter.ClearBeforeFill = true;
+            // 
             // seatPanel
             // 
-            this.seatPanel.Location = new System.Drawing.Point(47, 28);
+            this.seatPanel.Location = new System.Drawing.Point(61, 143);
             this.seatPanel.Name = "seatPanel";
-            this.seatPanel.Size = new System.Drawing.Size(989, 505);
+            this.seatPanel.Size = new System.Drawing.Size(965, 399);
             this.seatPanel.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(61, 29);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(136, 24);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Rạp:";
             // 
             // DatVeUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.seatPanel);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -140,9 +161,10 @@
             this.Size = new System.Drawing.Size(1212, 620);
             this.Load += new System.EventHandler(this.DatVeUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_DATVE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datVeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_DATVE)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -160,5 +182,7 @@
         private QuanLyRapPhimDataSet_DATVE quanLyRapPhimDataSet_DATVE;
         private QuanLyRapPhimDataSet_DATVETableAdapters.DatVeTableAdapter datVeTableAdapter;
         private System.Windows.Forms.Panel seatPanel;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

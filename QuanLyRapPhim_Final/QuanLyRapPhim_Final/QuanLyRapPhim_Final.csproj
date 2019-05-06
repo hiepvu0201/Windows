@@ -84,6 +84,7 @@
       <DependentUpon>QuanLyRapPhimDataSet_RAP.xsd</DependentUpon>
     </Compile>
     <Compile Include="queryLayer\queryDatVe.cs" />
+    <Compile Include="queryLayer\queryKhachHang.cs" />
     <Compile Include="queryLayer\queryRap.cs" />
     <Compile Include="renderSeat\createObject.cs" />
     <Compile Include="renderSeat\render.cs" />

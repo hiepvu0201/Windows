@@ -36,15 +36,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTenKH = new System.Windows.Forms.TextBox();
             this.dgv_KHACHHANG = new System.Windows.Forms.DataGridView();
-            this.quanLyRapPhimDataSet_KHACHHANG = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_KHACHHANG();
-            this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.khachHangTableAdapter = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_KHACHHANGTableAdapters.KhachHangTableAdapter();
             this.maKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hovaLotKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyRapPhimDataSet_KHACHHANG = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_KHACHHANG();
+            this.khachHangTableAdapter = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_KHACHHANGTableAdapters.KhachHangTableAdapter();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KHACHHANG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_KHACHHANG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_KHACHHANG)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -104,6 +109,7 @@
             // dgv_KHACHHANG
             // 
             this.dgv_KHACHHANG.AutoGenerateColumns = false;
+            this.dgv_KHACHHANG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_KHACHHANG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_KHACHHANG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maKHDataGridViewTextBoxColumn,
@@ -112,22 +118,9 @@
             this.dgv_KHACHHANG.DataSource = this.khachHangBindingSource;
             this.dgv_KHACHHANG.Location = new System.Drawing.Point(33, 182);
             this.dgv_KHACHHANG.Name = "dgv_KHACHHANG";
-            this.dgv_KHACHHANG.Size = new System.Drawing.Size(341, 150);
+            this.dgv_KHACHHANG.Size = new System.Drawing.Size(545, 233);
             this.dgv_KHACHHANG.TabIndex = 6;
-            // 
-            // quanLyRapPhimDataSet_KHACHHANG
-            // 
-            this.quanLyRapPhimDataSet_KHACHHANG.DataSetName = "QuanLyRapPhimDataSet_KHACHHANG";
-            this.quanLyRapPhimDataSet_KHACHHANG.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // khachHangBindingSource
-            // 
-            this.khachHangBindingSource.DataMember = "KhachHang";
-            this.khachHangBindingSource.DataSource = this.quanLyRapPhimDataSet_KHACHHANG;
-            // 
-            // khachHangTableAdapter
-            // 
-            this.khachHangTableAdapter.ClearBeforeFill = true;
+            this.dgv_KHACHHANG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_KHACHHANG_CellClick);
             // 
             // maKHDataGridViewTextBoxColumn
             // 
@@ -147,10 +140,78 @@
             this.tenKHDataGridViewTextBoxColumn.HeaderText = "TenKH";
             this.tenKHDataGridViewTextBoxColumn.Name = "tenKHDataGridViewTextBoxColumn";
             // 
+            // khachHangBindingSource
+            // 
+            this.khachHangBindingSource.DataMember = "KhachHang";
+            this.khachHangBindingSource.DataSource = this.quanLyRapPhimDataSet_KHACHHANG;
+            // 
+            // quanLyRapPhimDataSet_KHACHHANG
+            // 
+            this.quanLyRapPhimDataSet_KHACHHANG.DataSetName = "QuanLyRapPhimDataSet_KHACHHANG";
+            this.quanLyRapPhimDataSet_KHACHHANG.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // khachHangTableAdapter
+            // 
+            this.khachHangTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(572, 71);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 55);
+            this.btnThem.TabIndex = 7;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.BtnThem_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(786, 71);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 55);
+            this.btnSua.TabIndex = 8;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.BtnSua_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(736, 157);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 55);
+            this.btnLuu.TabIndex = 9;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.BtnLuu_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(682, 71);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 55);
+            this.btnXoa.TabIndex = 10;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(627, 157);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(75, 55);
+            this.btnHuy.TabIndex = 11;
+            this.btnHuy.Text = "Huỷ";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.BtnHuy_Click);
+            // 
             // QuanLyKhachHangUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgv_KHACHHANG);
             this.Controls.Add(this.txtTenKH);
             this.Controls.Add(this.label3);
@@ -164,8 +225,8 @@
             this.Size = new System.Drawing.Size(896, 504);
             this.Load += new System.EventHandler(this.QuanLyKhachHangUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KHACHHANG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_KHACHHANG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_KHACHHANG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +247,10 @@
         private System.Windows.Forms.BindingSource khachHangBindingSource;
         private QuanLyRapPhimDataSet_KHACHHANG quanLyRapPhimDataSet_KHACHHANG;
         private QuanLyRapPhimDataSet_KHACHHANGTableAdapters.KhachHangTableAdapter khachHangTableAdapter;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnHuy;
     }
 }

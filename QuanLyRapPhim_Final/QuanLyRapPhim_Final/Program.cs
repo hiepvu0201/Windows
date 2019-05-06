@@ -11,7 +11,8 @@ namespace QuanLyRapPhim_Final
     {
         public static Pen myPen;
         public static Color myColor;
-        
+        public static int hangGhe = 0;
+        public static int soGhe = 0;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

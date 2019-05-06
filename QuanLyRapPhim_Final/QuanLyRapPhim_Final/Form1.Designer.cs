@@ -38,16 +38,16 @@
             this.btnQuanLyPhim = new System.Windows.Forms.Button();
             this.btnWelcome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelHeader = new System.Windows.Forms.Panel();
-            this.pbClose = new System.Windows.Forms.PictureBox();
-            this.lblHeader = new System.Windows.Forms.Label();
             this.datVeUC1 = new QuanLyRapPhim_Final.User_Controls.DatVeUC();
             this.quanLyRapUC1 = new QuanLyRapPhim_Final.User_Controls.QuanLyRapUC();
             this.quanLyNhanVienUC1 = new QuanLyRapPhim_Final.User_Controls.QuanLyNhanVienUC();
             this.quanLyKhachHangUC1 = new QuanLyRapPhim_Final.User_Controls.QuanLyKhachHangUC();
             this.phimUC1 = new QuanLyRapPhim_Final.User_Controls.PhimUC();
             this.welcomeUC1 = new QuanLyRapPhim_Final.User_Controls.WelcomeUC();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelHeader = new System.Windows.Forms.Panel();
+            this.pbClose = new System.Windows.Forms.PictureBox();
+            this.lblHeader = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelHeader.SuspendLayout();
@@ -175,53 +175,6 @@
             this.panel2.Size = new System.Drawing.Size(1208, 756);
             this.panel2.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label1.Location = new System.Drawing.Point(1, -1);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1195, 75);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "PHẦN MỀM QUẢN LÝ RẠP PHIM";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelHeader
-            // 
-            this.panelHeader.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.panelHeader.Controls.Add(this.pbClose);
-            this.panelHeader.Controls.Add(this.lblHeader);
-            this.panelHeader.Location = new System.Drawing.Point(4, 79);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(4);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1195, 60);
-            this.panelHeader.TabIndex = 1;
-            // 
-            // pbClose
-            // 
-            this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
-            this.pbClose.Location = new System.Drawing.Point(1084, -1);
-            this.pbClose.Margin = new System.Windows.Forms.Padding(4);
-            this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(76, 58);
-            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbClose.TabIndex = 1;
-            this.pbClose.TabStop = false;
-            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
-            // 
-            // lblHeader
-            // 
-            this.lblHeader.AutoSize = true;
-            this.lblHeader.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.Location = new System.Drawing.Point(63, 12);
-            this.lblHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(149, 38);
-            this.lblHeader.TabIndex = 0;
-            this.lblHeader.Text = "Welcome";
-            // 
             // datVeUC1
             // 
             this.datVeUC1.Location = new System.Drawing.Point(2, 136);
@@ -272,6 +225,54 @@
             this.welcomeUC1.Name = "welcomeUC1";
             this.welcomeUC1.Size = new System.Drawing.Size(1195, 620);
             this.welcomeUC1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label1.Location = new System.Drawing.Point(1, -1);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1195, 75);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "PHẦN MỀM QUẢN LÝ RẠP PHIM";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelHeader
+            // 
+            this.panelHeader.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.panelHeader.Controls.Add(this.pbClose);
+            this.panelHeader.Controls.Add(this.lblHeader);
+            this.panelHeader.Location = new System.Drawing.Point(4, 79);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(4);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(1195, 60);
+            this.panelHeader.TabIndex = 1;
+            // 
+            // pbClose
+            // 
+            this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
+            this.pbClose.Location = new System.Drawing.Point(1084, -1);
+            this.pbClose.Margin = new System.Windows.Forms.Padding(4);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(76, 58);
+            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbClose.TabIndex = 1;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            // 
+            // lblHeader
+            // 
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Location = new System.Drawing.Point(63, 12);
+            this.lblHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(149, 38);
+            this.lblHeader.TabIndex = 0;
+            this.lblHeader.Text = "Welcome";
             // 
             // Form1
             // 

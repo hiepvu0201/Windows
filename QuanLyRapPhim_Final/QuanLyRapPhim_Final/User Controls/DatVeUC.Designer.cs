@@ -61,10 +61,10 @@
             this.dayDataGridViewTextBoxColumn,
             this.soDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.datVeBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(399, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(1180, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(779, 99);
+            this.dataGridView1.Size = new System.Drawing.Size(25, 17);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.Visible = false;
             // 
@@ -127,9 +127,9 @@
             // seatPanel
             // 
             this.seatPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.seatPanel.Location = new System.Drawing.Point(61, 143);
+            this.seatPanel.Location = new System.Drawing.Point(20, 139);
             this.seatPanel.Name = "seatPanel";
-            this.seatPanel.Size = new System.Drawing.Size(1117, 458);
+            this.seatPanel.Size = new System.Drawing.Size(1158, 462);
             this.seatPanel.TabIndex = 1;
             this.seatPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.seatPanel_Paint);
             // 
@@ -140,7 +140,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(136, 24);
             this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // label1
             // 

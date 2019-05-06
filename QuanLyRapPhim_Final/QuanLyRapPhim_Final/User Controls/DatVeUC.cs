@@ -18,9 +18,7 @@ namespace QuanLyRapPhim_Final.User_Controls
         DataTable dtRap = null;
         queryRap dbRap = new queryRap();
         Graphics gp;
-        private int hangGhe;
-        private int soGhe;
-        string alPha = "abcdefghijklmnopqrstuvwxyz";
+
         public DatVeUC()
         {
             InitializeComponent();
@@ -37,28 +35,23 @@ namespace QuanLyRapPhim_Final.User_Controls
             comboBox1.DisplayMember = "MaRap";
             comboBox1.ValueMember = "MaRap";
             gp = seatPanel.CreateGraphics();
-
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             dtRap = new DataTable();
             dtRap.Clear();
-            DataSet ds = dbRap.findRap(comboBox1.Text);
+            DataSet ds = dbRap.findRap(comboBox1.SelectedValue.ToString());
             dtRap = ds.Tables[0];
-            try
+            if (dtRap.Rows.Count!=0)
             {
-                if(dtRap.Rows[0].ItemArray[0]!= null)
-                {
-                    ds = dbRap.findSoDayGhe(comboBox1.Text);
-                    dtRap = ds.Tables[0];
-
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
+                ds = dbRap.findSoDayGhe(comboBox1.SelectedValue.ToString());
+                dtRap = ds.Tables[0];
+                Program.hangGhe = Convert.ToInt32(dtRap.Rows[0].ItemArray[0].ToString());
+                ds = dbRap.findSoLuongGhe(comboBox1.SelectedValue.ToString());
+                dtRap = ds.Tables[0];
+                Program.soGhe = Convert.ToInt32(dtRap.Rows[0].ItemArray[0].ToString());
+                seatPanel.Refresh();
             }
 
         }
@@ -66,6 +59,8 @@ namespace QuanLyRapPhim_Final.User_Controls
         private void seatPanel_Paint(object sender, PaintEventArgs e)
         {
             render matrix = new render(seatPanel.Width,seatPanel.Height);
+
+
             matrix.drawTable(gp);
         }
     }

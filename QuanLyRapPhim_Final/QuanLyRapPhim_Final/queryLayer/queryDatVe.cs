@@ -19,6 +19,9 @@ namespace QuanLyRapPhim_Final.queryLayer
         {
             return db.ExecuteQueryDataSet("select * from DatVe", CommandType.Text);
         }
-
+        public DataSet findDay(string MaRap)
+        {
+            return db.ExecuteQueryDataSet($"select Day from DatVe where MaRap='{MaRap.Trim()}'",CommandType.Text);
+        }
     }
 }

@@ -5,21 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using QuanLyRapPhim_Final.User_Controls;
 using System.Windows.Forms;
+using System.Drawing;
+using QuanLyRapPhim_Final.renderSeat;
 
 namespace QuanLyRapPhim_Final.renderSeat
 {
-    class createObject
+    class ButtonObject
     {
-        
-        public Button createButton (ref Button btn)
+        render.CellTable cell = new render.CellTable();
+        public Button CreateButton (ref Button btn,string name,Point p)
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatVeUC));
-            btn = new Button();
-            btn.Location = new System.Drawing.Point(255, 160);
+            //btn = new Button();
+            btn.Location = new Point(p.X, p.Y);
             btn.Name = "button1";
-            btn.Size = new System.Drawing.Size(75, 23);
+            btn.Size = new Size(cell.CellWidth, cell.CellHeight);
             btn.TabIndex = 0;
-            btn.Text = "button1";
+            btn.Text = name;
             btn.UseVisualStyleBackColor = true;
             return btn;
         }

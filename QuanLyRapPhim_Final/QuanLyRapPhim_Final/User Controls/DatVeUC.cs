@@ -26,6 +26,7 @@ namespace QuanLyRapPhim_Final.User_Controls
 
         private void DatVeUC_Load(object sender, EventArgs e)
         {
+
             this.datVeTableAdapter.Fill(this.quanLyRapPhimDataSet_DATVE.DatVe);
             dtRap = new DataTable();
             dtRap.Clear();
@@ -35,10 +36,13 @@ namespace QuanLyRapPhim_Final.User_Controls
             comboBox1.DisplayMember = "MaRap";
             comboBox1.ValueMember = "MaRap";
             gp = seatPanel.CreateGraphics();
+            //seatLoader.renderSeat(ref seatPanel);
         }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+            
+            render seatLoader = new render();
             dtRap = new DataTable();
             dtRap.Clear();
             DataSet ds = dbRap.findRap(comboBox1.SelectedValue.ToString());
@@ -51,7 +55,10 @@ namespace QuanLyRapPhim_Final.User_Controls
                 ds = dbRap.findSoLuongGhe(comboBox1.SelectedValue.ToString());
                 dtRap = ds.Tables[0];
                 Program.soGhe = Convert.ToInt32(dtRap.Rows[0].ItemArray[0].ToString());
+                seatLoader.removeSeat(ref seatPanel);
                 seatPanel.Refresh();
+                seatLoader.renderSeat(ref seatPanel);
+
             }
 
         }
@@ -59,8 +66,6 @@ namespace QuanLyRapPhim_Final.User_Controls
         private void seatPanel_Paint(object sender, PaintEventArgs e)
         {
             render matrix = new render(seatPanel.Width,seatPanel.Height);
-
-
             matrix.drawTable(gp);
         }
     }

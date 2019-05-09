@@ -19,6 +19,7 @@ namespace QuanLyRapPhim_Final
 
         private void btnWelcome_Click(object sender, EventArgs e)
         {
+            btnWelcome.BackColor = Color.Cyan;
             pnlClick.Height = btnWelcome.Height;
             pnlClick.Top = btnWelcome.Top;
             welcomeUC1.BringToFront();
@@ -36,6 +37,7 @@ namespace QuanLyRapPhim_Final
 
         private void btnQuanLyPhim_Click(object sender, EventArgs e)
         {
+       
             pnlClick.Height = btnQuanLyPhim.Height;
             pnlClick.Top = btnQuanLyPhim.Top;
             phimUC1.BringToFront();
@@ -72,6 +74,11 @@ namespace QuanLyRapPhim_Final
             pnlClick.Top = btnDatVe.Top;
             datVeUC1.BringToFront();
             lblHeader.Text = "Đặt vé";
+
+        }
+
+        private void DatVeUC1_Load(object sender, EventArgs e)
+        {
 
         }
     }

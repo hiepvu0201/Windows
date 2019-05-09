@@ -98,6 +98,7 @@
             // dgv_PHIM
             // 
             this.dgv_PHIM.AutoGenerateColumns = false;
+            this.dgv_PHIM.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_PHIM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_PHIM.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tenPhimDataGridViewTextBoxColumn,
@@ -107,7 +108,7 @@
             this.dgv_PHIM.DataSource = this.phimBindingSource;
             this.dgv_PHIM.Location = new System.Drawing.Point(14, 280);
             this.dgv_PHIM.Name = "dgv_PHIM";
-            this.dgv_PHIM.Size = new System.Drawing.Size(444, 150);
+            this.dgv_PHIM.Size = new System.Drawing.Size(762, 202);
             this.dgv_PHIM.TabIndex = 4;
             // 
             // tenPhimDataGridViewTextBoxColumn

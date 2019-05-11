@@ -6,22 +6,18 @@ using System.Threading.Tasks;
 using QuanLyRapPhim_Final.DBLayer;
 using System.Data;
 
-namespace QuanLyRapPhim_Final.queryLayer
+namespace QuanLyRapPhim_Final.BSLayer
 {
-    class queryDatVe
+    class BLDatVe
     {
         DBMain db = null;
-        public queryDatVe()
+        public BLDatVe()
         {
             db = new DBMain();
         }
-        public DataSet LayDatVe()
+        public DataSet LayThongTinVe()
         {
             return db.ExecuteQueryDataSet("select * from DatVe", CommandType.Text);
-        }
-        public DataSet findDay(string MaRap)
-        {
-            return db.ExecuteQueryDataSet($"select Day from DatVe where MaRap='{MaRap.Trim()}'",CommandType.Text);
         }
     }
 }

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 using QuanLyRapPhim_Final.DBLayer;
 using System.Data;
 
-namespace QuanLyRapPhim_Final.queryLayer
+namespace QuanLyRapPhim_Final.BSLayer
 {
-    class queryKhachHang
+    class BLKhachHang
     {
         DBMain db = null;
-        public queryKhachHang()
+        public BLKhachHang()
         {
             db = new DBMain();
         }
@@ -25,7 +25,16 @@ namespace QuanLyRapPhim_Final.queryLayer
                 $"Insert Into KhachHang Values " +
                 "( " + " '" + MaKH + " ' ,N'" + HovaTenLotKH +"',N' " + TenKH + "') ";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-
+        }
+        public bool XoaKhachHang(ref string err, string MaKH)
+        {
+            string sqlString = "Delete From KhachHang Where MaKH='" + MaKH + "'";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
+        public bool CapNhatKhachHang(string MaKH, string TenKH, ref string err)
+        {
+            string sqlString = "Update KhachHang Set TenKH=N'" + TenKH + "' Where MaKH='" + MaKH + "'";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
     }
 }

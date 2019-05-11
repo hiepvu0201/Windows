@@ -36,15 +36,21 @@
             this.txtHovalotNV = new System.Windows.Forms.TextBox();
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.dgv_NHANVIEN = new System.Windows.Forms.DataGridView();
-            this.quanLyRapPhimDataSet_NHANVIEN = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_NHANVIEN();
-            this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nhanVienTableAdapter = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_NHANVIENTableAdapters.NhanVienTableAdapter();
             this.hovaLotNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyRapPhimDataSet_NHANVIEN = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_NHANVIEN();
+            this.nhanVienTableAdapter = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_NHANVIENTableAdapters.NhanVienTableAdapter();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnReload = new System.Windows.Forms.Button();
+            this.btnEditNV = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelNV = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NHANVIEN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_NHANVIEN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_NHANVIEN)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -114,20 +120,7 @@
             this.dgv_NHANVIEN.Name = "dgv_NHANVIEN";
             this.dgv_NHANVIEN.Size = new System.Drawing.Size(343, 150);
             this.dgv_NHANVIEN.TabIndex = 9;
-            // 
-            // quanLyRapPhimDataSet_NHANVIEN
-            // 
-            this.quanLyRapPhimDataSet_NHANVIEN.DataSetName = "QuanLyRapPhimDataSet_NHANVIEN";
-            this.quanLyRapPhimDataSet_NHANVIEN.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nhanVienBindingSource
-            // 
-            this.nhanVienBindingSource.DataMember = "NhanVien";
-            this.nhanVienBindingSource.DataSource = this.quanLyRapPhimDataSet_NHANVIEN;
-            // 
-            // nhanVienTableAdapter
-            // 
-            this.nhanVienTableAdapter.ClearBeforeFill = true;
+            this.dgv_NHANVIEN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_NHANVIEN_CellClick);
             // 
             // hovaLotNVDataGridViewTextBoxColumn
             // 
@@ -147,10 +140,95 @@
             this.maNVDataGridViewTextBoxColumn.HeaderText = "MaNV";
             this.maNVDataGridViewTextBoxColumn.Name = "maNVDataGridViewTextBoxColumn";
             // 
+            // nhanVienBindingSource
+            // 
+            this.nhanVienBindingSource.DataMember = "NhanVien";
+            this.nhanVienBindingSource.DataSource = this.quanLyRapPhimDataSet_NHANVIEN;
+            // 
+            // quanLyRapPhimDataSet_NHANVIEN
+            // 
+            this.quanLyRapPhimDataSet_NHANVIEN.DataSetName = "QuanLyRapPhimDataSet_NHANVIEN";
+            this.quanLyRapPhimDataSet_NHANVIEN.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nhanVienTableAdapter
+            // 
+            this.nhanVienTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.AutoSize = true;
+            this.btnSave.Location = new System.Drawing.Point(518, 27);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 29);
+            this.btnSave.TabIndex = 14;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnReload
+            // 
+            this.btnReload.AutoSize = true;
+            this.btnReload.Location = new System.Drawing.Point(518, 71);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(67, 29);
+            this.btnReload.TabIndex = 17;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = true;
+            // 
+            // btnEditNV
+            // 
+            this.btnEditNV.AutoSize = true;
+            this.btnEditNV.Location = new System.Drawing.Point(518, 115);
+            this.btnEditNV.Name = "btnEditNV";
+            this.btnEditNV.Size = new System.Drawing.Size(196, 29);
+            this.btnEditNV.TabIndex = 18;
+            this.btnEditNV.Text = "Sửa Thông Tin  Nhân Viên";
+            this.btnEditNV.UseVisualStyleBackColor = true;
+            this.btnEditNV.Click += new System.EventHandler(this.btnEditNV_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.AutoSize = true;
+            this.btnAdd.Location = new System.Drawing.Point(518, 160);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(57, 29);
+            this.btnAdd.TabIndex = 19;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnDelNV
+            // 
+            this.btnDelNV.AutoSize = true;
+            this.btnDelNV.Location = new System.Drawing.Point(518, 206);
+            this.btnDelNV.Name = "btnDelNV";
+            this.btnDelNV.Size = new System.Drawing.Size(120, 29);
+            this.btnDelNV.TabIndex = 20;
+            this.btnDelNV.Text = "Xóa Nhân Viên";
+            this.btnDelNV.UseVisualStyleBackColor = true;
+            this.btnDelNV.Click += new System.EventHandler(this.btnDelNV_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.AutoSize = true;
+            this.btnCancel.Location = new System.Drawing.Point(518, 252);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(63, 29);
+            this.btnCancel.TabIndex = 21;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // QuanLyNhanVienUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnDelNV);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnEditNV);
+            this.Controls.Add(this.btnReload);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dgv_NHANVIEN);
             this.Controls.Add(this.txtTenNV);
             this.Controls.Add(this.txtHovalotNV);
@@ -159,13 +237,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLyNhanVienUC";
-            this.Size = new System.Drawing.Size(1344, 737);
+            this.Size = new System.Drawing.Size(896, 613);
             this.Load += new System.EventHandler(this.QuanLyNhanVienUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NHANVIEN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_NHANVIEN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_NHANVIEN)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +264,11 @@
         private System.Windows.Forms.BindingSource nhanVienBindingSource;
         private QuanLyRapPhimDataSet_NHANVIEN quanLyRapPhimDataSet_NHANVIEN;
         private QuanLyRapPhimDataSet_NHANVIENTableAdapters.NhanVienTableAdapter nhanVienTableAdapter;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.Button btnEditNV;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelNV;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

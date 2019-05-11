@@ -7,17 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
-using QuanLyRapPhim_Final.queryLayer;
+using QuanLyRapPhim_Final.BSLayer;
+
 namespace QuanLyRapPhim_Final.User_Controls
 {
     public partial class QuanLyKhachHangUC : UserControl
     {
         bool Them;
-        DataTable dtThanhPho = null;
         string err;
-      
+        BLKhachHang dbKH = new BLKhachHang();
+
         public QuanLyKhachHangUC()
         {
             InitializeComponent();
@@ -104,12 +104,9 @@ namespace QuanLyRapPhim_Final.User_Controls
             {
                 try
                 {
-                    // Thực hiện lệnh
-                     blTp = new BLThanhPho();
-                    blTp.ThemThanhPho(this.txtThanhPho.Text, this.txtTenThanhPho.Text, ref err);
-                    // Load lại dữ liệu trên DataGridView
+                    BLKhachHang blKH = new BLKhachHang();
+                    blKH.ThemKhachHang(this.txtMaKH.Text.Trim(), this.txtHovalotKH.Text.Trim(),this.txtTenKH.Text.Trim(), ref err);
                     LoadData();
-                    // Thông báo
                     MessageBox.Show("Đã thêm xong!");
                 }
                 catch (SqlException)
@@ -119,17 +116,35 @@ namespace QuanLyRapPhim_Final.User_Controls
             }
             else
             {
-                // Thực hiện lệnh
-                BLThanhPho blTp = new BLThanhPho();
-                blTp.CapNhatThanhPho(this.txtThanhPho.Text, this.txtTenThanhPho.Text, ref err);
-
-                // Load lại dữ liệu trên DataGridView
+                BLKhachHang blKH = new BLKhachHang();
+                blKH.CapNhatKhachHang(this.txtMaKH.Text, this.txtTenKH.Text, ref err);
                 LoadData();
-                // Thông báo
                 MessageBox.Show("Đã sửa xong!");
             }
-            // Đóng kết nối
         }
-    }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int r = dgv_KHACHHANG.CurrentCell.RowIndex;
+            string strKH = dgv_KHACHHANG.Rows[r].Cells[0].Value.ToString();
+
+            DialogResult traloi;
+            traloi = MessageBox.Show("Bạn thực sự muốn xóa?", "Trả lời", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloi == DialogResult.OK)
+            {
+
+                try
+                {
+                    dbKH.XoaKhachHang(ref err, strKH);
+                    LoadData();
+                    MessageBox.Show("Đã xóa!");
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Lỗi!!! Xóa thất bại!");
+                }
+
+            }
+        }
     }
 }

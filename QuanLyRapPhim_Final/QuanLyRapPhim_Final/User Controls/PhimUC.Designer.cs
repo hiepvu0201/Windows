@@ -42,6 +42,20 @@
             this.phimBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyRapPhimDataSet_PHIM = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_PHIM();
             this.phimTableAdapter = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_PHIMTableAdapters.PhimTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTenPhim = new System.Windows.Forms.TextBox();
+            this.txtMaPhim = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtGiaVe = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pbPoster = new System.Windows.Forms.PictureBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnEditFilm = new System.Windows.Forms.Button();
+            this.btnDelFilm = new System.Windows.Forms.Button();
+            this.btnReload = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvengers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLatMat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCorgi)).BeginInit();
@@ -49,6 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PHIM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phimBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_PHIM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPoster)).BeginInit();
             this.SuspendLayout();
             // 
             // pbAvengers
@@ -149,17 +164,158 @@
             // 
             this.phimTableAdapter.ClearBeforeFill = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(33, 506);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Tên phim :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(33, 538);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Mã phim :";
+            // 
+            // txtTenPhim
+            // 
+            this.txtTenPhim.Location = new System.Drawing.Point(96, 503);
+            this.txtTenPhim.Name = "txtTenPhim";
+            this.txtTenPhim.Size = new System.Drawing.Size(190, 20);
+            this.txtTenPhim.TabIndex = 7;
+            // 
+            // txtMaPhim
+            // 
+            this.txtMaPhim.Location = new System.Drawing.Point(96, 535);
+            this.txtMaPhim.Name = "txtMaPhim";
+            this.txtMaPhim.Size = new System.Drawing.Size(190, 20);
+            this.txtMaPhim.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(33, 572);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Giá vé :";
+            // 
+            // txtGiaVe
+            // 
+            this.txtGiaVe.Location = new System.Drawing.Point(96, 569);
+            this.txtGiaVe.Name = "txtGiaVe";
+            this.txtGiaVe.Size = new System.Drawing.Size(190, 20);
+            this.txtGiaVe.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(329, 506);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Poster :";
+            // 
+            // pbPoster
+            // 
+            this.pbPoster.Location = new System.Drawing.Point(379, 506);
+            this.pbPoster.Name = "pbPoster";
+            this.pbPoster.Size = new System.Drawing.Size(100, 50);
+            this.pbPoster.TabIndex = 12;
+            this.pbPoster.TabStop = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(519, 496);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnEditFilm
+            // 
+            this.btnEditFilm.AutoSize = true;
+            this.btnEditFilm.Location = new System.Drawing.Point(519, 525);
+            this.btnEditFilm.Name = "btnEditFilm";
+            this.btnEditFilm.Size = new System.Drawing.Size(109, 23);
+            this.btnEditFilm.TabIndex = 14;
+            this.btnEditFilm.Text = "Sửa Thông Tin Film";
+            this.btnEditFilm.UseVisualStyleBackColor = true;
+            this.btnEditFilm.Click += new System.EventHandler(this.btnEditFilm_Click);
+            // 
+            // btnDelFilm
+            // 
+            this.btnDelFilm.AutoSize = true;
+            this.btnDelFilm.Location = new System.Drawing.Point(519, 554);
+            this.btnDelFilm.Name = "btnDelFilm";
+            this.btnDelFilm.Size = new System.Drawing.Size(109, 23);
+            this.btnDelFilm.TabIndex = 15;
+            this.btnDelFilm.Text = "Xóa Phim";
+            this.btnDelFilm.UseVisualStyleBackColor = true;
+            this.btnDelFilm.Click += new System.EventHandler(this.btnDelFilm_Click);
+            // 
+            // btnReload
+            // 
+            this.btnReload.Location = new System.Drawing.Point(646, 496);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(58, 23);
+            this.btnReload.TabIndex = 16;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(646, 525);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(57, 23);
+            this.btnAdd.TabIndex = 17;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(646, 554);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(63, 23);
+            this.btnCancel.TabIndex = 18;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // PhimUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnReload);
+            this.Controls.Add(this.btnDelFilm);
+            this.Controls.Add(this.btnEditFilm);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.pbPoster);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtGiaVe);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtMaPhim);
+            this.Controls.Add(this.txtTenPhim);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_PHIM);
             this.Controls.Add(this.pbUpinIpin);
             this.Controls.Add(this.pbCorgi);
             this.Controls.Add(this.pbLatMat);
             this.Controls.Add(this.pbAvengers);
             this.Name = "PhimUC";
-            this.Size = new System.Drawing.Size(896, 504);
+            this.Size = new System.Drawing.Size(896, 613);
             this.Load += new System.EventHandler(this.PhimUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbAvengers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLatMat)).EndInit();
@@ -168,7 +324,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PHIM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phimBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_PHIM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPoster)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -186,5 +344,19 @@
         private System.Windows.Forms.BindingSource phimBindingSource;
         private QuanLyRapPhimDataSet_PHIM quanLyRapPhimDataSet_PHIM;
         private QuanLyRapPhimDataSet_PHIMTableAdapters.PhimTableAdapter phimTableAdapter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtTenPhim;
+        private System.Windows.Forms.TextBox txtMaPhim;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtGiaVe;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pbPoster;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnEditFilm;
+        private System.Windows.Forms.Button btnDelFilm;
+        private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

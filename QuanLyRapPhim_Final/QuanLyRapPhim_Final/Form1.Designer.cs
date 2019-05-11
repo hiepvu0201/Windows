@@ -42,12 +42,6 @@
             this.panelHeader = new System.Windows.Forms.Panel();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.lblHeader = new System.Windows.Forms.Label();
-            this.datVeUC1 = new QuanLyRapPhim_Final.User_Controls.DatVeUC();
-            this.quanLyRapUC1 = new QuanLyRapPhim_Final.User_Controls.QuanLyRapUC();
-            this.quanLyNhanVienUC1 = new QuanLyRapPhim_Final.User_Controls.QuanLyNhanVienUC();
-            this.quanLyKhachHangUC1 = new QuanLyRapPhim_Final.User_Controls.QuanLyKhachHangUC();
-            this.phimUC1 = new QuanLyRapPhim_Final.User_Controls.PhimUC();
-            this.welcomeUC1 = new QuanLyRapPhim_Final.User_Controls.WelcomeUC();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelHeader.SuspendLayout();
@@ -67,7 +61,7 @@
             this.panel1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(223, 614);
+            this.panel1.Size = new System.Drawing.Size(223, 737);
             this.panel1.TabIndex = 0;
             // 
             // btnDatVe
@@ -153,17 +147,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel2.Controls.Add(this.datVeUC1);
-            this.panel2.Controls.Add(this.quanLyRapUC1);
-            this.panel2.Controls.Add(this.quanLyNhanVienUC1);
-            this.panel2.Controls.Add(this.quanLyKhachHangUC1);
-            this.panel2.Controls.Add(this.phimUC1);
-            this.panel2.Controls.Add(this.welcomeUC1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.panelHeader);
             this.panel2.Location = new System.Drawing.Point(228, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(906, 614);
+            this.panel2.Size = new System.Drawing.Size(905, 736);
             this.panel2.TabIndex = 1;
             // 
             // label1
@@ -210,62 +198,11 @@
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "Welcome";
             // 
-            // datVeUC1
-            // 
-            this.datVeUC1.Location = new System.Drawing.Point(3, 116);
-            this.datVeUC1.Name = "datVeUC1";
-            this.datVeUC1.Size = new System.Drawing.Size(896, 504);
-            this.datVeUC1.TabIndex = 9;
-            this.datVeUC1.Load += new System.EventHandler(this.DatVeUC1_Load);
-            // 
-            // quanLyRapUC1
-            // 
-            this.quanLyRapUC1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quanLyRapUC1.Location = new System.Drawing.Point(2, 118);
-            this.quanLyRapUC1.Margin = new System.Windows.Forms.Padding(4);
-            this.quanLyRapUC1.Name = "quanLyRapUC1";
-            this.quanLyRapUC1.Size = new System.Drawing.Size(912, 502);
-            this.quanLyRapUC1.TabIndex = 8;
-            // 
-            // quanLyNhanVienUC1
-            // 
-            this.quanLyNhanVienUC1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quanLyNhanVienUC1.Location = new System.Drawing.Point(2, 116);
-            this.quanLyNhanVienUC1.Margin = new System.Windows.Forms.Padding(4);
-            this.quanLyNhanVienUC1.Name = "quanLyNhanVienUC1";
-            this.quanLyNhanVienUC1.Size = new System.Drawing.Size(1344, 737);
-            this.quanLyNhanVienUC1.TabIndex = 7;
-            // 
-            // quanLyKhachHangUC1
-            // 
-            this.quanLyKhachHangUC1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quanLyKhachHangUC1.Location = new System.Drawing.Point(2, 116);
-            this.quanLyKhachHangUC1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.quanLyKhachHangUC1.Name = "quanLyKhachHangUC1";
-            this.quanLyKhachHangUC1.Size = new System.Drawing.Size(896, 504);
-            this.quanLyKhachHangUC1.TabIndex = 6;
-            // 
-            // phimUC1
-            // 
-            this.phimUC1.Location = new System.Drawing.Point(3, 116);
-            this.phimUC1.Margin = new System.Windows.Forms.Padding(4);
-            this.phimUC1.Name = "phimUC1";
-            this.phimUC1.Size = new System.Drawing.Size(896, 504);
-            this.phimUC1.TabIndex = 5;
-            // 
-            // welcomeUC1
-            // 
-            this.welcomeUC1.Location = new System.Drawing.Point(4, 116);
-            this.welcomeUC1.Margin = new System.Windows.Forms.Padding(4);
-            this.welcomeUC1.Name = "welcomeUC1";
-            this.welcomeUC1.Size = new System.Drawing.Size(896, 504);
-            this.welcomeUC1.TabIndex = 4;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 616);
+            this.ClientSize = new System.Drawing.Size(1134, 749);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
@@ -291,16 +228,10 @@
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.PictureBox pbClose;
         private System.Windows.Forms.Label lblHeader;
-        private User_Controls.WelcomeUC welcomeUC1;
-        private User_Controls.PhimUC phimUC1;
         private System.Windows.Forms.Button btnQuanLyKhachHang;
-        private User_Controls.QuanLyKhachHangUC quanLyKhachHangUC1;
         private System.Windows.Forms.Button btnQuanLyNhanVien;
-        private User_Controls.QuanLyNhanVienUC quanLyNhanVienUC1;
-        private User_Controls.QuanLyRapUC quanLyRapUC1;
         private System.Windows.Forms.Button btnQuanLyRap;
         private System.Windows.Forms.Button btnDatVe;
-        private User_Controls.DatVeUC datVeUC1;
     }
 }
 

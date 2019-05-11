@@ -156,7 +156,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(572, 71);
+            this.btnThem.Location = new System.Drawing.Point(572, 68);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 55);
             this.btnThem.TabIndex = 7;
@@ -192,6 +192,7 @@
             this.btnXoa.TabIndex = 10;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnHuy
             // 
@@ -222,7 +223,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "QuanLyKhachHangUC";
-            this.Size = new System.Drawing.Size(896, 504);
+            this.Size = new System.Drawing.Size(896, 613);
             this.Load += new System.EventHandler(this.QuanLyKhachHangUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KHACHHANG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();

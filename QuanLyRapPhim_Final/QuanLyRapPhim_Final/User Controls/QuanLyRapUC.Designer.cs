@@ -38,16 +38,21 @@
             this.txtSoLuongGhe = new System.Windows.Forms.TextBox();
             this.cbbLoaiPhim = new System.Windows.Forms.ComboBox();
             this.dgv_RAP = new System.Windows.Forms.DataGridView();
-            this.quanLyRapPhimDataSet_RAP = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_RAP();
-            this.rapBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rapTableAdapter = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_RAPTableAdapters.RapTableAdapter();
             this.maRapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soDayGheDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongGheDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loaiPhimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rapBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyRapPhimDataSet_RAP = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_RAP();
+            this.rapTableAdapter = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_RAPTableAdapters.RapTableAdapter();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_RAP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_RAP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rapBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_RAP)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -137,20 +142,6 @@
             this.dgv_RAP.Size = new System.Drawing.Size(443, 150);
             this.dgv_RAP.TabIndex = 12;
             // 
-            // quanLyRapPhimDataSet_RAP
-            // 
-            this.quanLyRapPhimDataSet_RAP.DataSetName = "QuanLyRapPhimDataSet_RAP";
-            this.quanLyRapPhimDataSet_RAP.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rapBindingSource
-            // 
-            this.rapBindingSource.DataMember = "Rap";
-            this.rapBindingSource.DataSource = this.quanLyRapPhimDataSet_RAP;
-            // 
-            // rapTableAdapter
-            // 
-            this.rapTableAdapter.ClearBeforeFill = true;
-            // 
             // maRapDataGridViewTextBoxColumn
             // 
             this.maRapDataGridViewTextBoxColumn.DataPropertyName = "MaRap";
@@ -175,10 +166,74 @@
             this.loaiPhimDataGridViewTextBoxColumn.HeaderText = "LoaiPhim";
             this.loaiPhimDataGridViewTextBoxColumn.Name = "loaiPhimDataGridViewTextBoxColumn";
             // 
+            // rapBindingSource
+            // 
+            this.rapBindingSource.DataMember = "Rap";
+            this.rapBindingSource.DataSource = this.quanLyRapPhimDataSet_RAP;
+            // 
+            // quanLyRapPhimDataSet_RAP
+            // 
+            this.quanLyRapPhimDataSet_RAP.DataSetName = "QuanLyRapPhimDataSet_RAP";
+            this.quanLyRapPhimDataSet_RAP.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rapTableAdapter
+            // 
+            this.rapTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(535, 26);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 35);
+            this.btnAdd.TabIndex = 13;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // btnDel
+            // 
+            this.btnDel.Location = new System.Drawing.Point(535, 81);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(75, 35);
+            this.btnDel.TabIndex = 14;
+            this.btnDel.Text = "Xoá";
+            this.btnDel.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(535, 135);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 35);
+            this.btnEdit.TabIndex = 15;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(535, 189);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 35);
+            this.btnCancel.TabIndex = 16;
+            this.btnCancel.Text = "Huỷ";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(535, 244);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 35);
+            this.btnSave.TabIndex = 17;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
             // QuanLyRapUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgv_RAP);
             this.Controls.Add(this.cbbLoaiPhim);
             this.Controls.Add(this.txtSoLuongGhe);
@@ -189,13 +244,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLyRapUC";
-            this.Size = new System.Drawing.Size(1344, 737);
+            this.Size = new System.Drawing.Size(896, 613);
             this.Load += new System.EventHandler(this.QuanLyRapUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_RAP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_RAP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rapBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_RAP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +274,10 @@
         private System.Windows.Forms.BindingSource rapBindingSource;
         private QuanLyRapPhimDataSet_RAP quanLyRapPhimDataSet_RAP;
         private QuanLyRapPhimDataSet_RAPTableAdapters.RapTableAdapter rapTableAdapter;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSave;
     }
 }

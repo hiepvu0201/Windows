@@ -19,7 +19,6 @@ namespace QuanLyRapPhim_Final
 
         private void btnWelcome_Click(object sender, EventArgs e)
         {
-            btnWelcome.BackColor = Color.Cyan;
             pnlClick.Height = btnWelcome.Height;
             pnlClick.Top = btnWelcome.Top;
             welcomeUC1.BringToFront();

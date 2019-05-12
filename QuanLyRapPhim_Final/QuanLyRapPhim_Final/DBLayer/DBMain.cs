@@ -15,7 +15,7 @@ namespace QuanLyRapPhim_Final.DBLayer
         //"Integrated Security=True";
         string cnstr = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyRapPhim;Integrated Security=True";
         SqlConnection conn = null;
-        SqlDataAdapter daHoaDon = null;
+        SqlDataAdapter da = null;
         //DataTable dtHoaDon = null;
         SqlCommand comm = null;
         public DBMain()
@@ -30,9 +30,9 @@ namespace QuanLyRapPhim_Final.DBLayer
             conn.Open();
             comm.CommandText = strSQL;
             comm.CommandType = ct;
-            daHoaDon = new SqlDataAdapter(comm);
+            da = new SqlDataAdapter(comm);
             DataSet ds = new DataSet();
-            daHoaDon.Fill(ds); return ds;
+            da.Fill(ds); return ds;
         }
         public bool MyExecuteNonQuery(string strSQL, CommandType ct, ref string error)
         {

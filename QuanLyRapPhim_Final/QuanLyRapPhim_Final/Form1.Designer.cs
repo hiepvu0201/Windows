@@ -38,12 +38,15 @@
             this.btnQuanLyPhim = new System.Windows.Forms.Button();
             this.btnWelcome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.datVeUC1 = new QuanLyRapPhim_Final.User_Controls.DatVeUC();
             this.quanLyRapUC1 = new QuanLyRapPhim_Final.User_Controls.QuanLyRapUC();
             this.quanLyNhanVienUC1 = new QuanLyRapPhim_Final.User_Controls.QuanLyNhanVienUC();
             this.quanLyKhachHangUC1 = new QuanLyRapPhim_Final.User_Controls.QuanLyKhachHangUC();
             this.phimUC1 = new QuanLyRapPhim_Final.User_Controls.PhimUC();
             this.welcomeUC1 = new QuanLyRapPhim_Final.User_Controls.WelcomeUC();
+=======
+>>>>>>> 89c5d9c6c39efa862ca0c2b41bad67f8a2b0c304
             this.label1 = new System.Windows.Forms.Label();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.pbClose = new System.Windows.Forms.PictureBox();
@@ -68,7 +71,11 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
+<<<<<<< HEAD
             this.panel1.Size = new System.Drawing.Size(297, 756);
+=======
+            this.panel1.Size = new System.Drawing.Size(223, 737);
+>>>>>>> 89c5d9c6c39efa862ca0c2b41bad67f8a2b0c304
             this.panel1.TabIndex = 0;
             // 
             // btnDatVe
@@ -161,18 +168,16 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel2.Controls.Add(this.datVeUC1);
-            this.panel2.Controls.Add(this.quanLyRapUC1);
-            this.panel2.Controls.Add(this.quanLyNhanVienUC1);
-            this.panel2.Controls.Add(this.quanLyKhachHangUC1);
-            this.panel2.Controls.Add(this.phimUC1);
-            this.panel2.Controls.Add(this.welcomeUC1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.panelHeader);
             this.panel2.Location = new System.Drawing.Point(304, 1);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
+<<<<<<< HEAD
             this.panel2.Size = new System.Drawing.Size(1208, 756);
+=======
+            this.panel2.Size = new System.Drawing.Size(905, 736);
+>>>>>>> 89c5d9c6c39efa862ca0c2b41bad67f8a2b0c304
             this.panel2.TabIndex = 1;
             // 
             // datVeUC1
@@ -279,7 +284,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1577, 810);
+=======
+            this.ClientSize = new System.Drawing.Size(1134, 749);
+>>>>>>> 89c5d9c6c39efa862ca0c2b41bad67f8a2b0c304
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -306,16 +315,10 @@
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.PictureBox pbClose;
         private System.Windows.Forms.Label lblHeader;
-        private User_Controls.WelcomeUC welcomeUC1;
-        private User_Controls.PhimUC phimUC1;
         private System.Windows.Forms.Button btnQuanLyKhachHang;
-        private User_Controls.QuanLyKhachHangUC quanLyKhachHangUC1;
         private System.Windows.Forms.Button btnQuanLyNhanVien;
-        private User_Controls.QuanLyNhanVienUC quanLyNhanVienUC1;
-        private User_Controls.QuanLyRapUC quanLyRapUC1;
         private System.Windows.Forms.Button btnQuanLyRap;
         private System.Windows.Forms.Button btnDatVe;
-        private User_Controls.DatVeUC datVeUC1;
     }
 }
 

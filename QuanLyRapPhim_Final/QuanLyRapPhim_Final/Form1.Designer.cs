@@ -232,5 +232,6 @@
         private System.Windows.Forms.Button btnQuanLyNhanVien;
         private System.Windows.Forms.Button btnQuanLyRap;
         private System.Windows.Forms.Button btnDatVe;
+
     }
 }

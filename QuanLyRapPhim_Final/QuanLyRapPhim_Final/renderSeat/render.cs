@@ -7,11 +7,15 @@ using QuanLyRapPhim_Final;
 using System.Drawing;
 using System.Windows.Forms;
 using QuanLyRapPhim_Final.User_Controls;
+using QuanLyRapPhim_Final.queryLayer;
+using System.Data;
+
 
 namespace QuanLyRapPhim_Final.renderSeat
 {
     class render
     {
+        private queryRap dbRap = new queryRap();
         public List<Button> btns;
         private char[] alpha= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
         private int row;
@@ -60,13 +64,12 @@ namespace QuanLyRapPhim_Final.renderSeat
 
         }
 
-        public void renderSeat(ref Panel panel)
+        public void renderSeat(ref Panel panel,List<string> dayAlpha,List<string> daySo)
         {
             ButtonObject obj = new ButtonObject();
             CellTable cell = new CellTable();
             btns = new List<Button>();
             string alphaChar;
-
             for (int i = 0; i < Program.hangGhe; i++)
             {
                 for (int j = 0; j < Program.soGhe; j++)
@@ -87,12 +90,30 @@ namespace QuanLyRapPhim_Final.renderSeat
                     {
                         btn = obj.CreateButton(ref btn, $"{alphaChar}-{j}", p);
                     }
+                    //so sánh
+                    for (int k = 0; k < dayAlpha.Count(); k++)
+                    {
+                        if (dayAlpha[k] == alphaChar) //xét chữ đầu
+                        {
+                            //xét số
+                            if (Convert.ToInt64(daySo[k]) == j)
+                            {
+                                //todo: disable nút
+                                btn.Enabled = false;
+                                btn.Text = "booked";
+                                btn.BackColor = Color.Red;
+
+                            }
+                        }
+                    }
                     panel.Controls.Add(btn);
                     btns.Add(btn);
 
                 }
             }
         }
+
+        
         public void removeSeat(ref Panel panel)
         {
             //btns.Clear();

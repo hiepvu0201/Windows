@@ -16,9 +16,14 @@ namespace QuanLyRapPhim_Final.User_Controls
     public partial class DatVeUC : UserControl
     {
         DataTable dtRap = null;
+        DataTable dtDatVe = null;
+        DataTable dtPhim = null;
+
+        queryDatVe dbDatVe = new queryDatVe();
         queryRap dbRap = new queryRap();
         Graphics gp;
-
+        private List<string> bookedSeatAlpha ;
+        private List<string> bookedSeatNum;
         public DatVeUC()
         {
             InitializeComponent();
@@ -36,12 +41,12 @@ namespace QuanLyRapPhim_Final.User_Controls
             comboBox1.DisplayMember = "MaRap";
             comboBox1.ValueMember = "MaRap";
             gp = seatPanel.CreateGraphics();
-            //seatLoader.renderSeat(ref seatPanel);
+            seatPanel.Visible=false;
         }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            
+            seatPanel.Visible = true;
             render seatLoader = new render();
             dtRap = new DataTable();
             dtRap.Clear();
@@ -57,8 +62,8 @@ namespace QuanLyRapPhim_Final.User_Controls
                 Program.soGhe = Convert.ToInt32(dtRap.Rows[0].ItemArray[0].ToString());
                 seatLoader.removeSeat(ref seatPanel);
                 seatPanel.Refresh();
-                seatLoader.renderSeat(ref seatPanel);
-
+                getBookedSeat();
+                seatLoader.renderSeat(ref seatPanel,bookedSeatAlpha,bookedSeatNum);
             }
 
         }
@@ -67,6 +72,30 @@ namespace QuanLyRapPhim_Final.User_Controls
         {
             render matrix = new render(seatPanel.Width,seatPanel.Height);
             matrix.drawTable(gp);
+        }
+        private void getBookedSeat()
+        {
+            dtDatVe = new DataTable();
+            dtDatVe.Clear();
+            DataSet ds = dbDatVe.findBookedSeat(comboBox1.SelectedValue.ToString());
+            dtDatVe = ds.Tables[0];
+            bookedSeatAlpha = new List<string>();
+            bookedSeatNum = new List<string>();
+            if (dtDatVe.Rows.Count!=0)
+            {
+                for (int i = 0; i < dtDatVe.Rows.Count; i++)   //2 cột
+                {
+
+                    bookedSeatAlpha.Add(dtDatVe.Rows[i].ItemArray[0].ToString());
+                    bookedSeatNum.Add(dtDatVe.Rows[i].ItemArray[1].ToString());
+
+                }
+            }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

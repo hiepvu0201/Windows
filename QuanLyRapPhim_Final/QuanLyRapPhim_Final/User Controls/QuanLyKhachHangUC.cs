@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 using QuanLyRapPhim_Final.queryLayer;
 namespace QuanLyRapPhim_Final.User_Controls
@@ -100,36 +99,36 @@ namespace QuanLyRapPhim_Final.User_Controls
 
         private void BtnLuu_Click(object sender, EventArgs e)
         {
-            if (Them)
-            {
-                try
-                {
-                    // Thực hiện lệnh
-                     blTp = new BLThanhPho();
-                    blTp.ThemThanhPho(this.txtThanhPho.Text, this.txtTenThanhPho.Text, ref err);
-                    // Load lại dữ liệu trên DataGridView
-                    LoadData();
-                    // Thông báo
-                    MessageBox.Show("Đã thêm xong!");
-                }
-                catch (SqlException)
-                {
-                    MessageBox.Show("Không thêm được. Lỗi rồi!");
-                }
-            }
-            else
-            {
-                // Thực hiện lệnh
-                BLThanhPho blTp = new BLThanhPho();
-                blTp.CapNhatThanhPho(this.txtThanhPho.Text, this.txtTenThanhPho.Text, ref err);
+            //if (Them)
+            //{
+            //    try
+            //    {
+            //        // Thực hiện lệnh
+            //         blTp = new BLThanhPho();
+            //        blTp.ThemThanhPho(this.txtThanhPho.Text, this.txtTenThanhPho.Text, ref err);
+            //        // Load lại dữ liệu trên DataGridView
+            //        LoadData();
+            //        // Thông báo
+            //        MessageBox.Show("Đã thêm xong!");
+            //    }
+            //    catch (SqlException)
+            //    {
+            //        MessageBox.Show("Không thêm được. Lỗi rồi!");
+            //    }
+            //}
+            //else
+            //{
+            //    // Thực hiện lệnh
+            //    BLThanhPho blTp = new BLThanhPho();
+            //    blTp.CapNhatThanhPho(this.txtThanhPho.Text, this.txtTenThanhPho.Text, ref err);
 
-                // Load lại dữ liệu trên DataGridView
-                LoadData();
-                // Thông báo
-                MessageBox.Show("Đã sửa xong!");
-            }
+            //    // Load lại dữ liệu trên DataGridView
+            //    LoadData();
+            //    // Thông báo
+            //    MessageBox.Show("Đã sửa xong!");
+            //}
             // Đóng kết nối
         }
     }
-    }
+    
 }

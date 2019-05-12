@@ -66,7 +66,7 @@ namespace QuanLyRapPhim_Final.User_Controls
             btnThem.Enabled = false;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
-      
+
         }
 
         private void BtnSua_Click(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace QuanLyRapPhim_Final.User_Controls
             int r = dgv_KHACHHANG.CurrentCell.RowIndex;
 
             txtMaKH.Text = dgv_KHACHHANG.Rows[r].Cells[0].Value.ToString();
-            txtHovalotKH.Text= dgv_KHACHHANG.Rows[r].Cells[1].Value.ToString();
+            txtHovalotKH.Text = dgv_KHACHHANG.Rows[r].Cells[1].Value.ToString();
             txtTenKH.Text = dgv_KHACHHANG.Rows[r].Cells[2].Value.ToString();
         }
 
@@ -100,46 +100,12 @@ namespace QuanLyRapPhim_Final.User_Controls
 
         private void BtnLuu_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            //if (Them)
-            //{
-            //    try
-            //    {
-            //        // Thực hiện lệnh
-            //         blTp = new BLThanhPho();
-            //        blTp.ThemThanhPho(this.txtThanhPho.Text, this.txtTenThanhPho.Text, ref err);
-            //        // Load lại dữ liệu trên DataGridView
-            //        LoadData();
-            //        // Thông báo
-            //        MessageBox.Show("Đã thêm xong!");
-            //    }
-            //    catch (SqlException)
-            //    {
-            //        MessageBox.Show("Không thêm được. Lỗi rồi!");
-            //    }
-            //}
-            //else
-            //{
-            //    // Thực hiện lệnh
-            //    BLThanhPho blTp = new BLThanhPho();
-            //    blTp.CapNhatThanhPho(this.txtThanhPho.Text, this.txtTenThanhPho.Text, ref err);
-
-            //    // Load lại dữ liệu trên DataGridView
-            //    LoadData();
-            //    // Thông báo
-            //    MessageBox.Show("Đã sửa xong!");
-            //}
-            // Đóng kết nối
-        }
-    }
-    
-=======
             if (Them)
             {
                 try
                 {
                     BLKhachHang blKH = new BLKhachHang();
-                    blKH.ThemKhachHang(this.txtMaKH.Text.Trim(), this.txtHovalotKH.Text.Trim(),this.txtTenKH.Text.Trim(), ref err);
+                    blKH.ThemKhachHang(this.txtMaKH.Text.Trim(), this.txtHovalotKH.Text.Trim(), this.txtTenKH.Text.Trim(), ref err);
                     LoadData();
                     MessageBox.Show("Đã thêm xong!");
                 }
@@ -181,5 +147,4 @@ namespace QuanLyRapPhim_Final.User_Controls
             }
         }
     }
->>>>>>> 89c5d9c6c39efa862ca0c2b41bad67f8a2b0c304
 }

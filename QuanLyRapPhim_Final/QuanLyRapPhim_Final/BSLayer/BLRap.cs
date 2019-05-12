@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using QuanLyRapPhim_Final.DBLayer;
 using System.Data;
 
-namespace QuanLyRapRap_Final.BSLayer
+namespace QuanLyRapPhim_Final.BSLayer
 {
     class BLRap
     {
@@ -19,7 +19,7 @@ namespace QuanLyRapRap_Final.BSLayer
         {
             return db.ExecuteQueryDataSet("select * from Rap", CommandType.Text);
         }
-        public bool ThemRap(string MaRap, string SoDayGhe, string SoLuongGhe,string LoaiPhim, ref string err)
+        public bool ThemRap(string MaRap, string SoDayGhe, string SoLuongGhe, string LoaiPhim, ref string err)
         {
             string sqlString = "Insert Into Rap Values(" + "'" + MaRap + "',N'" + SoDayGhe + "',N'" + SoLuongGhe + "',N'" + LoaiPhim + "',N'" + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
@@ -33,6 +33,18 @@ namespace QuanLyRapRap_Final.BSLayer
         {
             string sqlString = "Update Rap Set LoaiPhim=N'" + LoaiPhim + "' Where MaRap='" + MaRap + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
+        public DataSet findRap(string MaRap)
+        {
+            return db.ExecuteQueryDataSet($"select MaRap from Rap where MaRap='{MaRap.Trim()}'", CommandType.Text);
+        }
+        public DataSet findSoDayGhe(string MaRap)
+        {
+            return db.ExecuteQueryDataSet($"select SoDayGhe from Rap where MaRap='{MaRap.Trim()}'", CommandType.Text);
+        }
+        public DataSet findSoLuongGhe(string MaRap)
+        {
+            return db.ExecuteQueryDataSet($"select SoLuongGhe from Rap where MaRap='{MaRap.Trim()}'", CommandType.Text);
         }
     }
 }

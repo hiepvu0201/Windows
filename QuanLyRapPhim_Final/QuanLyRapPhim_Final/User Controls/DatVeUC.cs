@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyRapPhim_Final.User_Controls;
-using QuanLyRapPhim_Final.queryLayer;
+using QuanLyRapPhim_Final.BSLayer;
 using QuanLyRapPhim_Final.renderSeat;
 
 namespace QuanLyRapPhim_Final.User_Controls
@@ -19,8 +19,8 @@ namespace QuanLyRapPhim_Final.User_Controls
         DataTable dtDatVe = null;
         DataTable dtPhim = null;
 
-        queryDatVe dbDatVe = new queryDatVe();
-        queryRap dbRap = new queryRap();
+        BLDatVe dbDatVe = new BLDatVe();
+        BLRap dbRap = new BLRap();
         Graphics gp;
         private List<string> bookedSeatAlpha ;
         private List<string> bookedSeatNum;
@@ -52,7 +52,7 @@ namespace QuanLyRapPhim_Final.User_Controls
             dtRap.Clear();
             DataSet ds = dbRap.findRap(comboBox1.SelectedValue.ToString());
             dtRap = ds.Tables[0];
-            if (dtRap.Rows.Count!=0)
+            if (dtRap.Rows.Count != 0)
             {
                 ds = dbRap.findSoDayGhe(comboBox1.SelectedValue.ToString());
                 dtRap = ds.Tables[0];
@@ -63,7 +63,7 @@ namespace QuanLyRapPhim_Final.User_Controls
                 seatLoader.removeSeat(ref seatPanel);
                 seatPanel.Refresh();
                 getBookedSeat();
-                seatLoader.renderSeat(ref seatPanel,bookedSeatAlpha,bookedSeatNum);
+                seatLoader.renderSeat(ref seatPanel, bookedSeatAlpha, bookedSeatNum);
             }
 
         }

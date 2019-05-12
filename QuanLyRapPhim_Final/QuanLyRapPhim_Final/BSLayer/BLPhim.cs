@@ -19,9 +19,9 @@ namespace QuanLyRapPhim_Final.BSLayer
         {
             return db.ExecuteQueryDataSet("select * from Phim", CommandType.Text);
         }
-        public bool ThemPhim(string TenPhim, string MaPhim, int GiaVe,   ref string err)
+        public bool ThemPhim(string TenPhim, string MaPhim, int GiaVe, ref string err)
         {
-            string sqlString = "Insert Into Phim Values(" + "'" + TenPhim + "',N'" + MaPhim + "',N'" + GiaVe /*+ "',N'" + ThanhPho*/ + "',N'"  + "')";
+            string sqlString = "Insert Into Phim Values(" + "'" + TenPhim + "',N'" + MaPhim + "',N'" + GiaVe /*+ "',N'" + ThanhPho*/ + "',N'" + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         public bool XoaPhim(ref string err, string MaPhim)

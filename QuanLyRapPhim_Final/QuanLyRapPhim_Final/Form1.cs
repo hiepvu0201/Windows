@@ -36,7 +36,7 @@ namespace QuanLyRapPhim_Final
 
         private void btnQuanLyPhim_Click(object sender, EventArgs e)
         {
-       
+
             pnlClick.Height = btnQuanLyPhim.Height;
             pnlClick.Top = btnQuanLyPhim.Top;
             phimUC1.BringToFront();

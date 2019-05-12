@@ -7,7 +7,7 @@ using QuanLyRapPhim_Final;
 using System.Drawing;
 using System.Windows.Forms;
 using QuanLyRapPhim_Final.User_Controls;
-using QuanLyRapPhim_Final.queryLayer;
+using QuanLyRapPhim_Final.BSLayer;
 using System.Data;
 
 
@@ -15,9 +15,9 @@ namespace QuanLyRapPhim_Final.renderSeat
 {
     class render
     {
-        private queryRap dbRap = new queryRap();
+        private BLRap dbRap = new BLRap();
         public List<Button> btns;
-        private char[] alpha= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+        private char[] alpha = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
         private int row;
         private int col;
         private Point p;
@@ -26,18 +26,18 @@ namespace QuanLyRapPhim_Final.renderSeat
         DatVeUC datVe = new DatVeUC();
         public render()
         {
-            
+
         }
-        public render(int r,int c)
+        public render(int r, int c)
         {
             this.row = r;
             this.col = c;
         }
 
-        public void drawTable( Graphics gp)
+        public void drawTable(Graphics gp)
         {
             Program.myColor = Color.Red;
-            Program.myPen= new Pen(Program.myColor, 2);
+            Program.myPen = new Pen(Program.myColor, 2);
             CellTable cell = null;
             if (Program.hangGhe != 0 && Program.soGhe != 0)
             {
@@ -48,7 +48,7 @@ namespace QuanLyRapPhim_Final.renderSeat
                 cell = new CellTable();
             }
 
-            for (int i = 0; i <= cell.LineCol+1; i++)   //bỏ 1 cột ở row-2 nên +1 vào cột
+            for (int i = 0; i <= cell.LineCol + 1; i++)   //bỏ 1 cột ở row-2 nên +1 vào cột
             {
                 gp.DrawLine(Program.myPen, i * cell.CellWidth, 0, i * cell.CellWidth, (cell.LineRow) * cell.CellHeight);
 
@@ -57,14 +57,14 @@ namespace QuanLyRapPhim_Final.renderSeat
             for (int j = 0; j <= cell.LineRow; j++)
             {
                 //gp.DrawLine(Program.myPen, 0, j * cell.CellHeight, (cell.LineCol) * cell.CellWidth, j * cell.CellHeight);
-                gp.DrawLine(Program.myPen, 0, j * cell.CellHeight, (cell.LineCol-2) * cell.CellWidth, j * cell.CellHeight);
-                gp.DrawLine(Program.myPen, (cell.LineCol-1) * cell.CellWidth, j * cell.CellHeight, (cell.LineCol+1) * cell.CellWidth, j * cell.CellHeight);
+                gp.DrawLine(Program.myPen, 0, j * cell.CellHeight, (cell.LineCol - 2) * cell.CellWidth, j * cell.CellHeight);
+                gp.DrawLine(Program.myPen, (cell.LineCol - 1) * cell.CellWidth, j * cell.CellHeight, (cell.LineCol + 1) * cell.CellWidth, j * cell.CellHeight);
 
             }
 
         }
 
-        public void renderSeat(ref Panel panel,List<string> dayAlpha,List<string> daySo)
+        public void renderSeat(ref Panel panel, List<string> dayAlpha, List<string> daySo)
         {
             ButtonObject obj = new ButtonObject();
             CellTable cell = new CellTable();
@@ -79,7 +79,7 @@ namespace QuanLyRapPhim_Final.renderSeat
                     p = cell.findCell(i, j);
                     p.X++;
                     p.Y++;
-                    if (j>=Program.soGhe-2)
+                    if (j >= Program.soGhe - 2)
                     {
                         p.X = p.X + cell.CellWidth;
 
@@ -113,7 +113,7 @@ namespace QuanLyRapPhim_Final.renderSeat
             }
         }
 
-        
+
         public void removeSeat(ref Panel panel)
         {
             //btns.Clear();
@@ -127,7 +127,7 @@ namespace QuanLyRapPhim_Final.renderSeat
             {
 
             }
-            public CellTable (int soHang,int soGhe)
+            public CellTable(int soHang, int soGhe)
             {
                 lineRow = soHang;
                 lineCol = soGhe;

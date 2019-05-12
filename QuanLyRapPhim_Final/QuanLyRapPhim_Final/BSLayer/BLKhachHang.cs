@@ -21,9 +21,9 @@ namespace QuanLyRapPhim_Final.BSLayer
         }
         public bool ThemKhachHang(string MaKH, string HovaTenLotKH, string TenKH, ref string err)
         {
-            string sqlString = 
+            string sqlString =
                 $"Insert Into KhachHang Values " +
-                "( " + " '" + MaKH + " ' ,N'" + HovaTenLotKH +"',N' " + TenKH + "') ";
+                "( " + " '" + MaKH + " ' ,N'" + HovaTenLotKH + "',N' " + TenKH + "') ";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         public bool XoaKhachHang(ref string err, string MaKH)

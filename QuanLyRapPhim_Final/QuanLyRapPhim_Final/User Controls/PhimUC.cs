@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyRapPhim_Final.queryLayer;
+using QuanLyRapPhim_Final.BSLayer;
 using System.Data.SqlClient;
 
 namespace QuanLyRapPhim_Final.User_Controls

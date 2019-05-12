@@ -63,11 +63,10 @@
             this.dayDataGridViewTextBoxColumn,
             this.soDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.datVeBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(885, 2);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(1180, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(19, 14);
+            this.dataGridView1.Size = new System.Drawing.Size(25, 17);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.Visible = false;
             // 
@@ -130,38 +129,27 @@
             // seatPanel
             // 
             this.seatPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.seatPanel.Location = new System.Drawing.Point(15, 113);
-            this.seatPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.seatPanel.Location = new System.Drawing.Point(20, 139);
             this.seatPanel.Name = "seatPanel";
-<<<<<<< HEAD
             this.seatPanel.Size = new System.Drawing.Size(1173, 462);
-=======
-            this.seatPanel.Size = new System.Drawing.Size(869, 376);
->>>>>>> 89c5d9c6c39efa862ca0c2b41bad67f8a2b0c304
             this.seatPanel.TabIndex = 1;
             this.seatPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.seatPanel_Paint);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-<<<<<<< HEAD
             this.comboBox1.Location = new System.Drawing.Point(70, 29);
-=======
-            this.comboBox1.Location = new System.Drawing.Point(46, 24);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> 89c5d9c6c39efa862ca0c2b41bad67f8a2b0c304
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(103, 21);
+            this.comboBox1.Size = new System.Drawing.Size(136, 24);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 24);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(17, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.Size = new System.Drawing.Size(38, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Rạp:";
             // 
@@ -185,7 +173,7 @@
             // 
             // DatVeUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label2);
@@ -193,8 +181,9 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.seatPanel);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DatVeUC";
-            this.Size = new System.Drawing.Size(896, 613);
+            this.Size = new System.Drawing.Size(1208, 634);
             this.Load += new System.EventHandler(this.DatVeUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datVeBindingSource)).EndInit();

@@ -21,7 +21,7 @@ namespace QuanLyRapPhim_Final
         {
             pnlClick.Height = btnWelcome.Height;
             pnlClick.Top = btnWelcome.Top;
-            //welcomeUC1.BringToFront();
+            welcomeUC1.BringToFront();
             lblHeader.Text = "Welcome";
         }
 
@@ -39,7 +39,7 @@ namespace QuanLyRapPhim_Final
 
             pnlClick.Height = btnQuanLyPhim.Height;
             pnlClick.Top = btnQuanLyPhim.Top;
-            //phimUC1.BringToFront();
+            phimUC1.BringToFront();
             lblHeader.Text = "Phim đang chiếu";
         }
 
@@ -47,7 +47,7 @@ namespace QuanLyRapPhim_Final
         {
             pnlClick.Height = btnQuanLyKhachHang.Height;
             pnlClick.Top = btnQuanLyKhachHang.Top;
-            //quanLyKhachHangUC1.BringToFront();
+            quanLyKhachHangUC1.BringToFront();
             lblHeader.Text = "Quản lý khách hàng";
         }
 
@@ -55,7 +55,7 @@ namespace QuanLyRapPhim_Final
         {
             pnlClick.Height = btnQuanLyNhanVien.Height;
             pnlClick.Top = btnQuanLyNhanVien.Top;
-            //quanLyNhanVienUC1.BringToFront();
+            quanLyNhanVienUC1.BringToFront();
             lblHeader.Text = "Quản lý nhân viên";
         }
 
@@ -63,7 +63,7 @@ namespace QuanLyRapPhim_Final
         {
             pnlClick.Height = btnQuanLyRap.Height;
             pnlClick.Top = btnQuanLyRap.Top;
-            //quanLyRapUC1.BringToFront();
+            quanLyRapUC1.BringToFront();
             lblHeader.Text = "Quản lý rạp";
         }
 
@@ -71,7 +71,7 @@ namespace QuanLyRapPhim_Final
         {
             pnlClick.Height = btnDatVe.Height;
             pnlClick.Top = btnDatVe.Top;
-            //datVeUC1.BringToFront();
+            datVeUC1.BringToFront();
             lblHeader.Text = "Đặt vé";
 
         }

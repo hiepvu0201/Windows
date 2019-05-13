@@ -64,7 +64,7 @@ namespace QuanLyRapPhim_Final.renderSeat
 
         }
 
-        public void renderSeat(ref Panel panel, List<string> dayAlpha, List<string> daySo)
+        public void renderSeat(ref Panel panel, List<string> dayAlpha, List<string> daySo, string time)
         {
             ButtonObject obj = new ButtonObject();
             CellTable cell = new CellTable();

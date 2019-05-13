@@ -267,10 +267,10 @@ namespace testProject.Detail
     }
     static class Model
     {
-        public static string StrWall = @"D:\Temp\Windows\testProject\testProject\Detail\wall2.png";
-        public static string StrCrate = @"D:\Temp\Windows\testProject\testProject\Detail\crate.png";
-        public static string StrMiner = @"D:\Temp\Windows\testProject\testProject\Detail\Charactor.gif";
-        public static string StrHole = @"D:\Temp\Windows\testProject\testProject\Detail\x.png";
-        public static string StrBackground = @"D:\Temp\Windows\testProject\testProject\Detail\galaxy.jpg";
+        public static string StrWall = @"C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\Detail\wall2.png";
+        public static string StrCrate = @"C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\Detail\crate.png";
+        public static string StrMiner = @"C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\Detail\Charactor.gif";
+        public static string StrHole = @"C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\Detail\x.png";
+        public static string StrBackground = @"C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\Detail\galaxy.jpg";
     }
 }

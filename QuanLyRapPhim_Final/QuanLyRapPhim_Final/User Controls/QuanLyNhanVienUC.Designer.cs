@@ -59,7 +59,7 @@
             this.label1.Location = new System.Drawing.Point(29, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 19);
+            this.label1.Size = new System.Drawing.Size(141, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Mã Nhân Viên :";
             // 
@@ -69,7 +69,7 @@
             this.label2.Location = new System.Drawing.Point(29, 71);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 19);
+            this.label2.Size = new System.Drawing.Size(221, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "Họ và tên lót Nhân Viên :";
             // 
@@ -79,7 +79,7 @@
             this.label3.Location = new System.Drawing.Point(29, 115);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 19);
+            this.label3.Size = new System.Drawing.Size(145, 23);
             this.label3.TabIndex = 5;
             this.label3.Text = "Tên Nhân Viên :";
             // 
@@ -88,7 +88,7 @@
             this.txtMaNV.Location = new System.Drawing.Point(229, 26);
             this.txtMaNV.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(229, 26);
+            this.txtMaNV.Size = new System.Drawing.Size(229, 30);
             this.txtMaNV.TabIndex = 6;
             // 
             // txtHovalotNV
@@ -96,7 +96,7 @@
             this.txtHovalotNV.Location = new System.Drawing.Point(227, 68);
             this.txtHovalotNV.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtHovalotNV.Name = "txtHovalotNV";
-            this.txtHovalotNV.Size = new System.Drawing.Size(229, 26);
+            this.txtHovalotNV.Size = new System.Drawing.Size(229, 30);
             this.txtHovalotNV.TabIndex = 7;
             // 
             // txtTenNV
@@ -104,7 +104,7 @@
             this.txtTenNV.Location = new System.Drawing.Point(227, 112);
             this.txtTenNV.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(229, 26);
+            this.txtTenNV.Size = new System.Drawing.Size(229, 30);
             this.txtTenNV.TabIndex = 8;
             // 
             // dgv_NHANVIEN
@@ -159,7 +159,7 @@
             this.btnSave.AutoSize = true;
             this.btnSave.Location = new System.Drawing.Point(518, 27);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 29);
+            this.btnSave.Size = new System.Drawing.Size(75, 33);
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -170,7 +170,7 @@
             this.btnReload.AutoSize = true;
             this.btnReload.Location = new System.Drawing.Point(518, 71);
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(67, 29);
+            this.btnReload.Size = new System.Drawing.Size(79, 33);
             this.btnReload.TabIndex = 17;
             this.btnReload.Text = "Reload";
             this.btnReload.UseVisualStyleBackColor = true;
@@ -180,7 +180,7 @@
             this.btnEditNV.AutoSize = true;
             this.btnEditNV.Location = new System.Drawing.Point(518, 115);
             this.btnEditNV.Name = "btnEditNV";
-            this.btnEditNV.Size = new System.Drawing.Size(196, 29);
+            this.btnEditNV.Size = new System.Drawing.Size(240, 33);
             this.btnEditNV.TabIndex = 18;
             this.btnEditNV.Text = "Sửa Thông Tin  Nhân Viên";
             this.btnEditNV.UseVisualStyleBackColor = true;
@@ -191,7 +191,7 @@
             this.btnAdd.AutoSize = true;
             this.btnAdd.Location = new System.Drawing.Point(518, 160);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(57, 29);
+            this.btnAdd.Size = new System.Drawing.Size(67, 33);
             this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -202,7 +202,7 @@
             this.btnDelNV.AutoSize = true;
             this.btnDelNV.Location = new System.Drawing.Point(518, 206);
             this.btnDelNV.Name = "btnDelNV";
-            this.btnDelNV.Size = new System.Drawing.Size(120, 29);
+            this.btnDelNV.Size = new System.Drawing.Size(144, 33);
             this.btnDelNV.TabIndex = 20;
             this.btnDelNV.Text = "Xóa Nhân Viên";
             this.btnDelNV.UseVisualStyleBackColor = true;
@@ -213,7 +213,7 @@
             this.btnCancel.AutoSize = true;
             this.btnCancel.Location = new System.Drawing.Point(518, 252);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(63, 29);
+            this.btnCancel.Size = new System.Drawing.Size(63, 33);
             this.btnCancel.TabIndex = 21;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -221,7 +221,7 @@
             // 
             // QuanLyNhanVienUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDelNV);
@@ -239,7 +239,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLyNhanVienUC";
-            this.Size = new System.Drawing.Size(896, 613);
+            this.Size = new System.Drawing.Size(1195, 754);
             this.Load += new System.EventHandler(this.QuanLyNhanVienUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NHANVIEN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();

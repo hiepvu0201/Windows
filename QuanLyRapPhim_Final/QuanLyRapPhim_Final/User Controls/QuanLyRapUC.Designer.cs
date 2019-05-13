@@ -61,7 +61,7 @@
             this.label1.Location = new System.Drawing.Point(29, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 19);
+            this.label1.Size = new System.Drawing.Size(89, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Mã Rạp :";
             // 
@@ -71,7 +71,7 @@
             this.label2.Location = new System.Drawing.Point(29, 71);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 19);
+            this.label2.Size = new System.Drawing.Size(113, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "Số dãy ghế :";
             // 
@@ -81,7 +81,7 @@
             this.label3.Location = new System.Drawing.Point(29, 114);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 19);
+            this.label3.Size = new System.Drawing.Size(131, 23);
             this.label3.TabIndex = 6;
             this.label3.Text = "Số lượng ghế :";
             // 
@@ -91,7 +91,7 @@
             this.label4.Location = new System.Drawing.Point(29, 161);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 19);
+            this.label4.Size = new System.Drawing.Size(105, 23);
             this.label4.TabIndex = 7;
             this.label4.Text = "Loại phim :";
             // 
@@ -100,7 +100,7 @@
             this.txtMaRap.Location = new System.Drawing.Point(229, 26);
             this.txtMaRap.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMaRap.Name = "txtMaRap";
-            this.txtMaRap.Size = new System.Drawing.Size(229, 26);
+            this.txtMaRap.Size = new System.Drawing.Size(229, 30);
             this.txtMaRap.TabIndex = 8;
             // 
             // txtSoDayGhe
@@ -108,7 +108,7 @@
             this.txtSoDayGhe.Location = new System.Drawing.Point(229, 68);
             this.txtSoDayGhe.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSoDayGhe.Name = "txtSoDayGhe";
-            this.txtSoDayGhe.Size = new System.Drawing.Size(229, 26);
+            this.txtSoDayGhe.Size = new System.Drawing.Size(229, 30);
             this.txtSoDayGhe.TabIndex = 9;
             // 
             // txtSoLuongGhe
@@ -116,7 +116,7 @@
             this.txtSoLuongGhe.Location = new System.Drawing.Point(229, 111);
             this.txtSoLuongGhe.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSoLuongGhe.Name = "txtSoLuongGhe";
-            this.txtSoLuongGhe.Size = new System.Drawing.Size(229, 26);
+            this.txtSoLuongGhe.Size = new System.Drawing.Size(229, 30);
             this.txtSoLuongGhe.TabIndex = 10;
             // 
             // cbbLoaiPhim
@@ -124,7 +124,7 @@
             this.cbbLoaiPhim.FormattingEnabled = true;
             this.cbbLoaiPhim.Location = new System.Drawing.Point(229, 158);
             this.cbbLoaiPhim.Name = "cbbLoaiPhim";
-            this.cbbLoaiPhim.Size = new System.Drawing.Size(121, 27);
+            this.cbbLoaiPhim.Size = new System.Drawing.Size(121, 31);
             this.cbbLoaiPhim.TabIndex = 11;
             // 
             // dgv_RAP
@@ -227,7 +227,7 @@
             // 
             // QuanLyRapUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
@@ -246,7 +246,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLyRapUC";
-            this.Size = new System.Drawing.Size(896, 613);
+            this.Size = new System.Drawing.Size(1195, 754);
             this.Load += new System.EventHandler(this.QuanLyRapUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_RAP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rapBindingSource)).EndInit();

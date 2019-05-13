@@ -58,7 +58,7 @@
             this.label1.Location = new System.Drawing.Point(29, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 19);
+            this.label1.Size = new System.Drawing.Size(158, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Khách Hàng :";
             // 
@@ -67,7 +67,7 @@
             this.txtMaKH.Location = new System.Drawing.Point(227, 23);
             this.txtMaKH.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(229, 26);
+            this.txtMaKH.Size = new System.Drawing.Size(229, 30);
             this.txtMaKH.TabIndex = 1;
             // 
             // label2
@@ -76,7 +76,7 @@
             this.label2.Location = new System.Drawing.Point(29, 71);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 19);
+            this.label2.Size = new System.Drawing.Size(238, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Họ và tên lót Khách Hàng :";
             // 
@@ -85,7 +85,7 @@
             this.txtHovalotKH.Location = new System.Drawing.Point(227, 68);
             this.txtHovalotKH.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtHovalotKH.Name = "txtHovalotKH";
-            this.txtHovalotKH.Size = new System.Drawing.Size(229, 26);
+            this.txtHovalotKH.Size = new System.Drawing.Size(229, 30);
             this.txtHovalotKH.TabIndex = 3;
             // 
             // label3
@@ -94,7 +94,7 @@
             this.label3.Location = new System.Drawing.Point(29, 115);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 19);
+            this.label3.Size = new System.Drawing.Size(162, 23);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tên Khách Hàng :";
             // 
@@ -103,7 +103,7 @@
             this.txtTenKH.Location = new System.Drawing.Point(227, 112);
             this.txtTenKH.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Size = new System.Drawing.Size(229, 26);
+            this.txtTenKH.Size = new System.Drawing.Size(229, 30);
             this.txtTenKH.TabIndex = 5;
             // 
             // dgv_KHACHHANG
@@ -206,7 +206,7 @@
             // 
             // QuanLyKhachHangUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnXoa);
@@ -223,7 +223,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "QuanLyKhachHangUC";
-            this.Size = new System.Drawing.Size(896, 613);
+            this.Size = new System.Drawing.Size(1195, 754);
             this.Load += new System.EventHandler(this.QuanLyKhachHangUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KHACHHANG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();

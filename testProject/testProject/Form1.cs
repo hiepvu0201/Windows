@@ -77,7 +77,7 @@ namespace testProject
          
                     curr_point++;
                     this.lblScore.Text = curr_point.ToString();
-                    this.ptbRightForm.Image=Image.FromFile(@"D:\Temp\Windows\testProject\testProject\Detail\finish.gif");
+                    this.ptbRightForm.Image=Image.FromFile(@"C:\Users\DangKhoa\Desktop\project\Windows\testProject\testProject\Detail\finish.gif");
                     this.Controls.Add(ptbRightForm);
                     this.Close();
                     FrmWin win = new FrmWin();

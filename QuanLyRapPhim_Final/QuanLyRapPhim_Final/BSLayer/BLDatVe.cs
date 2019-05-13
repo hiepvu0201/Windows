@@ -24,6 +24,10 @@ namespace QuanLyRapPhim_Final.BSLayer
         {
             return db.ExecuteQueryDataSet($"select Day,So from DatVe where MaRap='{MaRap.Trim()}'",CommandType.Text);
         }
+        public DataSet findHour()
+        {
+            return db.ExecuteQueryDataSet("select A.SuatChieu,B.TenPhim from DatVe as A inner join Phim as B on A.MaPhim = B.MaPhim",CommandType.Text);
+        }
 
     }
 }

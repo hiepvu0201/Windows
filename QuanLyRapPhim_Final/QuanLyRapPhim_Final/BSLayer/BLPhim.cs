@@ -21,7 +21,8 @@ namespace QuanLyRapPhim_Final.BSLayer
         }
         public bool ThemPhim(string TenPhim, string MaPhim, int GiaVe, ref string err)
         {
-            string sqlString = "Insert Into Phim Values(" + "'" + TenPhim + "',N'" + MaPhim + "',N'" + GiaVe /*+ "',N'" + ThanhPho*/ + "',N'" + "')";
+            string sqlString = "Insert Into Phim Values(" + "'" + TenPhim + "',N'" + MaPhim +
+                "',N'" + GiaVe  + "',N'" + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         public bool XoaPhim(ref string err, string MaPhim)
@@ -31,7 +32,8 @@ namespace QuanLyRapPhim_Final.BSLayer
         }
         public bool CapNhatPhim(string MaPhim, string TenPhim, ref string err)
         {
-            string sqlString = "Update Phim Set TenPhim=N'" + TenPhim + "' Where MaPhim='" + MaPhim + "'";
+            string sqlString = "Update Phim Set TenPhim=N'" + TenPhim + "' Where MaPhim='" 
+                + MaPhim + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
     }

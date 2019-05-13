@@ -10,13 +10,12 @@ namespace QuanLyRapPhim_Final.DBLayer
 {
     class DBMain
     {
-        //        string strConnectionString = @"Data Source=AMATERASU\SQLEXPRESS;" +
-        //"Initial Catalog=QuanLyBanHang;" +
-        //"Integrated Security=True";
-        string cnstr = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyRapPhim;Integrated Security=True";
+       
+        string cnstr = @"Data Source=.\SQLEXPRESS;
+          Initial Catalog=QuanLyRapPhim;
+          Integrated Security=True";
         SqlConnection conn = null;
         SqlDataAdapter da = null;
-        //DataTable dtHoaDon = null;
         SqlCommand comm = null;
         public DBMain()
         {

@@ -13,6 +13,7 @@ namespace QuanLyRapPhim_Final
         public static Color myColor;
         public static int hangGhe = 0;
         public static int soGhe = 0;
+        public static string clickbtn = "";
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

@@ -64,7 +64,7 @@ namespace QuanLyRapPhim_Final.renderSeat
 
         }
 
-        public void renderSeat(ref Panel panel, List<string> dayAlpha, List<string> daySo, string time)
+        public void renderSeat(ref Panel panel, List<string> dayAlpha, List<string> daySo)
         {
             ButtonObject obj = new ButtonObject();
             CellTable cell = new CellTable();
@@ -85,10 +85,12 @@ namespace QuanLyRapPhim_Final.renderSeat
 
                         btn = obj.CreateButton(ref btn, $"{alphaChar}-{j}", p);
 
+                        
                     }
                     else
                     {
                         btn = obj.CreateButton(ref btn, $"{alphaChar}-{j}", p);
+
                     }
                     //so sánh
                     for (int k = 0; k < dayAlpha.Count(); k++)
@@ -108,7 +110,7 @@ namespace QuanLyRapPhim_Final.renderSeat
                     }
                     panel.Controls.Add(btn);
                     btns.Add(btn);
-
+                    
                 }
             }
         }
@@ -146,6 +148,7 @@ namespace QuanLyRapPhim_Final.renderSeat
                 return point;
             }
         }
+
 
     }
 

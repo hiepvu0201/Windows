@@ -25,7 +25,7 @@ namespace QuanLyRapPhim_Final.BSLayer
         {
             string sqlString =
                 $"Insert Into NhanVien Values " +
-                "( " + " '" + MaNV + " ' ,N'" + HovaTenLotNV + "',N' 
+                "( " + " '" + MaNV + " ' ,N'" + HovaTenLotNV + "',N'" 
                 + TenNV + "') ";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }

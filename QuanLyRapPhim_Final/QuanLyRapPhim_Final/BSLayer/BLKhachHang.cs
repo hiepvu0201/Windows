@@ -17,24 +17,34 @@ namespace QuanLyRapPhim_Final.BSLayer
         }
         public DataSet LayKhachHang()
         {
-            return db.ExecuteQueryDataSet("select * from KhachHang", CommandType.Text);
+            return db.ExecuteQueryDataSet("" +
+                "select * from KhachHang", 
+                CommandType.Text);
         }
-        public bool ThemKhachHang(string MaKH, string HovaTenLotKH, string TenKH, ref string err)
+        public bool ThemKhachHang(string MaKH, string HovaTenLotKH, 
+            string TenKH, ref string err)
         {
             string sqlString =
                 $"Insert Into KhachHang Values " +
-                "( " + " '" + MaKH + " ' ,N'" + HovaTenLotKH + "',N' " + TenKH + "') ";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+                "( " + " '" + MaKH + " ' ,N'" + HovaTenLotKH +
+                "',N' " + TenKH + "') ";
+            return db.MyExecuteNonQuery(sqlString,
+                CommandType.Text, ref err);
         }
         public bool XoaKhachHang(ref string err, string MaKH)
         {
-            string sqlString = "Delete From KhachHang Where MaKH='" + MaKH + "'";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+            string sqlString = "Delete From KhachHang Where MaKH='"
+                + MaKH + "'";
+            return db.MyExecuteNonQuery(sqlString, 
+                CommandType.Text, ref err);
         }
-        public bool CapNhatKhachHang(string MaKH, string TenKH, ref string err)
+        public bool CapNhatKhachHang(string MaKH,
+            string TenKH, ref string err)
         {
-            string sqlString = "Update KhachHang Set TenKH=N'" + TenKH + "' Where MaKH='" + MaKH + "'";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+            string sqlString = "Update KhachHang Set TenKH=N'" +
+                TenKH + "' Where MaKH='" + MaKH + "'";
+            return db.MyExecuteNonQuery(sqlString, 
+                CommandType.Text, ref err);
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using QuanLyRapPhim_Final.DBLayer;
 using System.Data;
+using System.IO;
 
 namespace QuanLyRapPhim_Final.BSLayer
 {
@@ -19,10 +20,9 @@ namespace QuanLyRapPhim_Final.BSLayer
         {
             return db.ExecuteQueryDataSet("select * from Phim", CommandType.Text);
         }
-        public bool ThemPhim(string TenPhim, string MaPhim, int GiaVe, ref string err)
+        public bool ThemPhim(string TenPhim, string MaPhim, int GiaVe, string Poster, ref string err)
         {
-            string sqlString = "Insert Into Phim Values(" + "'" + TenPhim + "',N'" + MaPhim +
-                "',N'" + GiaVe  + "',N'" + "')";
+            string sqlString = $"Insert Into Phim Values('{TenPhim.Trim()}','{MaPhim.Trim()}',{GiaVe},( select BulkColumn from Openrowset(Bulk '{Poster}', single_Blob) as image))";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         public bool XoaPhim(ref string err, string MaPhim)

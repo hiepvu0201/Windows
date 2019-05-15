@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyRapPhim_Final.BSLayer;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace QuanLyRapPhim_Final.User_Controls
 {
@@ -19,7 +20,7 @@ namespace QuanLyRapPhim_Final.User_Controls
         bool Them = false;
         string err;
         BLPhim dbPhim = new BLPhim();
-
+        private string linkPic="";
         public PhimUC()
         {
             InitializeComponent();
@@ -54,7 +55,7 @@ namespace QuanLyRapPhim_Final.User_Controls
             }
             catch (SqlException)
             {
-                MessageBox.Show("Không lấy được nội dung trong table KHACHHANG. Lỗi rồi!!!");
+                MessageBox.Show("Không lấy được nội dung trong table Phim. Lỗi rồi!!!");
             }
         }
 
@@ -111,8 +112,14 @@ namespace QuanLyRapPhim_Final.User_Controls
             {
                 try
                 {
+                    if (linkPic.Equals("")) return;
+                    
+                    MemoryStream pic = new MemoryStream();
+                    pbPoster.Image.Save(pic, pbPoster.Image.RawFormat);
                     BLPhim blPhim = new BLPhim();
-                    blPhim.ThemPhim(this.txtTenPhim.Text.Trim(), this.txtMaPhim.Text.Trim(), int.Parse(txtGiaVe.Text.ToString()), ref err);
+
+                    blPhim.ThemPhim(this.txtTenPhim.Text.Trim(), this.txtMaPhim.Text.Trim(),
+                        int.Parse(txtGiaVe.Text.ToString()), linkPic, ref err);
                     LoadData();
                     MessageBox.Show("Đã thêm xong!");
                 }
@@ -159,6 +166,17 @@ namespace QuanLyRapPhim_Final.User_Controls
                     MessageBox.Show("Lỗi!!! Xóa thất bại!");
                 }
 
+            }
+        }
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "select image(*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                pbPoster.Image = Image.FromFile(open.FileName);
+                linkPic = open.FileName;
             }
         }
     }

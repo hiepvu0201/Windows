@@ -13,7 +13,6 @@ namespace QuanLyRapPhim_Final.User_Controls
 {
     public partial class QuanLyRapUC : UserControl
     {
-        bool them;
         bool Them;
         string err;
         BLRap dbRap = new BLRap();

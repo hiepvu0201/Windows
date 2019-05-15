@@ -21,10 +21,10 @@ namespace QuanLyRapPhim_Final.BSLayer
                 CommandType.Text);
         }
         public bool ThemRap(string MaRap, string SoDayGhe, 
-            string SoLuongGhe, string LoaiPhim, ref string err)
+            string SoLuongGhe,string LoaiRap, ref string err)
         {
             string sqlString = "Insert Into Rap Values(" + "'" + MaRap + "',N'" +
-                SoDayGhe + "',N'" + SoLuongGhe + "',N'" + LoaiPhim + "',N'" + "')";
+                SoDayGhe + "',N'" + SoLuongGhe + "',N'" +LoaiRap + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         public bool XoaRap(ref string err, string MaRap)
@@ -32,9 +32,9 @@ namespace QuanLyRapPhim_Final.BSLayer
             string sqlString = "Delete From Rap Where MaRap='" + MaRap + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-        public bool CapNhatRap(string MaRap, string LoaiPhim, ref string err)
+        public bool CapNhatRap(string MaRap, string LoaiRap, ref string err)
         {
-            string sqlString = "Update Rap Set LoaiPhim=N'" + LoaiPhim + "'" +
+            string sqlString = "Update Rap Set LoaiRap=N'" + LoaiRap + "'" +
                 " Where MaRap='" + MaRap + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }

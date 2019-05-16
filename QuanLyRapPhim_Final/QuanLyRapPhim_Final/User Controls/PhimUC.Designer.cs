@@ -56,7 +56,6 @@
             this.btnReload = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnBrowse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvengers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLatMat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCorgi)).BeginInit();
@@ -113,11 +112,8 @@
             // 
             // dgv_PHIM
             // 
-            this.dgv_PHIM.AllowUserToAddRows = false;
-            this.dgv_PHIM.AllowUserToResizeColumns = false;
-            this.dgv_PHIM.AllowUserToResizeRows = false;
             this.dgv_PHIM.AutoGenerateColumns = false;
-            this.dgv_PHIM.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dgv_PHIM.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_PHIM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_PHIM.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tenPhimDataGridViewTextBoxColumn,
@@ -125,45 +121,34 @@
             this.giaVeDataGridViewTextBoxColumn,
             this.posterDataGridViewImageColumn});
             this.dgv_PHIM.DataSource = this.phimBindingSource;
-            this.dgv_PHIM.Location = new System.Drawing.Point(14, 260);
+            this.dgv_PHIM.Location = new System.Drawing.Point(14, 280);
             this.dgv_PHIM.Name = "dgv_PHIM";
-            this.dgv_PHIM.RowHeadersWidth = 40;
-            this.dgv_PHIM.RowTemplate.Height = 90;
-            this.dgv_PHIM.Size = new System.Drawing.Size(762, 369);
+            this.dgv_PHIM.Size = new System.Drawing.Size(762, 202);
             this.dgv_PHIM.TabIndex = 4;
             // 
             // tenPhimDataGridViewTextBoxColumn
             // 
             this.tenPhimDataGridViewTextBoxColumn.DataPropertyName = "TenPhim";
-            this.tenPhimDataGridViewTextBoxColumn.FillWeight = 116.9477F;
             this.tenPhimDataGridViewTextBoxColumn.HeaderText = "TenPhim";
             this.tenPhimDataGridViewTextBoxColumn.Name = "tenPhimDataGridViewTextBoxColumn";
-            this.tenPhimDataGridViewTextBoxColumn.Width = 208;
             // 
             // maPhimDataGridViewTextBoxColumn
             // 
             this.maPhimDataGridViewTextBoxColumn.DataPropertyName = "MaPhim";
-            this.maPhimDataGridViewTextBoxColumn.FillWeight = 77.69075F;
             this.maPhimDataGridViewTextBoxColumn.HeaderText = "MaPhim";
             this.maPhimDataGridViewTextBoxColumn.Name = "maPhimDataGridViewTextBoxColumn";
-            this.maPhimDataGridViewTextBoxColumn.Width = 138;
             // 
             // giaVeDataGridViewTextBoxColumn
             // 
             this.giaVeDataGridViewTextBoxColumn.DataPropertyName = "GiaVe";
-            this.giaVeDataGridViewTextBoxColumn.FillWeight = 101.5228F;
             this.giaVeDataGridViewTextBoxColumn.HeaderText = "GiaVe";
             this.giaVeDataGridViewTextBoxColumn.Name = "giaVeDataGridViewTextBoxColumn";
-            this.giaVeDataGridViewTextBoxColumn.Width = 180;
             // 
             // posterDataGridViewImageColumn
             // 
             this.posterDataGridViewImageColumn.DataPropertyName = "Poster";
-            this.posterDataGridViewImageColumn.FillWeight = 103.8387F;
             this.posterDataGridViewImageColumn.HeaderText = "Poster";
-            this.posterDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.posterDataGridViewImageColumn.Name = "posterDataGridViewImageColumn";
-            this.posterDataGridViewImageColumn.Width = 184;
             // 
             // phimBindingSource
             // 
@@ -182,7 +167,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 677);
+            this.label1.Location = new System.Drawing.Point(33, 506);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 5;
@@ -191,7 +176,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(66, 716);
+            this.label2.Location = new System.Drawing.Point(33, 538);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 6;
@@ -199,14 +184,14 @@
             // 
             // txtTenPhim
             // 
-            this.txtTenPhim.Location = new System.Drawing.Point(170, 674);
+            this.txtTenPhim.Location = new System.Drawing.Point(96, 503);
             this.txtTenPhim.Name = "txtTenPhim";
             this.txtTenPhim.Size = new System.Drawing.Size(190, 20);
             this.txtTenPhim.TabIndex = 7;
             // 
             // txtMaPhim
             // 
-            this.txtMaPhim.Location = new System.Drawing.Point(170, 713);
+            this.txtMaPhim.Location = new System.Drawing.Point(96, 535);
             this.txtMaPhim.Name = "txtMaPhim";
             this.txtMaPhim.Size = new System.Drawing.Size(190, 20);
             this.txtMaPhim.TabIndex = 8;
@@ -214,7 +199,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(66, 758);
+            this.label3.Location = new System.Drawing.Point(33, 572);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 9;
@@ -222,7 +207,7 @@
             // 
             // txtGiaVe
             // 
-            this.txtGiaVe.Location = new System.Drawing.Point(170, 755);
+            this.txtGiaVe.Location = new System.Drawing.Point(96, 569);
             this.txtGiaVe.Name = "txtGiaVe";
             this.txtGiaVe.Size = new System.Drawing.Size(190, 20);
             this.txtGiaVe.TabIndex = 10;
@@ -230,7 +215,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(450, 644);
+            this.label4.Location = new System.Drawing.Point(329, 506);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 11;
@@ -238,19 +223,17 @@
             // 
             // pbPoster
             // 
-            this.pbPoster.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pbPoster.Location = new System.Drawing.Point(429, 660);
+            this.pbPoster.Location = new System.Drawing.Point(379, 506);
             this.pbPoster.Name = "pbPoster";
-            this.pbPoster.Size = new System.Drawing.Size(100, 124);
-            this.pbPoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPoster.Size = new System.Drawing.Size(100, 50);
             this.pbPoster.TabIndex = 12;
             this.pbPoster.TabStop = false;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(579, 672);
+            this.btnSave.Location = new System.Drawing.Point(519, 496);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(109, 23);
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -259,7 +242,7 @@
             // btnEditFilm
             // 
             this.btnEditFilm.AutoSize = true;
-            this.btnEditFilm.Location = new System.Drawing.Point(579, 711);
+            this.btnEditFilm.Location = new System.Drawing.Point(519, 525);
             this.btnEditFilm.Name = "btnEditFilm";
             this.btnEditFilm.Size = new System.Drawing.Size(109, 23);
             this.btnEditFilm.TabIndex = 14;
@@ -270,7 +253,7 @@
             // btnDelFilm
             // 
             this.btnDelFilm.AutoSize = true;
-            this.btnDelFilm.Location = new System.Drawing.Point(579, 753);
+            this.btnDelFilm.Location = new System.Drawing.Point(519, 554);
             this.btnDelFilm.Name = "btnDelFilm";
             this.btnDelFilm.Size = new System.Drawing.Size(109, 23);
             this.btnDelFilm.TabIndex = 15;
@@ -280,9 +263,9 @@
             // 
             // btnReload
             // 
-            this.btnReload.Location = new System.Drawing.Point(719, 672);
+            this.btnReload.Location = new System.Drawing.Point(646, 496);
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(109, 23);
+            this.btnReload.Size = new System.Drawing.Size(58, 23);
             this.btnReload.TabIndex = 16;
             this.btnReload.Text = "Reload";
             this.btnReload.UseVisualStyleBackColor = true;
@@ -290,9 +273,9 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(719, 711);
+            this.btnAdd.Location = new System.Drawing.Point(646, 525);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(109, 23);
+            this.btnAdd.Size = new System.Drawing.Size(57, 23);
             this.btnAdd.TabIndex = 17;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -300,29 +283,18 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(719, 753);
+            this.btnCancel.Location = new System.Drawing.Point(646, 554);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(109, 23);
+            this.btnCancel.Size = new System.Drawing.Size(63, 23);
             this.btnCancel.TabIndex = 18;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnBrowse
-            // 
-            this.btnBrowse.Location = new System.Drawing.Point(429, 790);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(109, 23);
-            this.btnBrowse.TabIndex = 19;
-            this.btnBrowse.Text = "Browse";
-            this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
-            // 
             // PhimUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnReload);
@@ -343,7 +315,7 @@
             this.Controls.Add(this.pbLatMat);
             this.Controls.Add(this.pbAvengers);
             this.Name = "PhimUC";
-            this.Size = new System.Drawing.Size(896, 918);
+            this.Size = new System.Drawing.Size(896, 613);
             this.Load += new System.EventHandler(this.PhimUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbAvengers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLatMat)).EndInit();
@@ -365,6 +337,10 @@
         private System.Windows.Forms.PictureBox pbCorgi;
         private System.Windows.Forms.PictureBox pbUpinIpin;
         private System.Windows.Forms.DataGridView dgv_PHIM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenPhimDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maPhimDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giaVeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn posterDataGridViewImageColumn;
         private System.Windows.Forms.BindingSource phimBindingSource;
         private QuanLyRapPhimDataSet_PHIM quanLyRapPhimDataSet_PHIM;
         private QuanLyRapPhimDataSet_PHIMTableAdapters.PhimTableAdapter phimTableAdapter;
@@ -382,10 +358,5 @@
         private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenPhimDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maPhimDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giaVeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn posterDataGridViewImageColumn;
-        private System.Windows.Forms.Button btnBrowse;
     }
 }

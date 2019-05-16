@@ -102,19 +102,17 @@ namespace QuanLyRapPhim_Final.renderSeat
                             {
                                 //todo: disable nút
                                 btn.Enabled = false;
-                                btn.Text = "X";
+                                btn.Text = "booked";
                                 btn.BackColor = Color.Red;
 
                             }
                         }
                     }
-                    
+                    panel.Controls.Add(btn);
                     btns.Add(btn);
                     
                 }
             }
-            panel.Controls.AddRange(btns.ToArray());
-
         }
 
 

@@ -42,11 +42,6 @@ namespace QuanLyRapPhim_Final.BSLayer
             //    CommandType.Text);
 
         }
-        public bool themVe(string MaPhim, string Rap, string SuatChieu,string MaNV,string MaKH,string Day,string Ghe, ref string err)
-        {
-            string sqlString = $"Insert Into DatVe values('{MaPhim.Trim()}','{SuatChieu.Trim()}','{MaNV.Trim()}','{MaKH.Trim()}','{Rap.Trim()}','{Day.Trim()}','{Ghe.Trim()}')";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-        }
 
     }
 }

@@ -20,23 +20,17 @@ namespace QuanLyRapPhim_Final.User_Controls
         DataTable dtPhim = null;
         DataTable dtSuatChieu = null;
         DataTable dtNhanVien = null;
-        DataTable dtKH = null;
 
         BLNhanVien dbNhanVien = new BLNhanVien();
         BLSuatChieu dbSuatChieu = new BLSuatChieu();
         BLPhim dbPhim = new BLPhim();
         BLDatVe dbDatVe = new BLDatVe();
         BLRap dbRap = new BLRap();
-        BLKhachHang dbKhachHang = new BLKhachHang();
         Graphics gp;
         private List<string> bookedSeatAlpha ;
         private List<string> bookedSeatNum;
         private string globalRap;
         private string currentMaPhim;
-        private string globalMaKH;
-        private int globalMaNV;
-        private bool themFlag = false;
-        string err;
         public DatVeUC()
         {
             InitializeComponent();
@@ -52,14 +46,12 @@ namespace QuanLyRapPhim_Final.User_Controls
             setCombobox2();
             DataSet ds = dbRap.LayRap();
             dtRap = ds.Tables[0];
-            raptxt.Enabled = false;
+            //comboBox1.DataSource = dtRap;
+            //comboBox1.DisplayMember = "MaRap";
+            //comboBox1.ValueMember = "MaRap";
             gp = seatPanel.CreateGraphics();
             seatPanel.Visible=false;
             SuatChieucb.Enabled = false;
-            setMaKHcb();
-            comboBox2.Enabled = false;
-            btnHuy.Enabled = false;
-            btnLuu.Enabled = false;
         }
         private void setCombobox2()
         {
@@ -70,32 +62,47 @@ namespace QuanLyRapPhim_Final.User_Controls
             comboBox2.DataSource = dtPhim;
             comboBox2.DisplayMember = "TenPhim";
             comboBox2.ValueMember = "TenPhim";
+            setRaptxt(dtPhim);
         }
         private void setRaptxt(DataTable dt)
         {
-
-            dtSuatChieu = new DataTable();
-            dtSuatChieu.Clear();
-            DataSet dsSuatChieu = dbSuatChieu.LaySuatChieu();
-            dtSuatChieu = dsSuatChieu.Tables[0];
+            dtDatVe = new DataTable();
+            dtDatVe.Clear();
+            DataSet ds = dbDatVe.LayThongTinVe();
+            dtDatVe = ds.Tables[0];
             for (int i = 0; i < dtPhim.Rows.Count; i++)
             {
                 if (comboBox2.Text == dt.Rows[i].ItemArray[0].ToString())
                 {
-                    for (int j = 0; j < dtSuatChieu.Rows.Count; j++)
-                    {
-                        if (dt.Rows[i].ItemArray[1].ToString() == dtSuatChieu.Rows[j].ItemArray[0].ToString() && dtSuatChieu.Rows[j].ItemArray[1].ToString()==SuatChieucb.Text)
-                        {
-                            globalRap = dtSuatChieu.Rows[j].ItemArray[2].ToString();
-                            raptxt.Enabled = true;
-                            raptxt.Text = globalRap;
-                            raptxt.Enabled = false;
-                        }
-
-                    }
-
+                    globalRap = dtDatVe.Rows[i].ItemArray[4].ToString();
+                    raptxt.Enabled = true;
+                    raptxt.Text = globalRap;
+                    raptxt.Enabled = false;
                 }
             }
+
+        }
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            //seatPanel.Visible = true;
+            //render seatLoader = new render();
+            //dtRap = new DataTable();
+            //dtRap.Clear();
+            //DataSet ds = dbRap.findRap(comboBox1.SelectedValue.ToString());
+            //dtRap = ds.Tables[0];
+            //if (dtRap.Rows.Count != 0)
+            //{
+            //    ds = dbRap.findSoDayGhe(comboBox1.SelectedValue.ToString());
+            //    dtRap = ds.Tables[0];
+            //    Program.hangGhe = Convert.ToInt32(dtRap.Rows[0].ItemArray[0].ToString());
+            //    ds = dbRap.findSoLuongGhe(comboBox1.SelectedValue.ToString());
+            //    dtRap = ds.Tables[0];
+            //    Program.soGhe = Convert.ToInt32(dtRap.Rows[0].ItemArray[0].ToString());
+            //    seatLoader.removeSeat(ref seatPanel);
+            //    seatPanel.Refresh();
+            //    getBookedSeat();
+            //    seatLoader.renderSeat(ref seatPanel, bookedSeatAlpha, bookedSeatNum);
+            //}
 
         }
 
@@ -134,7 +141,7 @@ namespace QuanLyRapPhim_Final.User_Controls
             dtPhim.Clear();
             DataSet dsPhim = dbPhim.LayPhim();
             dtPhim = dsPhim.Tables[0];
-            //setRaptxt(dtPhim);
+            setRaptxt(dtPhim);
             //gọi hàm set cb suất chiếu
             SuatChieucb.Enabled = true;
             if (comboBox2.ValueMember!="")
@@ -165,8 +172,6 @@ namespace QuanLyRapPhim_Final.User_Controls
 
         private void SuatChieucb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Daytxt.Text = "";
-            ghetxt.Text = "";
             if (comboBox2.ValueMember.ToString() == "") return;
             if (SuatChieucb.ValueMember.ToString() == "") return; 
             //string time;
@@ -175,10 +180,6 @@ namespace QuanLyRapPhim_Final.User_Controls
             render seatLoader = new render();
             dtRap = new DataTable();
             dtRap.Clear();
-            dtPhim = new DataTable();
-            DataSet dsPhim = dbPhim.LayPhim();
-            dtPhim = dsPhim.Tables[0];
-            setRaptxt(dtPhim);
             if (globalRap != null)
             {
                 DataSet ds = dbRap.findRap(globalRap);
@@ -223,8 +224,7 @@ namespace QuanLyRapPhim_Final.User_Controls
 
         private void nhanViencb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (nhanViencb.ValueMember == "") return;
-            globalMaNV = nhanViencb.SelectedIndex;
+
         }
         private void setNhanViencb()
         {
@@ -235,7 +235,6 @@ namespace QuanLyRapPhim_Final.User_Controls
             nhanViencb.DataSource = dtNhanVien;
             nhanViencb.DisplayMember =  "TenNV";
             nhanViencb.ValueMember =  "TenNV";
-            globalMaNV = nhanViencb.SelectedIndex;
         }
         private void setBtnEven(List<Button> btns)
         {
@@ -252,153 +251,6 @@ namespace QuanLyRapPhim_Final.User_Controls
             string[] splitedString = btn.Text.Split('-');
             Daytxt.Text = splitedString[0];
             ghetxt.Text = splitedString[1];
-        }
-
-        private void btnReload_Click(object sender, EventArgs e)
-        {
-            if (SuatChieucb.ValueMember.ToString() == "") return;
-            render seatLoader = new render();
-            if (globalRap != null)
-            {
-                DataSet ds = dbRap.findRap(globalRap);
-                dtRap = ds.Tables[0];
-
-                if (dtRap.Rows.Count != 0)
-                {
-                    ds = dbRap.findSoDayGhe(globalRap);
-                    dtRap = ds.Tables[0];
-                    Program.hangGhe = Convert.ToInt32(dtRap.Rows[0].ItemArray[0].ToString());
-                    ds = dbRap.findSoLuongGhe(globalRap);
-                    dtRap = ds.Tables[0];
-                    Program.soGhe = Convert.ToInt32(dtRap.Rows[0].ItemArray[0].ToString());
-                    seatLoader.removeSeat(ref seatPanel);
-                    seatPanel.Refresh();
-                    //time = getHour();
-                    getBookedSeat();
-                    seatLoader.renderSeat(ref seatPanel, bookedSeatAlpha, bookedSeatNum);
-                    setBtnEven(seatLoader.btns);
-                }
-            }
-        }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            themFlag = true;
-            btnLuu.Enabled = true;
-            btnHuy.Enabled = true;
-            btnThem.Enabled = false;
-            btnXoa.Enabled = false;
-            comboBox2.Enabled = true;
-
-        }
-
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            if (!raptxt.Text.Equals("") && !ghetxt.Text.Equals("")&&!Daytxt.Text.Equals(""))
-            {
-                bool checkKH = checkMaKH();
-                if (checkKH==false)
-                {
-                    MessageBox.Show("bạn đã đặt suất chiếu này rồi!");
-                    return;
-                }
-
-                dtPhim = new DataTable();
-                dtPhim.Clear();
-                DataSet dsPhim = dbPhim.LayPhim();
-                dtPhim = dsPhim.Tables[0];
-                string maPhim = findMaPhim(dtPhim);
-                string maNV = findMaNV();
-                dbDatVe = new BLDatVe();
-
-                //todo
-                try
-                {
-                    dbDatVe.themVe(maPhim, raptxt.Text, SuatChieucb.Text, maNV, globalMaKH, Daytxt.Text, ghetxt.Text, ref err);
-                    MessageBox.Show("thêm thành công!");
-
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("lỗi");
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("chưa hoàn thành đặt vé !");
-            }
-        }
-        private bool checkMaKH()
-        {
-            dtDatVe = new DataTable();
-            dtDatVe.Clear();
-            DataSet ds = dbDatVe.LayThongTinVe();
-            dtDatVe = ds.Tables[0];
-
-            for (int i = 0; i < dtDatVe.Rows.Count; i++)
-            {
-                if (globalMaKH == dtDatVe.Rows[i].ItemArray[3].ToString())
-                {
-                    if (SuatChieucb.Text == dtDatVe.Rows[i].ItemArray[1].ToString())
-                    {
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
-        private string findMaPhim(DataTable dt)
-        {
-            int i = 0;
-            while (i<dt.Rows.Count && comboBox2.Text != dt.Rows[i].ItemArray[0].ToString())
-            {
-                i++;
-            }
-            return dt.Rows[i].ItemArray[1].ToString();
-        }
-        private string findMaNV()
-        {
-            
-            dtNhanVien = new DataTable();
-            dtNhanVien.Clear();
-            DataSet ds = dbNhanVien.LayNhanVien();
-            dtNhanVien = ds.Tables[0];
-            int i= 0;
-            while (i < dtNhanVien.Rows.Count && globalMaNV != (Convert.ToInt64(dtNhanVien.Rows[i].ItemArray[2])-1))
-            {
-                i++;
-            }
-            return dtNhanVien.Rows[i].ItemArray[2].ToString();
-        }
-        private void setMaKHcb()
-        {
-            dtKH = new DataTable();
-            dtKH.Clear();
-            DataSet ds = dbKhachHang.LayKhachHang();
-            dtKH = ds.Tables[0];
-            maKHcb.DataSource = dtKH;
-            maKHcb.DisplayMember = "MaKH";
-            maKHcb.ValueMember = "MaKH";
-            globalMaKH = maKHcb.Text;
-        }
-
-        private void maKHcb_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (maKHcb.ValueMember == "") return;
-            globalMaKH = maKHcb.Text;
-        }
-
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            comboBox2.Text = "";
-            SuatChieucb.Text = "";
-            maKHcb.Text = "";
-            raptxt.Text = "";
-            Daytxt.Text = "";
-            ghetxt.Text = "";
-            nhanViencb.Text = "";
-
         }
     }
 }

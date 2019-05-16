@@ -17,7 +17,8 @@ namespace QuanLyRapPhim_Final.User_Controls
         bool Them;
         string err;
         BLNhanVien dbNV = new BLNhanVien();
-
+        BLChucVu dbCV = new BLChucVu();
+        DataTable dt = null;
         public QuanLyNhanVienUC()
         {
             InitializeComponent();
@@ -43,11 +44,19 @@ namespace QuanLyRapPhim_Final.User_Controls
             btnDelNV.Enabled = true;
             try
             {
-                this.nhanVienTableAdapter.Fill(this.quanLyRapPhimDataSet_NHANVIEN.NhanVien);
+                dt = new DataTable();
+                dt.Clear();
+                DataSet data = dbCV.LayChucVu();
+                dt = data.Tables[0];
+                this.cbbMaCV.DataSource = dt;
+                this.cbbMaCV.DisplayMember = "MaCV";
+                this.cbbMaCV.ValueMember = "MaCV";
+                this.nhanVienTableAdapter.Fill(quanLyRapPhimDataSet_NHANVIEN.NhanVien);
+               
             }
             catch
             {
-                MessageBox.Show("Không lấy được nội dung trong table THANHPHO. Lỗi rồi!!!");
+                MessageBox.Show("Không lấy được nội dung trong table ChucVu. Lỗi rồi!!!");
             }
         }
 
@@ -106,7 +115,7 @@ namespace QuanLyRapPhim_Final.User_Controls
                 try
                 {
                     BLNhanVien blNV = new BLNhanVien();
-                    blNV.ThemNhanVien(this.txtMaNV.Text.Trim(), this.txtHovalotNV.Text.Trim(), this.txtTenNV.Text.Trim(), ref err);
+                    blNV.ThemNhanVien(this.txtMaNV.Text.Trim(), this.txtHovalotNV.Text.Trim(), this.txtTenNV.Text.Trim(), cbbMaCV.Text,ref err);
                     LoadData();
                     MessageBox.Show("Đã thêm xong!");
                 }
@@ -146,6 +155,17 @@ namespace QuanLyRapPhim_Final.User_Controls
                 }
 
             }
+        }
+
+        private void cbbMaCV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbMaCV.ValueMember == "") return;
+            dt = new DataTable();
+            dt.Clear();
+            DataSet data = dbCV.LayChucVu();
+            dt = data.Tables[0];
+            txtChucVu.Text = dt.Rows[cbbMaCV.SelectedIndex].ItemArray[1].ToString();
+            txtLuong.Text = dt.Rows[cbbMaCV.SelectedIndex].ItemArray[2].ToString();
         }
     }
 }

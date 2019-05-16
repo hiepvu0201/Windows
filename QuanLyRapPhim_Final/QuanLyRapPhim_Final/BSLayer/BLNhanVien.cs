@@ -21,12 +21,12 @@ namespace QuanLyRapPhim_Final.BSLayer
                 CommandType.Text);
         }
         public bool ThemNhanVien(string MaNV, string HovaTenLotNV, 
-            string TenNV, ref string err)
+            string TenNV, string MaCV,ref string err)
         {
             string sqlString =
                 $"Insert Into NhanVien Values " +
                 "( " + " '" + MaNV + " ' ,N'" + HovaTenLotNV + "',N'" 
-                + TenNV + "') ";
+                + TenNV + "',N'" + MaCV + "') ";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         public bool XoaNhanVien(ref string err, string MaNV)

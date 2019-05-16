@@ -26,7 +26,6 @@ namespace QuanLyRapPhim_Final.User_Controls
 
         private void QuanLyRapUC_Load(object sender, EventArgs e)
         {
-            
             LoadData();
         }
         void LoadData()

@@ -80,5 +80,13 @@ namespace QuanLyRapPhim_Final
         {
 
         }
+
+        private void btnChucVuNhanVien_Click(object sender, EventArgs e)
+        {
+            pnlClick.Height = btnChucVuNhanVien.Height;
+            pnlClick.Top = btnChucVuNhanVien.Top;
+            chucVuUC1.BringToFront();
+            lblHeader.Text = "Chức vụ nhân viên";
+        }
     }
 }

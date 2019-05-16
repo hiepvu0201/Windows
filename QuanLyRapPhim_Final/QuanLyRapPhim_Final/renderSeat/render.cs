@@ -15,7 +15,6 @@ namespace QuanLyRapPhim_Final.renderSeat
 {
     class render
     {
-        private BLRap dbRap = new BLRap();
         public List<Button> btns;
         private char[] alpha = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
         private int row;
@@ -23,7 +22,6 @@ namespace QuanLyRapPhim_Final.renderSeat
         private Point p;
         public int Row { get => row; set => row = value; }
         public int Col { get => col; set => col = value; }
-        DatVeUC datVe = new DatVeUC();
         public render()
         {
 
@@ -56,7 +54,6 @@ namespace QuanLyRapPhim_Final.renderSeat
 
             for (int j = 0; j <= cell.LineRow; j++)
             {
-                //gp.DrawLine(Program.myPen, 0, j * cell.CellHeight, (cell.LineCol) * cell.CellWidth, j * cell.CellHeight);
                 gp.DrawLine(Program.myPen, 0, j * cell.CellHeight, (cell.LineCol - 2) * cell.CellWidth, j * cell.CellHeight);
                 gp.DrawLine(Program.myPen, (cell.LineCol - 1) * cell.CellWidth, j * cell.CellHeight, (cell.LineCol + 1) * cell.CellWidth, j * cell.CellHeight);
 
@@ -85,7 +82,7 @@ namespace QuanLyRapPhim_Final.renderSeat
 
                         btn = obj.CreateButton(ref btn, $"{alphaChar}-{j}", p);
 
-                        
+
                     }
                     else
                     {
@@ -102,17 +99,19 @@ namespace QuanLyRapPhim_Final.renderSeat
                             {
                                 //todo: disable nút
                                 btn.Enabled = false;
-                                btn.Text = "booked";
+                                btn.Text = "X";
                                 btn.BackColor = Color.Red;
 
                             }
                         }
                     }
-                    panel.Controls.Add(btn);
+
                     btns.Add(btn);
-                    
+
                 }
             }
+            panel.Controls.AddRange(btns.ToArray());
+
         }
 
 

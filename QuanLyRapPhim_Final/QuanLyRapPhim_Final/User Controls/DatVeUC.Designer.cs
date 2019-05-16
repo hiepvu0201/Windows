@@ -53,6 +53,12 @@
             this.Daytxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.ghetxt = new System.Windows.Forms.TextBox();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnReload = new System.Windows.Forms.Button();
+            this.maKHcb = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datVeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_DATVE)).BeginInit();
@@ -157,9 +163,9 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(59, 18);
+            this.comboBox2.Location = new System.Drawing.Point(93, 18);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(338, 24);
+            this.comboBox2.Size = new System.Drawing.Size(304, 24);
             this.comboBox2.TabIndex = 4;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged_1);
             // 
@@ -174,9 +180,9 @@
             // 
             // raptxt
             // 
-            this.raptxt.Location = new System.Drawing.Point(59, 48);
+            this.raptxt.Location = new System.Drawing.Point(93, 48);
             this.raptxt.Name = "raptxt";
-            this.raptxt.Size = new System.Drawing.Size(100, 22);
+            this.raptxt.Size = new System.Drawing.Size(121, 22);
             this.raptxt.TabIndex = 6;
             // 
             // label3
@@ -218,7 +224,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(414, 51);
+            this.label5.Location = new System.Drawing.Point(412, 51);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 17);
             this.label5.TabIndex = 11;
@@ -247,10 +253,74 @@
             this.ghetxt.Size = new System.Drawing.Size(100, 22);
             this.ghetxt.TabIndex = 15;
             // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(648, 18);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 23);
+            this.btnLuu.TabIndex = 16;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(729, 19);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.TabIndex = 17;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(729, 51);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(75, 23);
+            this.btnHuy.TabIndex = 18;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnReload
+            // 
+            this.btnReload.Location = new System.Drawing.Point(648, 51);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(75, 23);
+            this.btnReload.TabIndex = 19;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            // 
+            // maKHcb
+            // 
+            this.maKHcb.FormattingEnabled = true;
+            this.maKHcb.Location = new System.Drawing.Point(280, 46);
+            this.maKHcb.Name = "maKHcb";
+            this.maKHcb.Size = new System.Drawing.Size(117, 24);
+            this.maKHcb.TabIndex = 20;
+            this.maKHcb.SelectedIndexChanged += new System.EventHandler(this.maKHcb_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(220, 51);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 17);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Mã KH:";
+            // 
             // DatVeUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.maKHcb);
+            this.Controls.Add(this.btnReload);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.ghetxt);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Daytxt);
@@ -303,5 +373,11 @@
         private System.Windows.Forms.TextBox Daytxt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox ghetxt;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.ComboBox maKHcb;
+        private System.Windows.Forms.Label label7;
     }
 }

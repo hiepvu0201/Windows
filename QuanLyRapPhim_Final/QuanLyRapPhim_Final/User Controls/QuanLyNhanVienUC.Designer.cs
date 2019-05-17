@@ -40,6 +40,8 @@
             this.tenNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maCVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyRapPhimDataSet_NHANVIEN = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_NHANVIEN();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
             this.btnEditNV = new System.Windows.Forms.Button();
@@ -52,12 +54,10 @@
             this.cbbMaCV = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtChucVu = new System.Windows.Forms.TextBox();
-            this.quanLyRapPhimDataSet_NHANVIEN = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_NHANVIEN();
-            this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nhanVienTableAdapter = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_NHANVIENTableAdapters.NhanVienTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NHANVIEN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_NHANVIEN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_NHANVIEN)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -117,6 +117,7 @@
             // dgv_NHANVIEN
             // 
             this.dgv_NHANVIEN.AutoGenerateColumns = false;
+            this.dgv_NHANVIEN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_NHANVIEN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_NHANVIEN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.hovaLotNVDataGridViewTextBoxColumn,
@@ -126,7 +127,7 @@
             this.dgv_NHANVIEN.DataSource = this.nhanVienBindingSource;
             this.dgv_NHANVIEN.Location = new System.Drawing.Point(33, 312);
             this.dgv_NHANVIEN.Name = "dgv_NHANVIEN";
-            this.dgv_NHANVIEN.Size = new System.Drawing.Size(442, 150);
+            this.dgv_NHANVIEN.Size = new System.Drawing.Size(473, 150);
             this.dgv_NHANVIEN.TabIndex = 9;
             this.dgv_NHANVIEN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_NHANVIEN_CellClick);
             // 
@@ -153,6 +154,16 @@
             this.maCVDataGridViewTextBoxColumn.DataPropertyName = "MaCV";
             this.maCVDataGridViewTextBoxColumn.HeaderText = "MaCV";
             this.maCVDataGridViewTextBoxColumn.Name = "maCVDataGridViewTextBoxColumn";
+            // 
+            // nhanVienBindingSource
+            // 
+            this.nhanVienBindingSource.DataMember = "NhanVien";
+            this.nhanVienBindingSource.DataSource = this.quanLyRapPhimDataSet_NHANVIEN;
+            // 
+            // quanLyRapPhimDataSet_NHANVIEN
+            // 
+            this.quanLyRapPhimDataSet_NHANVIEN.DataSetName = "QuanLyRapPhimDataSet_NHANVIEN";
+            this.quanLyRapPhimDataSet_NHANVIEN.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnSave
             // 
@@ -250,6 +261,7 @@
             // 
             // cbbMaCV
             // 
+            this.cbbMaCV.DisplayMember = "MaCV";
             this.cbbMaCV.FormattingEnabled = true;
             this.cbbMaCV.Location = new System.Drawing.Point(227, 157);
             this.cbbMaCV.Name = "cbbMaCV";
@@ -274,16 +286,6 @@
             this.txtChucVu.Name = "txtChucVu";
             this.txtChucVu.Size = new System.Drawing.Size(229, 26);
             this.txtChucVu.TabIndex = 28;
-            // 
-            // quanLyRapPhimDataSet_NHANVIEN
-            // 
-            this.quanLyRapPhimDataSet_NHANVIEN.DataSetName = "QuanLyRapPhimDataSet_NHANVIEN";
-            this.quanLyRapPhimDataSet_NHANVIEN.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nhanVienBindingSource
-            // 
-            this.nhanVienBindingSource.DataMember = "NhanVien";
-            this.nhanVienBindingSource.DataSource = this.quanLyRapPhimDataSet_NHANVIEN;
             // 
             // nhanVienTableAdapter
             // 
@@ -318,8 +320,8 @@
             this.Size = new System.Drawing.Size(1195, 754);
             this.Load += new System.EventHandler(this.QuanLyNhanVienUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NHANVIEN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_NHANVIEN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_NHANVIEN)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

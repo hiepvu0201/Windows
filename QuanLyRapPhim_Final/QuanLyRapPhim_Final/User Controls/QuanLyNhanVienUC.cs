@@ -97,10 +97,10 @@ namespace QuanLyRapPhim_Final.User_Controls
         private void dgv_NHANVIEN_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int r = dgv_NHANVIEN.CurrentCell.RowIndex;
-
-            txtMaNV.Text = dgv_NHANVIEN.Rows[r].Cells[0].Value.ToString();
-            txtHovalotNV.Text = dgv_NHANVIEN.Rows[r].Cells[1].Value.ToString();
-            txtTenNV.Text = dgv_NHANVIEN.Rows[r].Cells[2].Value.ToString();
+            cbbMaCV.Text = dgv_NHANVIEN.Rows[r].Cells[3].Value.ToString();
+            txtMaNV.Text = dgv_NHANVIEN.Rows[r].Cells[2].Value.ToString();
+            txtHovalotNV.Text = dgv_NHANVIEN.Rows[r].Cells[0].Value.ToString();
+            txtTenNV.Text = dgv_NHANVIEN.Rows[r].Cells[1].Value.ToString();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

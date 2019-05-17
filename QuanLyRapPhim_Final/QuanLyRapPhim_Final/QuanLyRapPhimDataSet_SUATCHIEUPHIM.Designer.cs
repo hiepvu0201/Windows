@@ -283,6 +283,8 @@ namespace QuanLyRapPhim_Final {
             
             private global::System.Data.DataColumn columnSuatChieu;
             
+            private global::System.Data.DataColumn columnMaRap;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public SuatChieuPhimDataTable() {
@@ -334,6 +336,14 @@ namespace QuanLyRapPhim_Final {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn MaRapColumn {
+                get {
+                    return this.columnMaRap;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -369,11 +379,12 @@ namespace QuanLyRapPhim_Final {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public SuatChieuPhimRow AddSuatChieuPhimRow(string MaPhim, string SuatChieu) {
+            public SuatChieuPhimRow AddSuatChieuPhimRow(string MaPhim, string SuatChieu, string MaRap) {
                 SuatChieuPhimRow rowSuatChieuPhimRow = ((SuatChieuPhimRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MaPhim,
-                        SuatChieu};
+                        SuatChieu,
+                        MaRap};
                 rowSuatChieuPhimRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSuatChieuPhimRow);
                 return rowSuatChieuPhimRow;
@@ -398,6 +409,7 @@ namespace QuanLyRapPhim_Final {
             internal void InitVars() {
                 this.columnMaPhim = base.Columns["MaPhim"];
                 this.columnSuatChieu = base.Columns["SuatChieu"];
+                this.columnMaRap = base.Columns["MaRap"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -407,10 +419,13 @@ namespace QuanLyRapPhim_Final {
                 base.Columns.Add(this.columnMaPhim);
                 this.columnSuatChieu = new global::System.Data.DataColumn("SuatChieu", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSuatChieu);
+                this.columnMaRap = new global::System.Data.DataColumn("MaRap", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaRap);
                 this.columnMaPhim.AllowDBNull = false;
                 this.columnMaPhim.MaxLength = 50;
                 this.columnSuatChieu.AllowDBNull = false;
                 this.columnSuatChieu.MaxLength = 50;
+                this.columnMaRap.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -571,6 +586,34 @@ namespace QuanLyRapPhim_Final {
                 set {
                     this[this.tableSuatChieuPhim.SuatChieuColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string MaRap {
+                get {
+                    try {
+                        return ((string)(this[this.tableSuatChieuPhim.MaRapColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MaRap\' in table \'SuatChieuPhim\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSuatChieuPhim.MaRapColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsMaRapNull() {
+                return this.IsNull(this.tableSuatChieuPhim.MaRapColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetMaRapNull() {
+                this[this.tableSuatChieuPhim.MaRapColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -735,14 +778,16 @@ namespace QuanLyRapPhim_Final.QuanLyRapPhimDataSet_SUATCHIEUPHIMTableAdapters {
             tableMapping.DataSetTable = "SuatChieuPhim";
             tableMapping.ColumnMappings.Add("MaPhim", "MaPhim");
             tableMapping.ColumnMappings.Add("SuatChieu", "SuatChieu");
+            tableMapping.ColumnMappings.Add("MaRap", "MaRap");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[SuatChieuPhim] ([MaPhim], [SuatChieu]) VALUES (@MaPhim, @SuatC" +
-                "hieu)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[SuatChieuPhim] ([MaPhim], [SuatChieu], [MaRap]) VALUES (@MaPhi" +
+                "m, @SuatChieu, @MaRap)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaPhim", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaPhim", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SuatChieu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SuatChieu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaRap", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaRap", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -758,7 +803,7 @@ namespace QuanLyRapPhim_Final.QuanLyRapPhimDataSet_SUATCHIEUPHIMTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT MaPhim, SuatChieu FROM dbo.SuatChieuPhim";
+            this._commandCollection[0].CommandText = "SELECT MaPhim, SuatChieu, MaRap FROM dbo.SuatChieuPhim";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -819,7 +864,7 @@ namespace QuanLyRapPhim_Final.QuanLyRapPhimDataSet_SUATCHIEUPHIMTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string MaPhim, string SuatChieu) {
+        public virtual int Insert(string MaPhim, string SuatChieu, string MaRap) {
             if ((MaPhim == null)) {
                 throw new global::System.ArgumentNullException("MaPhim");
             }
@@ -831,6 +876,12 @@ namespace QuanLyRapPhim_Final.QuanLyRapPhimDataSet_SUATCHIEUPHIMTableAdapters {
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(SuatChieu));
+            }
+            if ((MaRap == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(MaRap));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 

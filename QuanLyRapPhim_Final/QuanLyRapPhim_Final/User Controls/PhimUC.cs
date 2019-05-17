@@ -21,6 +21,7 @@ namespace QuanLyRapPhim_Final.User_Controls
         string err;
         BLPhim dbPhim = new BLPhim();
         private string linkPic="";
+        private string globalMaPhim = "";
         public PhimUC()
         {
             InitializeComponent();
@@ -29,7 +30,10 @@ namespace QuanLyRapPhim_Final.User_Controls
         private void PhimUC_Load(object sender, EventArgs e)
         {
             this.phimTableAdapter.Fill(this.quanLyRapPhimDataSet_PHIM.Phim);
+            SetcbTinhphim();
+
         }
+
         void LoadData()
         {
             try
@@ -178,6 +182,54 @@ namespace QuanLyRapPhim_Final.User_Controls
                 pbPoster.Image = Image.FromFile(open.FileName);
                 linkPic = open.FileName;
             }
+        }
+
+        private void cbPhim_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbTinhPhim.ValueMember == "") return;
+            DataTable dtPhim = new DataTable();
+            dtPhim.Clear();
+            DataSet ds = dbPhim.LayPhim();
+            dtPhim = ds.Tables[0];
+            for (int i = 0; i < dtPhim.Rows.Count; i++)
+            {
+                if (cbTinhPhim.Text == dtPhim.Rows[i].ItemArray[0].ToString())
+                {
+                    globalMaPhim = dtPhim.Rows[i].ItemArray[1].ToString();
+                }
+            }
+        }
+        private void SetcbTinhphim()
+        {
+            DataTable dtPhim = new DataTable();
+            dtPhim.Clear();
+            DataSet ds = dbPhim.LayPhim();
+            dtPhim = ds.Tables[0];
+            cbTinhPhim.DataSource = dtPhim;
+            cbTinhPhim.DisplayMember = "TenPhim";
+            cbTinhPhim.ValueMember = "TenPhim";
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (cbTinhPhim.ValueMember == "") return;
+            BLDatVe dbDatVe = new BLDatVe();
+            DataTable dtDatVe = new DataTable();
+            dtDatVe.Clear();
+            DataSet  ds= dbDatVe.countMaPhim(globalMaPhim);
+            dtDatVe = ds.Tables[0];
+            int sumVe = Convert.ToInt32(dtDatVe.Rows[0].ItemArray[0].ToString());
+            if (sumVe == 0) lblKetQua.Text = "0";
+            else
+            {
+            
+                    int temp = Convert.ToInt32(dtDatVe.Rows[0].ItemArray[2]) * Convert.ToInt32(dtDatVe.Rows[0].ItemArray[1]);
+                    lblKetQua.Text = temp.ToString();
+
+
+            }
+
         }
     }
 }

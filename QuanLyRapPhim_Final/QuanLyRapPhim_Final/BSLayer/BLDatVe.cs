@@ -52,5 +52,10 @@ namespace QuanLyRapPhim_Final.BSLayer
             string sqlString = "Delete From DatVe Where MaRap='" + MaRap + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
+        public DataSet countMaPhim(string MaPhim)
+        {
+            return db.ExecuteQueryDataSet($"select A.MaPhim,sl,GiaVe from Phim as A inner join (select MaPhim , count(MaPhim) as sl from DatVe where MaPhim = '{MaPhim.Trim()}' group by MaPhim) as B on A.MaPhim =B.MaPhim", CommandType.Text);
+        }
+
     }
 }

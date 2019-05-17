@@ -76,16 +76,19 @@ namespace QuanLyRapPhim_Final
 
         }
 
-        private void DatVeUC1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnChucVuNhanVien_Click(object sender, EventArgs e)
         {
             pnlClick.Height = btnChucVuNhanVien.Height;
             pnlClick.Top = btnChucVuNhanVien.Top;
             chucVuUC1.BringToFront();
+            lblHeader.Text = "Chức vụ nhân viên";
+        }
+
+        private void btnQuanLySuatChieu_Click(object sender, EventArgs e)
+        {
+            pnlClick.Height = btnQuanLySuatChieu.Height;
+            pnlClick.Top = btnQuanLySuatChieu.Top;
+            quanLySuatChieuUC1.BringToFront();
             lblHeader.Text = "Chức vụ nhân viên";
         }
     }

@@ -37,12 +37,21 @@ namespace QuanLyRapPhim_Final.User_Controls
             btnDel.Enabled = true;
             try
             {
-                //this.nhanVienTableAdapter.Fill(quanLyRapPhimDataSet_NHANVIEN.NhanVien);
+                this.suatChieuPhimTableAdapter.Fill(quanLyRapPhimDataSet_SUATCHIEUPHIM.SuatChieuPhim);
             }
             catch
             {
                 MessageBox.Show("Không lấy được nội dung trong table ChucVu. Lỗi rồi!!!");
             }
+        }
+
+        private void dgv_SUATCHIEU_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int r = dgv_SUATCHIEU.CurrentCell.RowIndex;
+
+            txtMaPhim.Text = dgv_SUATCHIEU.Rows[r].Cells[0].Value.ToString();
+            txtSuatChieu.Text = dgv_SUATCHIEU.Rows[r].Cells[1].Value.ToString();
+            txtMaRap.Text = dgv_SUATCHIEU.Rows[r].Cells[2].Value.ToString();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -64,11 +73,11 @@ namespace QuanLyRapPhim_Final.User_Controls
             btnDel.Enabled = false;
         }
 
-        private void btnEditNV_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
             Them = false;
 
-            //dgv_NHANVIEN_CellClick(null, null);
+            dgv_SUATCHIEU_CellClick(null, null);
             btnSave.Enabled = true;
             btnCancel.Enabled = true;
 
@@ -79,46 +88,7 @@ namespace QuanLyRapPhim_Final.User_Controls
             txtMaPhim.Enabled = false;
         }
 
-        //private void dgv_NHANVIEN_CellClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    int r = dgv_NHANVIEN.CurrentCell.RowIndex;
-
-        //    txtMaNV.Text = dgv_NHANVIEN.Rows[r].Cells[0].Value.ToString();
-        //    txtHovalotNV.Text = dgv_NHANVIEN.Rows[r].Cells[1].Value.ToString();
-        //    txtTenNV.Text = dgv_NHANVIEN.Rows[r].Cells[2].Value.ToString();
-        //}
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            LoadData();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (Them)
-            {
-                try
-                {
-                    BLSuatChieu blSC = new BLSuatChieu();
-                    blSC.ThemSuatChieu(this.txtMaPhim.Text.Trim(), this.txtSuatChieu.Text.Trim(), this.txtMaRap.Text.Trim(),  ref err);
-                    LoadData();
-                    MessageBox.Show("Đã thêm xong!");
-                }
-                catch (SqlException)
-                {
-                    MessageBox.Show("Không thêm được. Lỗi rồi!");
-                }
-            }
-            else
-            {
-                BLSuatChieu blSC = new BLSuatChieu();
-                blSC.CapNhatSuatChieu(this.txtMaPhim.Text, this.txtSuatChieu.Text, ref err);
-                LoadData();
-                MessageBox.Show("Đã sửa xong!");
-            }
-        }
-
-        private void btnDelNV_Click(object sender, EventArgs e)
+        private void btnDel_Click(object sender, EventArgs e)
         {
             int r = dgv_SUATCHIEU.CurrentCell.RowIndex;
             string strSC = dgv_SUATCHIEU.Rows[r].Cells[0].Value.ToString();
@@ -140,6 +110,41 @@ namespace QuanLyRapPhim_Final.User_Controls
                 }
 
             }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (Them)
+            {
+                try
+                {
+                    BLSuatChieu blSC = new BLSuatChieu();
+                    blSC.ThemSuatChieu(this.txtMaPhim.Text.Trim(), this.txtSuatChieu.Text.Trim(), this.txtMaRap.Text.Trim(), ref err);
+                    LoadData();
+                    MessageBox.Show("Đã thêm xong!");
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Không thêm được. Lỗi rồi!");
+                }
+            }
+            else
+            {
+                BLSuatChieu blSC = new BLSuatChieu();
+                blSC.CapNhatSuatChieu(this.txtMaPhim.Text, this.txtSuatChieu.Text, ref err);
+                LoadData();
+                MessageBox.Show("Đã sửa xong!");
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void QuanLySuatChieuUC_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

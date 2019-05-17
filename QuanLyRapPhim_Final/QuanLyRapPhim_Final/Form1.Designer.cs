@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnQuanLySuatChieu = new System.Windows.Forms.Button();
+            this.btnChucVuNhanVien = new System.Windows.Forms.Button();
             this.btnDatVe = new System.Windows.Forms.Button();
             this.btnQuanLyRap = new System.Windows.Forms.Button();
             this.btnQuanLyNhanVien = new System.Windows.Forms.Button();
@@ -37,6 +39,8 @@
             this.btnQuanLyPhim = new System.Windows.Forms.Button();
             this.btnWelcome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.quanLySuatChieuUC1 = new QuanLyRapPhim_Final.User_Controls.QuanLySuatChieuUC();
+            this.chucVuUC1 = new QuanLyRapPhim_Final.User_Controls.ChucVuUC();
             this.welcomeUC1 = new QuanLyRapPhim_Final.User_Controls.WelcomeUC();
             this.quanLyRapUC1 = new QuanLyRapPhim_Final.User_Controls.QuanLyRapUC();
             this.quanLyNhanVienUC1 = new QuanLyRapPhim_Final.User_Controls.QuanLyNhanVienUC();
@@ -47,8 +51,6 @@
             this.panelHeader = new System.Windows.Forms.Panel();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.lblHeader = new System.Windows.Forms.Label();
-            this.btnChucVuNhanVien = new System.Windows.Forms.Button();
-            this.chucVuUC1 = new QuanLyRapPhim_Final.User_Controls.ChucVuUC();
             this.pnlClick = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -60,6 +62,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.pnlClick);
+            this.panel1.Controls.Add(this.btnQuanLySuatChieu);
             this.panel1.Controls.Add(this.btnChucVuNhanVien);
             this.panel1.Controls.Add(this.btnDatVe);
             this.panel1.Controls.Add(this.btnQuanLyRap);
@@ -72,6 +75,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(223, 930);
             this.panel1.TabIndex = 0;
+            // 
+            // btnQuanLySuatChieu
+            // 
+            this.btnQuanLySuatChieu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnQuanLySuatChieu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnQuanLySuatChieu.ForeColor = System.Drawing.Color.Indigo;
+            this.btnQuanLySuatChieu.Location = new System.Drawing.Point(3, 565);
+            this.btnQuanLySuatChieu.Name = "btnQuanLySuatChieu";
+            this.btnQuanLySuatChieu.Size = new System.Drawing.Size(216, 58);
+            this.btnQuanLySuatChieu.TabIndex = 9;
+            this.btnQuanLySuatChieu.Text = "Quản lý suất chiếu";
+            this.btnQuanLySuatChieu.UseVisualStyleBackColor = false;
+            this.btnQuanLySuatChieu.Click += new System.EventHandler(this.btnQuanLySuatChieu_Click);
+            // 
+            // btnChucVuNhanVien
+            // 
+            this.btnChucVuNhanVien.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnChucVuNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnChucVuNhanVien.ForeColor = System.Drawing.Color.Indigo;
+            this.btnChucVuNhanVien.Location = new System.Drawing.Point(3, 501);
+            this.btnChucVuNhanVien.Name = "btnChucVuNhanVien";
+            this.btnChucVuNhanVien.Size = new System.Drawing.Size(216, 58);
+            this.btnChucVuNhanVien.TabIndex = 6;
+            this.btnChucVuNhanVien.Text = "Chức vụ nhân viên";
+            this.btnChucVuNhanVien.UseVisualStyleBackColor = false;
+            this.btnChucVuNhanVien.Click += new System.EventHandler(this.btnChucVuNhanVien_Click);
             // 
             // btnDatVe
             // 
@@ -154,6 +183,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel2.Controls.Add(this.quanLySuatChieuUC1);
             this.panel2.Controls.Add(this.chucVuUC1);
             this.panel2.Controls.Add(this.welcomeUC1);
             this.panel2.Controls.Add(this.quanLyRapUC1);
@@ -167,6 +197,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(905, 930);
             this.panel2.TabIndex = 1;
+            // 
+            // quanLySuatChieuUC1
+            // 
+            this.quanLySuatChieuUC1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.quanLySuatChieuUC1.Location = new System.Drawing.Point(4, 116);
+            this.quanLySuatChieuUC1.Margin = new System.Windows.Forms.Padding(4);
+            this.quanLySuatChieuUC1.Name = "quanLySuatChieuUC1";
+            this.quanLySuatChieuUC1.Size = new System.Drawing.Size(1792, 1102);
+            this.quanLySuatChieuUC1.TabIndex = 11;
+            // 
+            // chucVuUC1
+            // 
+            this.chucVuUC1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.chucVuUC1.Location = new System.Drawing.Point(0, 116);
+            this.chucVuUC1.Margin = new System.Windows.Forms.Padding(4);
+            this.chucVuUC1.Name = "chucVuUC1";
+            this.chucVuUC1.Size = new System.Drawing.Size(1792, 1102);
+            this.chucVuUC1.TabIndex = 10;
             // 
             // welcomeUC1
             // 
@@ -262,35 +310,13 @@
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "Welcome";
             // 
-            // btnChucVuNhanVien
-            // 
-            this.btnChucVuNhanVien.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnChucVuNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnChucVuNhanVien.ForeColor = System.Drawing.Color.Indigo;
-            this.btnChucVuNhanVien.Location = new System.Drawing.Point(3, 501);
-            this.btnChucVuNhanVien.Name = "btnChucVuNhanVien";
-            this.btnChucVuNhanVien.Size = new System.Drawing.Size(216, 58);
-            this.btnChucVuNhanVien.TabIndex = 6;
-            this.btnChucVuNhanVien.Text = "Chức vụ nhân viên";
-            this.btnChucVuNhanVien.UseVisualStyleBackColor = false;
-            this.btnChucVuNhanVien.Click += new System.EventHandler(this.btnChucVuNhanVien_Click);
-            // 
-            // chucVuUC1
-            // 
-            this.chucVuUC1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.chucVuUC1.Location = new System.Drawing.Point(0, 116);
-            this.chucVuUC1.Margin = new System.Windows.Forms.Padding(4);
-            this.chucVuUC1.Name = "chucVuUC1";
-            this.chucVuUC1.Size = new System.Drawing.Size(1792, 1102);
-            this.chucVuUC1.TabIndex = 10;
-            // 
             // pnlClick
             // 
             this.pnlClick.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.pnlClick.Location = new System.Drawing.Point(3, 117);
             this.pnlClick.Name = "pnlClick";
             this.pnlClick.Size = new System.Drawing.Size(18, 58);
-            this.pnlClick.TabIndex = 7;
+            this.pnlClick.TabIndex = 10;
             // 
             // Form1
             // 
@@ -332,8 +358,10 @@
         private User_Controls.QuanLyRapUC quanLyRapUC1;
         private User_Controls.QuanLyNhanVienUC quanLyNhanVienUC1;
         private User_Controls.QuanLyKhachHangUC quanLyKhachHangUC1;
-        private System.Windows.Forms.Panel pnlClick;
         private System.Windows.Forms.Button btnChucVuNhanVien;
         private User_Controls.ChucVuUC chucVuUC1;
+        private System.Windows.Forms.Button btnQuanLySuatChieu;
+        private User_Controls.QuanLySuatChieuUC quanLySuatChieuUC1;
+        private System.Windows.Forms.Panel pnlClick;
     }
 }

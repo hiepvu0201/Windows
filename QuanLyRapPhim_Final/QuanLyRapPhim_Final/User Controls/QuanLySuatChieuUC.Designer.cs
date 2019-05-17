@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -35,12 +36,19 @@
             this.txtSuatChieu = new System.Windows.Forms.TextBox();
             this.txtMaRap = new System.Windows.Forms.TextBox();
             this.dgv_SUATCHIEU = new System.Windows.Forms.DataGridView();
+            this.maPhimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.suatChieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.suatChieuPhimBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyRapPhimDataSet_SUATCHIEUPHIM = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_SUATCHIEUPHIM();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.suatChieuPhimTableAdapter = new QuanLyRapPhim_Final.QuanLyRapPhimDataSet_SUATCHIEUPHIMTableAdapters.SuatChieuPhimTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SUATCHIEU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suatChieuPhimBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_SUATCHIEUPHIM)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,7 +84,7 @@
             // txtMaPhim
             // 
             this.txtMaPhim.Location = new System.Drawing.Point(198, 44);
-            this.txtMaPhim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaPhim.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaPhim.Name = "txtMaPhim";
             this.txtMaPhim.Size = new System.Drawing.Size(204, 26);
             this.txtMaPhim.TabIndex = 1;
@@ -84,7 +92,7 @@
             // txtSuatChieu
             // 
             this.txtSuatChieu.Location = new System.Drawing.Point(198, 98);
-            this.txtSuatChieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSuatChieu.Margin = new System.Windows.Forms.Padding(4);
             this.txtSuatChieu.Name = "txtSuatChieu";
             this.txtSuatChieu.Size = new System.Drawing.Size(204, 26);
             this.txtSuatChieu.TabIndex = 1;
@@ -92,18 +100,46 @@
             // txtMaRap
             // 
             this.txtMaRap.Location = new System.Drawing.Point(198, 151);
-            this.txtMaRap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaRap.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaRap.Name = "txtMaRap";
             this.txtMaRap.Size = new System.Drawing.Size(204, 26);
             this.txtMaRap.TabIndex = 1;
             // 
             // dgv_SUATCHIEU
             // 
+            this.dgv_SUATCHIEU.AutoGenerateColumns = false;
             this.dgv_SUATCHIEU.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_SUATCHIEU.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maPhimDataGridViewTextBoxColumn,
+            this.suatChieuDataGridViewTextBoxColumn});
+            this.dgv_SUATCHIEU.DataSource = this.suatChieuPhimBindingSource;
             this.dgv_SUATCHIEU.Location = new System.Drawing.Point(58, 212);
             this.dgv_SUATCHIEU.Name = "dgv_SUATCHIEU";
-            this.dgv_SUATCHIEU.Size = new System.Drawing.Size(240, 150);
+            this.dgv_SUATCHIEU.Size = new System.Drawing.Size(242, 150);
             this.dgv_SUATCHIEU.TabIndex = 2;
+            this.dgv_SUATCHIEU.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_SUATCHIEU_CellClick);
+            // 
+            // maPhimDataGridViewTextBoxColumn
+            // 
+            this.maPhimDataGridViewTextBoxColumn.DataPropertyName = "MaPhim";
+            this.maPhimDataGridViewTextBoxColumn.HeaderText = "MaPhim";
+            this.maPhimDataGridViewTextBoxColumn.Name = "maPhimDataGridViewTextBoxColumn";
+            // 
+            // suatChieuDataGridViewTextBoxColumn
+            // 
+            this.suatChieuDataGridViewTextBoxColumn.DataPropertyName = "SuatChieu";
+            this.suatChieuDataGridViewTextBoxColumn.HeaderText = "SuatChieu";
+            this.suatChieuDataGridViewTextBoxColumn.Name = "suatChieuDataGridViewTextBoxColumn";
+            // 
+            // suatChieuPhimBindingSource
+            // 
+            this.suatChieuPhimBindingSource.DataMember = "SuatChieuPhim";
+            this.suatChieuPhimBindingSource.DataSource = this.quanLyRapPhimDataSet_SUATCHIEUPHIM;
+            // 
+            // quanLyRapPhimDataSet_SUATCHIEUPHIM
+            // 
+            this.quanLyRapPhimDataSet_SUATCHIEUPHIM.DataSetName = "QuanLyRapPhimDataSet_SUATCHIEUPHIM";
+            this.quanLyRapPhimDataSet_SUATCHIEUPHIM.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnAdd
             // 
@@ -114,6 +150,7 @@
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
@@ -124,6 +161,7 @@
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDel
             // 
@@ -134,6 +172,7 @@
             this.btnDel.TabIndex = 3;
             this.btnDel.Text = "Xóa";
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnSave
             // 
@@ -144,6 +183,7 @@
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -154,6 +194,11 @@
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // suatChieuPhimTableAdapter
+            // 
+            this.suatChieuPhimTableAdapter.ClearBeforeFill = true;
             // 
             // QuanLySuatChieuUC
             // 
@@ -172,10 +217,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLySuatChieuUC";
             this.Size = new System.Drawing.Size(1792, 1102);
+            this.Load += new System.EventHandler(this.QuanLySuatChieuUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SUATCHIEU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suatChieuPhimBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyRapPhimDataSet_SUATCHIEUPHIM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +243,10 @@
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maPhimDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn suatChieuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource suatChieuPhimBindingSource;
+        private QuanLyRapPhimDataSet_SUATCHIEUPHIM quanLyRapPhimDataSet_SUATCHIEUPHIM;
+        private QuanLyRapPhimDataSet_SUATCHIEUPHIMTableAdapters.SuatChieuPhimTableAdapter suatChieuPhimTableAdapter;
     }
 }
